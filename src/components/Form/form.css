@@ -1,0 +1,213 @@
+@font-face {
+    font-family: Unbounded;
+    src: url(/public/fonts/Unbounded-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: Unbounded;
+    src: url(/public/fonts/Unbounded-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Unbounded;
+    src: url(/public/fonts/Unbounded-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Unbounded;
+    src: url(/public/fonts/Unbounded-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: FordAntenna;
+    src: url(/public/fonts/FordAntenna-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: FordAntenna;
+    src: url(/public/fonts/FordAntenna-Medium.ttf);
+    font-weight: 500;
+}
+
+* input {
+    outline:none
+}
+
+.form {
+    width: 1600px;
+    height: 850px;
+}
+
+.form__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 171px 200px 0 200px
+}
+
+.form__left {
+    width: 834px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.form__left-text {
+    font-family: Unbounded;
+    font-size: 35px;
+    font-weight: 600;
+}
+.form__left-textGradient {
+    background: linear-gradient(149.4deg, #FFD916 7.88%, #FF1914 47.61%, #6705FF 92.65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.inputs-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.inputs-labelLeft {
+    font-family: Unbounded;
+    font-size: 16px;
+    font-weight: 300;
+    width: 80px;
+    position: relative;
+    bottom: 2px;
+}
+
+.form__left-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.form__left-input {
+    width: 834px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 0;
+}::placeholder {
+    font-family: FordAntenna;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.form__left-inputCheckbox {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.form__left-inputCheck {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+.label-checkbox {
+    font-family: FordAntenna;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.label-policy {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #000000;
+}
+
+.form__right {
+    width: 295px;
+}
+
+.form__right-img {
+    display: flex;
+    justify-content: center;
+}
+
+.form__right-imgItem {
+    background-image: url(/public/assets/sure3.svg);
+    width: 205px;
+    height: 205px;
+}
+
+.inputs-labelRight {
+    font-family: Unbounded;
+    font-size: 16px;
+    font-weight: 300;
+    width: 53px;
+    position: relative;
+    bottom: 2px;
+}
+
+.form__right-input {
+    width: 242px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 0;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-weight: 500;
+    color: #A4A4A4;
+}
+
+.input__right-to {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.form__right-upSub{
+    margin-top: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.form__right__buttonUpload {
+    width: 295px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: FordAntenna;
+    font-size: 18px;
+    font-weight: 300;
+    height: 45px;
+}
+
+.button-clip {
+    background-image: url(/public/UI/clip.svg);
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+}
+
+.form__submit {
+    width: 295px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: FordAntenna;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+}

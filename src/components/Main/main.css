@@ -1,0 +1,419 @@
+@font-face {
+    font-family: Unbounded;
+    src: url(/public/fonts/Unbounded-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: FordAntenna;
+    src: url(../../../public/fonts/FordAntenna-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: FordAntenna;
+    src: url(../../../public/fonts/FordAntenna-Regular.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(74.97deg, rgba(0, 0, 0, 0.83) -1.11%, rgba(0, 0, 0, 0.88) 62.15%, rgba(0, 0, 0, 0) 99.4%) #000000;
+    background-image: url(/public/assets/leftGradientMain.svg), 
+    url(/public/assets/rightGradientMain.svg), url(/public/assets/set.svg);
+    background-repeat: no-repeat;
+    background-position: left, right, center;
+    background-size: contain, contain, cover;
+    height: 850px;
+    display: flex;
+    justify-content: center;
+}
+
+.header__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1600px;
+}
+
+.header__nav {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    height: 50px
+}
+
+.header__title {
+    width: 1206px;
+    height: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-image: url(/public/assets/atom.svg);
+    background-repeat: no-repeat;
+    background-position: 15% -35px;
+    margin-top: 70px;
+}
+
+.header__title-itemOne {
+    font-family: Unbounded;
+    font-size: 90px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.header__title-itemTwo {
+    font-family: Unbounded;
+    font-size: 90px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-image: url(/public/assets/sure.svg);
+    background-repeat: no-repeat;
+    background-position: 97%;
+}
+
+.header__cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.header__card-influenceMusic {
+    background-image: url(/public/UI/enf2.svg);
+    width: 382px;
+    height: 200px;
+}
+.header__card-influenceCompany {
+    background-image: url(/public/UI/enf1.svg);
+    width: 382px;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.header__card-branding {
+    background-image: url(/public/UI/branding.svg);
+    width: 382px;
+    height: 200px;
+}
+
+.header__ticker{
+    background-color: #000000;
+}
+
+.header__ticker-item {
+    width: 200%;
+    height: 100px;
+    background-image: url(/public/UX/tickerStringSec.png);
+    animation: scroll 30s linear infinite;
+}
+
+.header__ticker-item:after {
+    background-image: url(/public/UX/tickerStringSec.png);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main__cards {
+    margin-top: 158px;
+    width: 1600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.main__cards-item {
+    width: 556px;
+    height: 230px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.item-img {
+    background-image: url(/public/UI/rhomb.svg);
+    background-repeat: no-repeat;
+    width: 29px;
+    height: 29px;
+}
+
+.main__cards-itemOne {
+    width: 556px;
+    height: 230px;
+    border: none;
+    border-radius: 10px;
+}
+
+.main__cards-itemBG {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    width: 1196px;
+    height: 230px;
+}
+
+.main__cards-itemTitle {
+    font-family: Unbounded;
+    font-size: 35px;
+    font-weight: 600;
+    padding: 30px 30px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main__cards-itemTitleOne {
+    font-family: Unbounded;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.main__cards-itemTitleImgBG {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 435px;
+}
+
+.main__cards-itemTitleBG {
+    font-family: Unbounded;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.main__cards-itemText {
+    font-family: FordAntenna;
+    font-size: 20px;
+    font-weight: 300;
+    width: 400px;
+    padding: 41px 0 30px 30px;
+}
+.main__cards-itemTextOne {
+    margin-top: 20px;
+    font-family: FordAntenna;
+    font-size: 20px;
+    font-weight: 400;
+}
+.main__cards-itemTextBG {
+    text-align: center;
+    width: 540px;
+    font-family: FordAntenna;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.item-gradient {
+    background: linear-gradient(122.33deg, #FFD916 -12.52%, #FF1914 39.36%, #6705FF 83.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: Unbounded;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.main__marketing {
+    margin-top: 146px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main__marketing-company {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 799px;
+    border: 1px solid #000000;
+    border-left: none;
+    height: 500px;
+}
+
+.main__marketing-music {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 799px;
+    border: 1px solid #000000;
+    border-right: none;
+    height: 500px;
+}
+
+.main__marketing-branding {
+    display: flex;
+    align-items: center;
+    width: 1260px;
+    height: 310px;
+    justify-content: center;
+}
+
+.main__marketingTitle {
+    font-family: FordAntenna;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.main__marketingText {
+    font-family: Unbounded;
+    font-size: 64px;
+    font-weight: 600;
+    width: 450px;
+    margin-bottom: 80px;
+}
+
+.main__marketingTextImg {
+    width: 1260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.main__marketingTextBG {
+    font-family: Unbounded;
+    font-size: 64px;
+    font-weight: 600;
+    width: 1020px;
+}
+
+.main__marketingArrowContainer {
+    width: 150px;
+}
+
+.main__marketingArrow {
+    background-image: url(/public/UI/arrowMarketing.svg);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 15px;
+}
+.main__marketingArrow:hover {
+    background-image: url(/public/UI/arrowMarketingHover.svg);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 15px;
+    transition: 0.2s;
+}
+
+.marketingGradient {
+    font-family: Unbounded;
+    font-size: 64px;
+    font-weight: 600;
+    background: linear-gradient(122.33deg, #FFD916 -12.52%, #FF1914 39.36%, #6705FF 83.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.main__idea {
+    height: 400px;
+    background-color: #000000;
+    width: 100%;
+    background-image: url(/public/assets/ideaGradient.svg);
+    background-repeat: no-repeat;
+    background-position: 400px -200px;
+    background-size: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 400px;
+}
+
+.main__idea-left {
+    width: 580px;
+    background-image: url(/public/assets/ideaLine.svg);
+    background-repeat: no-repeat;
+    background-size: 270px;
+    background-position: 300px 30px;
+}
+
+.main__idea-leftText {
+    color: #ffffff;
+    font-family: Unbounded;
+    font-size: 40px;
+    font-weight: 600;
+    width: 456px;
+}
+
+.main__idea-right {
+    overflow: hidden;
+}
+
+.img {
+    background-image: url(/public/assets/sure2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: SureScroll 20s linear infinite;
+    width: 224px;
+    height: 224px;
+    position: absolute;
+}
+
+.main__idea-rightText {
+    background-image: url(/public/assets/PathGroup.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    animation: TextScroll 20s linear infinite;
+    width: 224px;
+    height: 224px;
+    margin: 0;
+}
+
+@keyframes TextScroll {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes SureScroll {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.bottom__ticker {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.bottom_ticker-item {
+    width: 200%;
+    height: 100px;
+    background-image: url(/public/UX/bottomTickerString.png);
+    animation: scroll 30s linear infinite;
+}
+
+.bottom_ticker-item:after {
+    background-image: url(/public/UX/bottomTickerString.png);
+}

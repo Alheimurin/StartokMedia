@@ -1,0 +1,158 @@
+@font-face {
+    font-family: FordAntenna;
+    src: url(../../../public/fonts/FordAntenna-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: FordAntenna;
+    src: url(../../../public/fonts/FordAntenna-Regular.ttf);
+    font-weight: 500;
+}
+
+
+.header {
+    width: 1400px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 100px;
+}
+
+.header__logo {
+    background-image: url(/public/UX/logo.svg);
+    width: 185px;
+    height: 35px;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.header__navigation {
+    display: flex;
+}
+
+.header__list {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    height: 50px;
+    align-items: center;
+}
+
+.header__list-item {
+    font-family: FordAntenna;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000000;
+}
+
+.header__list__menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    height: 50px;
+}
+
+.menu {
+    background-image: url(/public/UI/arrow.svg);
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 5px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 125px;
+    height: 90px;
+    margin-top: 140px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.dropdown__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 16px 0 16px;
+}
+
+.dropdown__content-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 97px;
+    text-decoration: none;
+    font-family: FordAntenna;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dropdown__content-arrows{
+    background-image: url(/public/UI/arrow-up-right.svg);
+    width: 16px;
+    height: 18px;
+}
+
+.header__list__menu:hover .dropdown {
+    display: flex;
+}
+
+.header__right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header__listLang {
+    display: flex;
+    gap: 2px;
+    padding: 0;
+}
+
+.header__listLang-item {
+    font-family: FordAntenna;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid white;
+    width: 35px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.header__listLang-item:hover {
+    border: 1px solid #000000;
+}
+.header__listLang-item:focus {
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+.header__button {
+    width: 228px;
+    height: 50px;
+    background-color: #060606;
+    border: 1px solid;
+    border-radius: 100px;
+    color: #ffffff;
+    font-family: FordAntenna;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.header__button:hover {
+    background: url(/public/assets/buttonGradient.svg)
+}
