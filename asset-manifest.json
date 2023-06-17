@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/StartokMedia/static/css/main.b169edc8.css",
-    "main.js": "/StartokMedia/static/js/main.8d537646.js",
+    "main.css": "/StartokMedia/static/css/main.0d4d2924.css",
+    "main.js": "/StartokMedia/static/js/main.702e5be1.js",
     "static/media/WeChat.svg": "/StartokMedia/static/media/WeChat.1d162dd932eca0b115f1.svg",
     "static/media/Unbounded-SemiBold.ttf": "/StartokMedia/static/media/Unbounded-SemiBold.cb16a9e03403a3a0a1a6.ttf",
     "static/media/Unbounded-Medium.ttf": "/StartokMedia/static/media/Unbounded-Medium.cc4af91f728dfdfebfb5.ttf",
@@ -36,11 +36,11 @@
     "static/media/sure2.svg": "/StartokMedia/static/media/sure2.f1fae22a2fd48c987592.svg",
     "static/media/arrow-up-right.svg": "/StartokMedia/static/media/arrow-up-right.3179e35621ba832dc44b.svg",
     "static/media/arrow.svg": "/StartokMedia/static/media/arrow.9800a6ede52fd5fc6676.svg",
-    "main.b169edc8.css.map": "/StartokMedia/static/css/main.b169edc8.css.map",
-    "main.8d537646.js.map": "/StartokMedia/static/js/main.8d537646.js.map"
+    "main.0d4d2924.css.map": "/StartokMedia/static/css/main.0d4d2924.css.map",
+    "main.702e5be1.js.map": "/StartokMedia/static/js/main.702e5be1.js.map"
   },
   "entrypoints": [
-    "static/css/main.b169edc8.css",
-    "static/js/main.8d537646.js"
+    "static/css/main.0d4d2924.css",
+    "static/js/main.702e5be1.js"
   ]
 }
