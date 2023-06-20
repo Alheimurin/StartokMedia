@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/StartokMedia/static/css/main.070e7490.css",
-    "main.js": "/StartokMedia/static/js/main.746936eb.js",
+    "main.css": "/StartokMedia/static/css/main.2188482f.css",
+    "main.js": "/StartokMedia/static/js/main.3619502c.js",
     "static/media/WeChat.svg": "/StartokMedia/static/media/WeChat.1d162dd932eca0b115f1.svg",
     "static/media/Unbounded-SemiBold.ttf": "/StartokMedia/static/media/Unbounded-SemiBold.cb16a9e03403a3a0a1a6.ttf",
     "static/media/Unbounded-Medium.ttf": "/StartokMedia/static/media/Unbounded-Medium.cc4af91f728dfdfebfb5.ttf",
@@ -10,17 +10,20 @@
     "static/media/FordAntenna-Light.ttf": "/StartokMedia/static/media/FordAntenna-Light.70967a6f21b15ab3dfca.ttf",
     "static/media/FordAntenna-Regular.ttf": "/StartokMedia/static/media/FordAntenna-Regular.e6dcd18e4f7ed2db0942.ttf",
     "static/media/FordAntenna-Medium.ttf": "/StartokMedia/static/media/FordAntenna-Medium.bce6f32a18090b19bd87.ttf",
-    "static/media/set.svg": "/StartokMedia/static/media/set.670e7c31afd2d3ceac79.svg",
+    "static/media/mainGrid.svg": "/StartokMedia/static/media/mainGrid.670e7c31afd2d3ceac79.svg",
+    "static/media/requestWhiteTicker.png": "/StartokMedia/static/media/requestWhiteTicker.9fd40915f753b5852a72.png",
     "static/media/bottomTickerString.png": "/StartokMedia/static/media/bottomTickerString.2d80fe73c2081a0519ed.png",
     "static/media/branding.svg": "/StartokMedia/static/media/branding.0d7c8e0bdefd45d0e46e.svg",
     "static/media/enf1.svg": "/StartokMedia/static/media/enf1.c10637ff088804b6aa2b.svg",
-    "static/media/PathGroup.svg": "/StartokMedia/static/media/PathGroup.3c1049c62082cc39f8c1.svg",
+    "static/media/MainIdeaRightText.svg": "/StartokMedia/static/media/MainIdeaRightText.3c1049c62082cc39f8c1.svg",
     "static/media/tickerStringSec.png": "/StartokMedia/static/media/tickerStringSec.4b686a338dbe0b052ac9.png",
     "static/media/enf2.svg": "/StartokMedia/static/media/enf2.5fdad0f61016a32c0b6c.svg",
     "static/media/logo.svg": "/StartokMedia/static/media/logo.22d64a55f775d4235229.svg",
     "static/media/logoFooter.svg": "/StartokMedia/static/media/logoFooter.c07ee36e37fc3af04a07.svg",
+    "static/media/contactsSure.svg": "/StartokMedia/static/media/contactsSure.1b89c2c76f5d90eb0525.svg",
     "static/media/atom.svg": "/StartokMedia/static/media/atom.00aa2be37ec2dab34118.svg",
     "static/media/footerGradient.svg": "/StartokMedia/static/media/footerGradient.7d807a875d6cadc6119c.svg",
+    "static/media/otherPageGrid.svg": "/StartokMedia/static/media/otherPageGrid.050f2e6793075712c6cd.svg",
     "static/media/leftGradientMain.svg": "/StartokMedia/static/media/leftGradientMain.18d1fa5cfc5fdbca2b63.svg",
     "static/media/sure3.svg": "/StartokMedia/static/media/sure3.77c840f8404fe3669d65.svg",
     "static/media/rightGradientMain.svg": "/StartokMedia/static/media/rightGradientMain.a1282030120a276cc2d0.svg",
@@ -36,11 +39,11 @@
     "static/media/sure2.svg": "/StartokMedia/static/media/sure2.f1fae22a2fd48c987592.svg",
     "static/media/arrow-up-right.svg": "/StartokMedia/static/media/arrow-up-right.3179e35621ba832dc44b.svg",
     "static/media/arrow.svg": "/StartokMedia/static/media/arrow.9800a6ede52fd5fc6676.svg",
-    "main.070e7490.css.map": "/StartokMedia/static/css/main.070e7490.css.map",
-    "main.746936eb.js.map": "/StartokMedia/static/js/main.746936eb.js.map"
+    "main.2188482f.css.map": "/StartokMedia/static/css/main.2188482f.css.map",
+    "main.3619502c.js.map": "/StartokMedia/static/js/main.3619502c.js.map"
   },
   "entrypoints": [
-    "static/css/main.070e7490.css",
-    "static/js/main.746936eb.js"
+    "static/css/main.2188482f.css",
+    "static/js/main.3619502c.js"
   ]
 }
