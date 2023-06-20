@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/StartokMedia/static/css/main.186b15ed.css",
+    "main.css": "/StartokMedia/static/css/main.c9568875.css",
     "main.js": "/StartokMedia/static/js/main.42640012.js",
     "static/media/WeChat.svg": "/StartokMedia/static/media/WeChat.1d162dd932eca0b115f1.svg",
     "static/media/Unbounded-SemiBold.ttf": "/StartokMedia/static/media/Unbounded-SemiBold.cb16a9e03403a3a0a1a6.ttf",
@@ -37,15 +37,16 @@
     "static/media/rhomb.svg": "/StartokMedia/static/media/rhomb.9f47501601803a3e72a4.svg",
     "static/media/buttonGradient.svg": "/StartokMedia/static/media/buttonGradient.21647713a061b0453c2e.svg",
     "static/media/arrowMarketing.svg": "/StartokMedia/static/media/arrowMarketing.0ba8f2bab7a55d195692.svg",
+    "static/media/mainHeaderRhomb.svg": "/StartokMedia/static/media/mainHeaderRhomb.19e089da425c5c41ff3c.svg",
     "index.html": "/StartokMedia/index.html",
     "static/media/sure2.svg": "/StartokMedia/static/media/sure2.f1fae22a2fd48c987592.svg",
     "static/media/arrow-up-right.svg": "/StartokMedia/static/media/arrow-up-right.3179e35621ba832dc44b.svg",
     "static/media/arrow.svg": "/StartokMedia/static/media/arrow.9800a6ede52fd5fc6676.svg",
-    "main.186b15ed.css.map": "/StartokMedia/static/css/main.186b15ed.css.map",
+    "main.c9568875.css.map": "/StartokMedia/static/css/main.c9568875.css.map",
     "main.42640012.js.map": "/StartokMedia/static/js/main.42640012.js.map"
   },
   "entrypoints": [
-    "static/css/main.186b15ed.css",
+    "static/css/main.c9568875.css",
     "static/js/main.42640012.js"
   ]
 }
