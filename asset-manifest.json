@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/StartokMedia/static/css/main.2188482f.css",
-    "main.js": "/StartokMedia/static/js/main.3619502c.js",
+    "main.css": "/StartokMedia/static/css/main.186b15ed.css",
+    "main.js": "/StartokMedia/static/js/main.42640012.js",
     "static/media/WeChat.svg": "/StartokMedia/static/media/WeChat.1d162dd932eca0b115f1.svg",
     "static/media/Unbounded-SemiBold.ttf": "/StartokMedia/static/media/Unbounded-SemiBold.cb16a9e03403a3a0a1a6.ttf",
     "static/media/Unbounded-Medium.ttf": "/StartokMedia/static/media/Unbounded-Medium.cc4af91f728dfdfebfb5.ttf",
@@ -26,8 +26,10 @@
     "static/media/otherPageGrid.svg": "/StartokMedia/static/media/otherPageGrid.050f2e6793075712c6cd.svg",
     "static/media/leftGradientMain.svg": "/StartokMedia/static/media/leftGradientMain.18d1fa5cfc5fdbca2b63.svg",
     "static/media/sure3.svg": "/StartokMedia/static/media/sure3.77c840f8404fe3669d65.svg",
+    "static/media/contactsLeftGradient.svg": "/StartokMedia/static/media/contactsLeftGradient.19ceccfbb4274a29fa60.svg",
     "static/media/rightGradientMain.svg": "/StartokMedia/static/media/rightGradientMain.a1282030120a276cc2d0.svg",
     "static/media/ideaGradient.svg": "/StartokMedia/static/media/ideaGradient.269e70dca1d074bcc3d7.svg",
+    "static/media/contactsRightGradient.svg": "/StartokMedia/static/media/contactsRightGradient.420d0cee48e7265cd1ba.svg",
     "static/media/clip.svg": "/StartokMedia/static/media/clip.933d60ab5df23b196881.svg",
     "static/media/ideaLine.svg": "/StartokMedia/static/media/ideaLine.d54cd92337e2cd36c948.svg",
     "static/media/arrowMarketingHover.svg": "/StartokMedia/static/media/arrowMarketingHover.3c5eafbe35028af34d5c.svg",
@@ -39,11 +41,11 @@
     "static/media/sure2.svg": "/StartokMedia/static/media/sure2.f1fae22a2fd48c987592.svg",
     "static/media/arrow-up-right.svg": "/StartokMedia/static/media/arrow-up-right.3179e35621ba832dc44b.svg",
     "static/media/arrow.svg": "/StartokMedia/static/media/arrow.9800a6ede52fd5fc6676.svg",
-    "main.2188482f.css.map": "/StartokMedia/static/css/main.2188482f.css.map",
-    "main.3619502c.js.map": "/StartokMedia/static/js/main.3619502c.js.map"
+    "main.186b15ed.css.map": "/StartokMedia/static/css/main.186b15ed.css.map",
+    "main.42640012.js.map": "/StartokMedia/static/js/main.42640012.js.map"
   },
   "entrypoints": [
-    "static/css/main.2188482f.css",
-    "static/js/main.3619502c.js"
+    "static/css/main.186b15ed.css",
+    "static/js/main.42640012.js"
   ]
 }
