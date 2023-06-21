@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom"
 
 import './navbar.css'
-
+import '../fonts/Fonts.css'
 
 function NavBar () {
     return (
-        <div className="header">
-            <Link className="header__logo"></Link>
-            <div className="header__left">
-                <nav className="header__navigation">
-                    <div className="header__list">
-                        <div className="header__list__menu">
-                            <Link className="header__list-item">INFLUENCE</Link>
-                            <span className="menu"></span>
+        <div className="navBar">
+            <Link className="navBar__logo"></Link>
+            <div className="navBar__left">
+                <nav className="navBar__center">
+                    <div className="navBar__list">
+                        <div className="navBar__list__menu">
+                            <Link className="navBar__list-item">INFLUENCE</Link>
+                            <svg className="menuArrow"></svg>
                             <div className="dropdown">
                                 <div className="dropdown__content">
-                                    <div>
-                                        <Link className="dropdown__content-links">
+                                    <div className="dropdown__content-linksContainer">
+                                        <Link to='companya' className="dropdown__content-links">
                                             BRAND
                                             <svg className="dropdown__content-arrows"></svg>
                                         </Link>
@@ -30,20 +30,20 @@ function NavBar () {
                                 </div>
                             </div>
                         </div>
-                        <Link className="header__list-item">BRANDING</Link>
-                        <Link className="header__list-item">КОНТАКТЫ</Link>
+                        <Link className="navBar__list-item">BRANDING</Link>
+                        <Link to='contacts' className="navBar__list-item">КОНТАКТЫ</Link>
                     </div>
                 </nav>
             </div>
-            <div className="header__right">
-                <nav className="header__navigation">
-                    <div className="header__listLang">
-                        <button autoFocus className="header__listLang-item">RU</button>
-                        <button disabled='disabled' className="header__listLang-item">EN</button>
-                        <button disabled='disabled' className="header__listLang-item">CH</button>
+            <div className="navBar__right">
+                <nav className="navBar__navigation">
+                    <div className="navBar__listLang">
+                        <button autoFocus className="navBar__listLang-item">RU</button>
+                        <button disabled='disabled' className="navBar__listLang-item">EN</button>
+                        <button disabled='disabled' className="navBar__listLang-item">CH</button>
                     </div>
                 </nav>
-                <button className="header__button">Оставить заявку</button>
+                <button className="navBar__button">Оставить заявку</button>
             </div>
         </div>
     )

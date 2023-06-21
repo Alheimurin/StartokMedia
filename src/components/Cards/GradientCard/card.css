@@ -1,0 +1,45 @@
+.card__container {
+    width: 382px;
+    height: 200px;
+    border-radius: 10px;
+    background: linear-gradient(245deg, #FFD916, #FF1914, #6705FF);
+}
+
+.card__img-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.card__img {
+    background-image: url(/public/UI/cardArrow.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin: 20px 20px 0 0;
+}
+
+
+.card__content {
+    margin-top: 33px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__title {
+    font-family: Unbounded;
+    font-size: 24px;
+    font-weight: 600px;
+    width: 195px;
+    text-align: center;
+}
+
+.card__text {
+    font-family: FordAntenna;
+    font-size: 12px;
+    font-weight: 500;
+    width: 195px;
+    text-align: center;
+}

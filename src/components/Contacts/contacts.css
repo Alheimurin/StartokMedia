@@ -1,0 +1,74 @@
+.contacts__header {
+    width: 100%;
+    min-height: 600px;
+    background: black;
+    background-image: url(/public/assets/otherPageGrid.svg)
+}
+
+.gradients {
+    background-image: url(/public/assets/contactsLeftGradient.svg), url(/public/assets/contactsRightGradient.svg);
+    background-repeat: no-repeat;
+    background-position: top left, right;
+}
+
+.contacts__header-nav {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.contacts__header-container {
+    margin: 73px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 94px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.contacts__header-img {
+    background-image: url(/public/UI/contactsSure.svg);
+    width: 374px;
+    height: 374px;
+}
+
+.contacts__header-contactsTitle {
+    font-family: Unbounded;
+    font-size: 83px;
+    font-weight: 600;
+}
+
+.contacts__header-contactsContainer {
+    min-width: 615px;
+}
+
+.contacts__header-contactsTextContainer {
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.contacts__header-contactsBox {
+    width: 281px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.contacts__header-contactsTextTitle {
+    font-family: Unbounded;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contacts__header-contactsText {
+    font-family: FordAntenna;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.conntections {
+    display: flex;
+    gap: 14px;
+}

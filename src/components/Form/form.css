@@ -1,47 +1,20 @@
-@font-face {
-    font-family: Unbounded;
-    src: url(/public/fonts/Unbounded-Light.ttf);
-    font-weight: 300;
-}
-@font-face {
-    font-family: Unbounded;
-    src: url(/public/fonts/Unbounded-Regular.ttf);
-    font-weight: 400;
-}
-@font-face {
-    font-family: Unbounded;
-    src: url(/public/fonts/Unbounded-Medium.ttf);
-    font-weight: 500;
-}
-@font-face {
-    font-family: Unbounded;
-    src: url(/public/fonts/Unbounded-SemiBold.ttf);
-    font-weight: 600;
-}
-@font-face {
-    font-family: FordAntenna;
-    src: url(/public/fonts/FordAntenna-Light.ttf);
-    font-weight: 300;
-}
-@font-face {
-    font-family: FordAntenna;
-    src: url(/public/fonts/FordAntenna-Medium.ttf);
-    font-weight: 500;
-}
-
 * input {
     outline:none
 }
 
 .form {
-    width: 1600px;
+    width: 100%;
     height: 850px;
+    display: flex;
+    align-items: center;
 }
 
 .form__item {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 171px 200px 0 200px
+    justify-content: center;
+    gap: 70px;
+    padding: 0 auto 0 auto;
 }
 
 .form__left {
@@ -66,13 +39,12 @@
 .inputs-form {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 .inputs-labelLeft {
     font-family: Unbounded;
     font-size: 16px;
     font-weight: 300;
-    width: 80px;
+    min-width: 76px;
     position: relative;
     bottom: 2px;
 }
@@ -89,10 +61,17 @@
     border: none;
     border-bottom: 1px solid #000000;
     padding: 0;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-weight: 500;
 }::placeholder {
     font-family: FordAntenna;
     font-size: 16px;
     font-weight: 300;
+}
+
+.wLabel::placeholder {
+    padding-left: 10px;
 }
 
 .form__left-inputCheckbox {
@@ -120,7 +99,11 @@
 }
 
 .form__right {
-    width: 295px;
+    max-width: 295px;
+}
+
+.form__right-container {
+    min-width: 295px;
 }
 
 .form__right-img {
@@ -129,7 +112,7 @@
 }
 
 .form__right-imgItem {
-    background-image: url(/public/assets/sure3.svg);
+    background-image: url(/public/UI/sure3.svg);
     width: 205px;
     height: 205px;
 }
@@ -138,7 +121,7 @@
     font-family: Unbounded;
     font-size: 16px;
     font-weight: 300;
-    width: 53px;
+    min-width: 53px;
     position: relative;
     bottom: 2px;
 }
@@ -153,6 +136,7 @@
     font-size: 14px;
     font-weight: 500;
     color: #A4A4A4;
+    background-color: white;
 }
 
 .input__right-to {
@@ -169,7 +153,7 @@
 }
 
 .form__right__buttonUpload {
-    width: 295px;
+    min-width: 295px;
     height: 50px;
     border-radius: 10px;
     background-color: #ffffff;
@@ -197,7 +181,7 @@
 }
 
 .form__submit {
-    width: 295px;
+    min-width: 295px;
     height: 50px;
     display: flex;
     justify-content: center;

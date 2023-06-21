@@ -1,16 +1,4 @@
-@font-face {
-    font-family: FordAntenna;
-    src: url(/public/fonts/FordAntenna-Light.ttf);
-    font-weight: 300;
-}
-@font-face {
-    font-family: Unbounded;
-    src: url(/public/fonts/Unbounded-SemiBold.ttf);
-    font-weight: 600;
-}
-
-
-footer {
+.footer__content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -18,25 +6,27 @@ footer {
     color: white;
     background-color: rgba(0, 0, 0, 1);
     background-image: url(/public/assets/footerGradient.svg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 230px;
     padding-top: 80px;
 }
 
-.footer {
-    width: 1600px;
+.footer__container {
+    width: 1400px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .footer__left {
+    max-width: 250px;
+    max-height: 100%; 
+}
+
+.footer__leftContainer {
     display: flex;
     flex-wrap: wrap;
-    width: 403px;
-    gap: 200px;
-    padding-left: 100px;
+    row-gap: 200px;
 }
 
 .footer__left-img {
@@ -46,7 +36,6 @@ footer {
 }
 
 .footer__left-policy {
-    width: 303px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -56,6 +45,7 @@ footer {
     font-family: FordAntenna;
     font-size: 14px;
     font-weight: 300;
+    width: 250px;
 }
 
 .footer__left-policyText {
@@ -67,15 +57,16 @@ footer {
 }
 
 .footer__right {
-    width: 715px;
+    max-width: 715px;
     display: flex;
     flex-wrap: wrap;
-    padding-right: 100px;
 }
 
 .footer__rightTOP {
     display: flex;
+    justify-content: space-between;
     gap: 55px;
+    width: 800px;
 }
 
 .footer__right-item {
@@ -100,16 +91,17 @@ footer {
     font-weight: 300;
     text-decoration: none;
     color: white;
-    width: 183px;
+    width: 185px;
 }
 
 .footer__rightBOTTOM {
     padding-top: 75px;
+    width: 620px;
 }
 
 .footer__right-QR {
     display: flex;
-    gap: 100px; 
+    justify-content: space-between;
 }
 
 .footer__right-QRItem {
@@ -162,7 +154,7 @@ footer {
 } 
 
 .footer__bottom {
-    padding-top: 85px;
+    padding-top: 80px;
     width: 100%;
 }
 
@@ -172,6 +164,7 @@ footer {
     align-items: center;
     justify-content: center;
     border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 .footer__bottomText {

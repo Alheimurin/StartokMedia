@@ -1,0 +1,7 @@
+.requestBlackTicker {
+    background-image: url(/public/UX/requestBlackTicker.png);
+    width: 300%;
+    height: 98px;
+    background-color: white;
+    animation: scroll 30s linear infinite
+}

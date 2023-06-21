@@ -4,10 +4,10 @@ import './footer.css'
 
 function Footer () {
     return (
-        <footer>
-            <>
-            <div className='footer'>
+        <footer className='footer__content'>
+            <div className='footer__container'>
                 <div className='footer__left'>
+                <div className="footer__leftContainer">
                     <div>
                         <svg className='footer__left-img'></svg>
                     </div>
@@ -22,6 +22,7 @@ function Footer () {
                             в Российской Федерации
                         </p>
                     </div>
+                </div>
                 </div>
 
 
@@ -96,7 +97,6 @@ function Footer () {
                         <h2 className='footer__bottomText'>© Copyright 2023, Все права защищены</h2>
                     </div>
             </div>
-            </>
         </footer>
     )
 }

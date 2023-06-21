@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import './form.css'
+import '../fonts/Fonts.css'
 
 function Form () {
     return (
@@ -11,13 +12,13 @@ function Form () {
                     <div className='form__left-inputs'>
                         <div className='inputs-form'>
                             <label className='inputs-labelLeft' htmlFor="">От кого</label>
-                            <input className='form__left-input' type="text" placeholder='Компания' />
+                            <input className='form__left-input wLabel' type="text" placeholder='Компания' />
                         </div>
                         <input className='form__left-input' type="text" placeholder='Имя'/>
                         <input className='form__left-input' type="text" placeholder='Телефон' />
                         <div className='inputs-form'>
                             <label className='inputs-labelLeft' htmlFor="">Откуда</label>
-                            <input className='form__left-input' type="text" placeholder='Email' />
+                            <input className='form__left-input wLabel' type="text" placeholder='Email' />
                         </div>
                         <input className='form__left-input' type="text" placeholder='Комментарий' />
                         <div className='form__left-inputCheckbox'>
@@ -28,7 +29,7 @@ function Form () {
                 </div>
 
                 <div className="form__right">
-                    <div>
+                    <div className='form__right-container'>
                         <div className='form__right-img'>
                             <svg className='form__right-imgItem' />
                         </div>
