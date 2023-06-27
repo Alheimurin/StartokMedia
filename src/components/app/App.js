@@ -4,21 +4,31 @@ import { BrowserRouter, Route, Routes, createBrowserRouter } from "react-router-
 import MainPage from '../../pages/MainPage'
 import ContactPage from '../../pages/ContactPage'
 import CompanyBrandPage from '../../pages/CompanyBrandPage'
+import MusicArtistPage from '../../pages/MusicArtistPage'
+import IdentityPage from '../../pages/IdentityPage'
 
 import './app.css'
 
 const router = createBrowserRouter([
   {
-  path: "/StartokMedia",
+  path: "/",
   element: <MainPage/>
   },
   {
-    path: "/StartokMedia/contacts",
+    path: "contacts",
     element: <ContactPage/>
   },
   {
-    path: "/StartokMedia/company",
+    path: "company",
     element: <CompanyBrandPage/>
+  },
+  {
+    path: "music",
+    element: <MusicArtistPage/>
+  },
+  {
+    path: "identity",
+    element: <IdentityPage/>
   }
 ])
 
@@ -26,9 +36,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/StartokMedia" element={<MainPage/>}></Route>
-        <Route path="/StartokMedia/contacts" element={<ContactPage/>}></Route>
-        <Route path="/StartokMedia/company" element={<CompanyBrandPage/>}></Route>
+        <Route path="/" element={<MainPage/>}></Route>
+        <Route path="contacts" element={<ContactPage/>}></Route>
+        <Route path="company" element={<CompanyBrandPage/>}></Route>
+        <Route path="music" element={<MusicArtistPage/>}></Route>
+        <Route path="identity" element={<IdentityPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );

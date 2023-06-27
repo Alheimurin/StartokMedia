@@ -8,7 +8,7 @@
 .card__img-container {
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .card__img {
@@ -21,6 +21,7 @@
 
 
 .card__content {
+    color: #ffffff;
     margin-top: 33px;
     display: flex;
     flex-wrap: wrap;

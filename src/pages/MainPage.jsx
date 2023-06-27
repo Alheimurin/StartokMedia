@@ -1,3 +1,9 @@
 import Main from '../components/Main/Main'
 
-export default Main
+function MainPage () {
+    return (
+        <Main/>
+    )
+}
+
+export default MainPage

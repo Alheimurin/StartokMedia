@@ -1,0 +1,26 @@
+.imgContainer {
+    height: 230px;
+    width: 283px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.integration__contentImg {
+    width: 283px;
+    height: 149px;
+    background-color: #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.integration__img { 
+}
+
+.integration__contentImgText {
+    font-family: FordAntenna;
+    font-size: 20px;
+    font-weight: 500;
+}

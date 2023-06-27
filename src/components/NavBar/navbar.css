@@ -1,3 +1,8 @@
+.navBarComponent {
+    display: flex;
+    justify-content: center;
+}
+
 .navBar {
     width: 1400px;
     height: 50px;

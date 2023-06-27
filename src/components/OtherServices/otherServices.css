@@ -1,3 +1,14 @@
+.otherServicesComponent {
+    display: flex;
+    justify-content: center;
+}
+
+.otherServices {
+    background-image: url(/public/assets/otherSevicesAtom.svg);
+    background-repeat: no-repeat;
+    background-position: right 6% top 19%;
+}
+
 .otherServices__container {
     width: 1200px;
     margin: 100px 0;
@@ -13,14 +24,15 @@
     margin-top: 93px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .otherServices__content {
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
+    align-items: flex-start;
     gap: 40px;
-    width: 44.5%;
+    width: 45%;
 }
 
 .otherServices__contentTitle {
@@ -33,6 +45,8 @@
     font-family: FordAntenna;
     font-size: 20px;
     font-weight: 300;
+    width: 540px;
+    /* min-height: 180px; */
 }
 
 .otherServices__contentLink {

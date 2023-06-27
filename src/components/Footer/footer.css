@@ -110,39 +110,29 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    text-decoration: none;
+}
+
+.QRBlock {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 74px;
+    width: 74px;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .footer__right-QRWe {
     background-image: url(/public/UX/WeChat.svg);
-    background-repeat: no-repeat;
-    height: 74px;
-    width: 74px;
-    background-color: white;
-    border-radius: 5px;
 }
 .footer__right-QRLinked {
-    background-image: url(/public/UX/WeChat.svg);
-    background-repeat: no-repeat;
-    height: 74px;
-    width: 74px;
-    background-color: white;
-    border-radius: 5px;
+    background-image: url(/public/UX/Linked.svg);
 }
 .footer__right-QREmail {
-    background-image: url(/public/UX/WeChat.svg);
-    background-repeat: no-repeat;
-    height: 74px;
-    width: 74px;
-    background-color: white;
-    border-radius: 5px;
+    background-image: url(/public/UX/Email.svg);
 }
 .footer__right-QRWApp {
-    background-image: url(/public/UX/WeChat.svg);
-    background-repeat: no-repeat;
-    height: 74px;
-    width: 74px;
-    background-color: white;
-    border-radius: 5px;
+    background-image: url(/public/UX/WApp.svg);
 }
 
 .footer__right-QRTitle {

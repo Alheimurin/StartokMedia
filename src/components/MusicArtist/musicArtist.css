@@ -1,0 +1,55 @@
+.musicArtists__header {
+    width: 100%;
+    height: 600px;
+    background-image: 
+    url(/public/assets/otherPageGrid.svg),
+    url(/public/assets/musicArtistleftGradient.svg),
+    url(/public/assets/musicArtistRightGradient.svg);
+    background-repeat: repeat, no-repeat, no-repeat;
+    background-color: #000000;
+    background-size: contain, 800px 1000px, contain;
+    background-position: center, top left -50px, right;
+}
+
+.musicArtists__nav {
+    padding-top: 30px;
+    height: 50px;
+}
+
+.musicArtists__header-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 112px;
+    background-image: url(/public/UI/star.svg);
+    background-repeat: no-repeat;
+    background-position: 38% 12%;
+}
+
+.musicArtists__header-content {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px 0 15px;
+    color: #ffffff;
+}
+
+.musicArtists__header-contentContainer {
+    width: 550px;
+}
+
+.musicArtists__title {
+    font-family: FordAntenna;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.musicArtists__text {
+    font-family: Unbounded;
+    font-size: 83px;
+    font-weight: 600;
+}
+
+.musicArtists__card {
+    transform: rotate(-2deg);
+}

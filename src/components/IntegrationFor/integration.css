@@ -1,0 +1,81 @@
+.integrationComponent {
+    display: flex;
+    justify-content: center;
+}
+
+.integration__container {
+    width: 1200px;
+    margin: 100px 0 100px 0;
+}
+
+.integration___content-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    row-gap: 40px;
+}
+
+.integration__contentTitle {
+    font-family: Unbounded;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.integration__contentText {
+    font-family: FordAntenna;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+
+.small-text {
+    width: 725px;
+}
+
+.integration-gradient {
+    background: linear-gradient(91.8deg, #FFD916, #FF1914, #6705FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+    .integration__cards {
+        display: flex;
+        justify-content: space-between;
+        margin: 80px 0 80px 0;
+    }
+
+.centerLine {
+    height: 150px;
+    color: rgba(0, 0, 0, 0.28);
+}
+
+.integration__connection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+}
+
+.connectText {
+    margin-left: 50px;
+    width: 400px;
+}
+
+.integration__connectButton {
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 265px;
+    height: 50px;
+    font-family: FordAntenna;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 50px;
+}

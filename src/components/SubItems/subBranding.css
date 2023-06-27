@@ -1,0 +1,39 @@
+.subBranding-component {
+    display: flex;
+}
+
+.subBranding-container {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: 650px;
+    align-items: center;
+}
+
+.subBranding-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 500px;
+}
+
+.subBranding-img {
+    height: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.subBranding-title {
+    font-family: Unbounded;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.subBranding-text {
+    font-family: FordAntenna;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    height: 150px;
+}

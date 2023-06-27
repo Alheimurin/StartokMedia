@@ -84,7 +84,7 @@ function Main () {
                             <Link className='main__content-marketingCompany arrows'>
                                 <div>
                                     <h3 className='main__content-marketingTitle'>Influencer Marketing</h3>
-                                    <p className='main__content-marketingText'>COMPANY <span className='marketingGradient'>&</span> BRAND</p>
+                                    <p className='main__content-marketingText'>COMPANY <span className='main__content-marketingTextGradient'>&</span> BRAND</p>
                                     <div className='main__content-marketingArrowContainer'>
                                         <svg className='main__content-marketingArrow main__content-marketingArrowAfter'></svg>
                                     </div>
@@ -93,7 +93,7 @@ function Main () {
                             <Link className='main__content-marketingMusic arrows'>
                                 <div>
                                     <h3 className='main__content-marketingTitle'>Influencer Marketing</h3>
-                                    <p className='main__content-marketingText'> MUSIC <br /> <span className='marketingGradient'>&</span> ARTISTS</p>
+                                    <p className='main__content-marketingText'> MUSIC <br /> <span className='main__content-marketingTextGradient'>&</span> ARTISTS</p>
                                     <div className='main__content-marketingArrowContainer'>
                                         <svg className='main__content-marketingArrow'></svg>
                                     </div>
@@ -109,7 +109,7 @@ function Main () {
                                             UX/UI-DESIGN
                                         </p>
                                         <div className='main__content-marketingArrowContainer'>
-                                            <Link><svg className='main__content-marketingArrow'></svg></Link>
+                                            <svg className='main__content-marketingArrow'></svg>
                                         </div>
                                     </div>
                                 </div>
