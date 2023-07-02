@@ -1,14 +1,13 @@
 .contacts__header {
-    width: 100%;
     min-height: 600px;
     background: black;
-    background-image: url(/public/assets/otherPageGrid.svg)
-}
-
-.gradients {
-    background-image: url(/public/assets/contactsLeftGradient.svg), url(/public/assets/contactsRightGradient.svg);
-    background-repeat: no-repeat;
-    background-position: top left, right;
+    background-image: 
+    url(/public/assets/contactsLeftGradient.svg), 
+    url(/public/assets/contactsRightGradient.svg),
+    url(/public/assets/otherPageGrid.svg);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: left top, right, center;
+    background-size: 700px 1000px, contain, contain;
 }
 
 .contacts__header-nav {
@@ -18,7 +17,7 @@
 }
 
 .contacts__header-container {
-    margin: 73px 0;
+    margin: 70px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,6 +65,8 @@
     font-family: FordAntenna;
     font-size: 14px;
     font-weight: 300;
+    text-decoration: none;
+    color: #fff;
 }
 
 .conntections {

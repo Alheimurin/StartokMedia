@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes, createBrowserRouter } from "react-router-dom";
 
-
 import MainPage from '../../pages/MainPage'
 import ContactPage from '../../pages/ContactPage'
 import CompanyBrandPage from '../../pages/CompanyBrandPage'

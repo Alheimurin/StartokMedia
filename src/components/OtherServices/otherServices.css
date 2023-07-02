@@ -63,3 +63,7 @@
     text-decoration: none;
     color: #000000;
 }
+.otherServices__contentLink:hover {
+    background-color: rgba(240, 240, 240, 1);
+    color: #000000;
+}

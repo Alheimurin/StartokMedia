@@ -1,10 +1,12 @@
 .identity__header {
-    background-image: url(/public/assets/otherPageGrid.svg),
+    background-image:
     url(/public/assets/identityLeftGradient.svg),
-    url(/public/assets/identityRightGradient.svg);
-    background-repeat: repeat, no-repeat, no-repeat;
+    url(/public/assets/identityRightGradient.svg),
+    url(/public/assets/otherPageGrid.svg);
+    background-repeat: no-repeat, no-repeat, repeat;
     background-color: #000000;
-    background-position: center, left, right top;
+    background-position: left, right top, center;
+    background-size: contain, 700px 1300px, contain;
     height: 600px;
 }
 
@@ -22,8 +24,9 @@
 .identity__header-content {
     width: 1200px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    height: 260px;
 }
 
 .identity__header-title {
@@ -36,11 +39,12 @@
     font-family: Unbounded;
     font-size: 83px;
     font-weight: 600;
-    width: 800px;
+    width: 720px;
 }
 
 .identity__header-card {
-    transform: rotate(-2deg)
+    transform: rotate(-2deg) scale(1.2);
+    width: 420px;
 }
 
 .identity__style {
@@ -112,24 +116,48 @@
 }
 
 .identity__dev-button {
-    margin-top: 80px;
+    margin-top: 130px;
 }
 
 @keyframes SlideBack {
     0% {
-        transform: scale(1);
+        transform: translateX(105px);
+        z-index: 0;
+    }
+    20% {
+        transform: translateX(105px);
+        z-index: 0;
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    80% {
+        transform: translateX(105px) scale(1.163);
+        z-index: 1;
     }
     100% {
-        transform: scale(0.3);
+        transform: translateX(105px) scale(1.163);
+        z-index: 1;
     }
 }
 
 @keyframes SlideFront {
     0% {
-        transform: scale(0.3);
+        transform: translateX(-100px);
+    }
+    20% {
+        transform: translateX(-100px);
+    }
+    50% {
+        transform: translateX(20px) scale(0.865);
+    }
+    80% {
+        transform: translateX(-80px) scale(0.865);
+        z-index: 0;
     }
     100% {
-        transform: scale(1)
+        transform: translateX(-80px) scale(0.865);
+        z-index: 0;
     }
 }
 
@@ -138,15 +166,16 @@
     align-items: center;
 }
 
-/* .dev-imgOne {
+.dev-imgOne {
     position: relative;
-    animation: SlideBack 5s linear infinite alternate;
-}
+    animation: SlideBack 5s linear infinite alternate forwards;
+} 
 
 .dev-imgTwo {
     position: relative;
-    animation: SlideFront 5s linear infinite alternate;
-} */
+    animation: SlideFront 5s linear infinite alternate forwards;
+}
+
 
 .identity__dev-sub {
     display: flex;

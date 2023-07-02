@@ -1,0 +1,122 @@
+input {
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 0;
+    font-family: FordAntenna;
+    font-size: 16px;
+    font-weight: 300
+}
+input::placeholder {
+    padding: 0;
+    font-family: FordAntenna;
+    font-size: 16px;
+    font-weight: 300
+}
+
+.formPopUpComponent {
+    width: 834px;
+    height: 474px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.formPopUp__Container {
+    width: 774px;
+    margin-top: 20px;
+}
+
+.formPopUp__Logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.formPopUp__Title {
+    font-family: Unbounded;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.formPopUp__Text {
+    font-family: FordAntenna;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.formPopUp__inputsBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.formPopUp__inputs {
+    display: flex;
+    width: 774px;
+    justify-content: space-between;
+}
+
+.formPopUp__input {
+    width: 345px;
+    padding-bottom: 10px;
+}
+
+.formPopUp__inputChecbox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.formPopUp__inputChecboxItem {
+    width: 20px;
+    height: 20px;
+}
+
+.formPopUp__inputBottom {
+    width: 774px;
+    padding-bottom: 10px;
+}
+
+.formPopUp__buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formPopUpBtn {
+    width: 345px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: FordAntenna;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.formPopUp__buttonsUpload {
+    border: 1px solid #000000;
+    background: #ffffff;
+}
+.formPopUp__buttonsUpload:hover {
+    background: rgba(240, 240, 240, 1);
+}
+
+.formPopUp__buttonsUploadContent {
+    display: flex;
+    gap: 10px
+}
+
+.formPopUp__buttonsSubmit {
+    color: #ffffff;
+    background: #000000;
+    border: none;
+}
+
+.formPopUp__buttonsSubmit:hover {
+    background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
+}

@@ -30,7 +30,7 @@ function CompanyBrand() {
                             </div>
 
                             <div className='company__header-containerCard'>
-                                <Card title='Influence' text='Company & Brand' />
+                                <Card title='INFLUENCE' text='Company & Brand' />
                             </div>
                         </div>
 

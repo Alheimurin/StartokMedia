@@ -9,7 +9,7 @@ function Footer () {
                 <div className='footer__left'>
                 <div className="footer__leftContainer">
                     <div>
-                        <svg className='footer__left-img'></svg>
+                        <Link to='/' className='footer__left-img'></Link>
                     </div>
                     <div className='footer__left-policy'>
                         <h2 className='footer__left-policyTitle'>

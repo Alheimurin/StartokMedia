@@ -12,26 +12,29 @@ function Main () {
     return (
         <div>
             <header className='main__header'>
-                <div className='main__header-grid'>
                     <div className='main__header-nav'>
                         <NavBar/>
                     </div>
 
                     <div className='main__header-container'>
-
-                    
-                    <div className='main__header-containerTitle'>
-                        <h1 className='main__header-containerItemOne'>INFLUENCER</h1>
-                        <h1 className='main__header-containerItemTwo'>MARKETING AGENCY</h1>
+                        <div className='main__header-containerTitle'>
+                            <div>
+                                <h1 className='main__header-containerItemOne'>INFLUENCER</h1>
+                                <h1 className='main__header-containerItemTwo'>MARKETING AGENCY</h1>
+                            </div>
+                        </div>
+                        <nav className='main__header-cards'>
+                            <Link className='main__header-cardsInfluenceMusic mainHeaderCard'>
+                                <img className='cardImg' src="/UI/mainHeaderCards/Branding.svg" alt="" />
+                            </Link>
+                            <Link className='main__header-cardsInfluenceCompany mainHeaderCard'>
+                                <img className='cardImg' src="/UI/mainHeaderCards/Branding.svg" alt="" />
+                            </Link>
+                            <Link className='main__header-cardsBranding mainHeaderCard'>
+                                <img className='cardImg' src="/UI/mainHeaderCards/Branding.svg" alt="" />
+                            </Link>
+                        </nav>
                     </div>
-                    
-                    <nav className='main__header-cards'>
-                        <Link className='main__header-cardsInfluenceMusic'></Link>
-                        <Link className='main__header-cardsInfluenceCompany'></Link>
-                        <Link className='main__header-cardsBranding'></Link>
-                    </nav>
-                    </div>
-                </div>
                 </header>
 
                 <div className='main__header-ticker'>
@@ -67,14 +70,20 @@ function Main () {
                                 <p className='main__content-cardsItemText'>Авторов в СНГ с возможностью индивидуального подбора блогеров в ОАЭ, Китае и Индии</p>
                             </div>
                             <div className='main__content-cardsItemBig'>
-                                <div className='main__content-cardsItemTitleImgBig'>
+                                <div className='image-big'>
+                                    <svg className='item-img'></svg>
+                                </div>
+                            
+                                <div className='main__content-cardsItemBigContent'>
                                     <h2 className='main__content-cardsItemTitleBig'>
                                         Оперативный
                                     </h2>
-                                    <svg className='item-img'></svg>
+
+                                    <div className='main__content-bigText'>
+                                        <p className='main__content-cardsItemTextBig'>Менеджмент для достижения поставленных целей в кратчайшие сроки</p>
+                                    </div>
                                 </div>
                                 
-                                <p className='main__content-cardsItemTextBig'>Менеджмент для достижения поставленных целей в кратчайшие сроки</p>
                             </div>
                         </div>
 

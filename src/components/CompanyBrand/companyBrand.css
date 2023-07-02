@@ -1,11 +1,13 @@
 .company__header {
     background-color: #000000;
     height: 600px;
-    background-image: url(/public/assets/otherPageGrid.svg), 
+    background-image: 
     url(/public/assets/companyLeftGradient.svg),
-    url(/public/assets/companyRightGradient.svg);
-    background-repeat: repeat, no-repeat, no-repeat;
-    background-position: center, left top, right top;
+    url(/public/assets/companyRightGradient.svg),
+    url(/public/assets/otherPageGrid.svg);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: left top, right 30px top 30px, center;
+    background-size: 800px 800px, 1200px 1200px, contain;
 }
 
 .company__header-nav {
@@ -30,10 +32,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.company__header-сontent {
-    padding: 0 15px 0 15px;
+    height: 260px;
 }
 
 .company__header-containerTitle {
@@ -50,7 +49,8 @@
 }
 
 .company__header-containerCard {
-    transform:  rotate(-2deg);
+    transform:  rotate(-2deg) scale(1.2);
+    width: 420px;
 }
 
 .conception__content {

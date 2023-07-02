@@ -12,7 +12,7 @@ function NavBar () {
                     <nav className="navBar__center">
                         <div className="navBar__list">
                             <div className="navBar__list__menu">
-                                <Link className="navBar__list-item">INFLUENCE</Link>
+                                <div className="navBar__list-item">INFLUENCE</div>
                                 <svg className="menuArrow"></svg>
                                 <div className="dropdown">
                                     <div className="dropdown__content">

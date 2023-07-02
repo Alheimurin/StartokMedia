@@ -87,6 +87,7 @@ function Identity () {
                                 />
                             </div>
                         </div>
+                        
                         <div className='identity__dev-img'>
                             <img className='dev-imgOne' src="UI/identityDev2.svg" alt="" />
                             <img className='dev-imgTwo' src="UI/identityDev.svg" alt="" />

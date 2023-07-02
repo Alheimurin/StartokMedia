@@ -9,53 +9,40 @@
     background-image: 
     url(/public/assets/leftGradientMain.svg), 
     url(/public/assets/rightGradientMain.svg), 
-    url(/public/assets/mainGrid.svg), 
+    url(/public/assets/mainPageGrid.svg), 
     url(/public/UI/mainHeaderRhomb.svg);
     background-repeat: no-repeat;
     background-position: left top, right top, center, left 430px bottom 10%;
-    background-size: contain, contain, cover, 62px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.main__header-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 1600px;
-    gap: 70px;
-    height: 100%;
-}
-
-.main__header-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100%;
-    gap: 70px;
+    background-size: contain, contain, 1920px, 62px;
+    height: 850px;
 }
 
 .main__header-nav {
     min-width: 100%;
     padding-top: 30px;
     display: flex;
+    justify-content: center;    
+}
+
+.main__header-container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    height: 60px;
+    gap: 45px;
+    margin-top: 60px;
 }
 
 .main__header-containerTitle {
     width: 1200px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: center;
     color: #ffffff;
     background-image: url(/public/assets/atom.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 15% -48px;
-    min-height: 270px;
-    column-gap: 10px;
+    background-position: 15% -45px;
+    min-height: 255px;
 }
 
 .main__header-containerItemOne {
@@ -65,6 +52,7 @@
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 112px;
 }
 .main__header-containerItemTwo {
@@ -80,34 +68,41 @@
     min-height: 112px;
 }
 
+.main__header-cardDesc {
+    width: 330px;
+    color: #ffffff;
+}
+
 .main__header-cards {
-    min-width: 100%;
+    min-width: 1200px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    height: 340px;
+    padding-top: 10px;
+}
+
+.mainHeaderCard {
+    width: 390px;
+    height: 220px;
+    display: flex;
     justify-content: center;
-    gap: 25px;
-    max-width: 1200px;
-    min-height: 350px;
+    align-items: center;
 }
 
-.main__header-cardsInfluenceMusic {
-    background-image: url(/public/UI/enf2.svg);
-    background-repeat: no-repeat;
-    width: 382px;
-    height: 200px;
+.cardImg {
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
 }
+.cardImg:hover {
+    transform: rotate(-2deg);
+    transition: 0.5s;
+    background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
+    backdrop-filter: none;
+}
+
 .main__header-cardsInfluenceCompany {
-    background-image: url(/public/UI/enf1.svg);
-    background-repeat: no-repeat;
-    width: 382px;
-    height: 200px;
-}
-
-.main__header-cardsBranding {
-    background-image: url(/public/UI/branding.svg);
-    background-repeat: no-repeat;
-    width: 382px;
-    height: 200px;
+    margin-top: 100px;
 }
 
 .main__header-ticker{
@@ -172,13 +167,30 @@
 }
 
 .main__content-cardsItemBig {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     border: 2px solid #000000;
     border-radius: 10px;
     width: 1196px;
     height: 230px;
+}
+
+.main__content-cardsItemBigContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-big {
+    width: 1168px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px
+}
+
+.main__content-bigText {
+    width: 1198px;
+    display: flex;
+    justify-content: center;
 }
 
 .main__content-cardsItemTitle {
@@ -187,7 +199,6 @@
     font-weight: 600;
     padding: 30px 30px 0 30px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 .main__content-cardsItemOneTitle {
@@ -196,15 +207,8 @@
     font-weight: 600;
 }
 
-.main__content-cardsItemTitleImgBig {
-    display: flex;
-    align-items: center;
-    padding: 55px 30px 0 0;
-    height: 44px;
-}
-
 .main__content-cardsItemTitleBig {
-    width: 1110px;
+    width: 1198px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -299,6 +303,7 @@
     font-family: FordAntenna;
     font-size: 20px;
     font-weight: 300;
+    color: #000000;
 }
 
 .main__content-marketingText {
@@ -307,6 +312,7 @@
     font-weight: 600;
     width: 450px;
     margin-bottom: 80px;
+    color: #000000;
 }
 
 .main__content-marketingTextImg {
@@ -322,10 +328,24 @@
     font-size: 64px;
     font-weight: 600;
     max-width: 1010px;
+    color: #000000;
 }
 
 .main__content-marketingArrowContainer {
     width: 150px;
+}
+
+@keyframes Arrow {
+    0% {
+        background-image: url(/public/UI/arrowMarketingHover.svg);
+        transform: scaleX(0.5) translateX(-100px);
+        opacity: 0.3;
+    }
+    100% {
+        background-image: url(/public/UI/arrowMarketingHover.svg);
+        transform: scaleX(1);
+        opacity: 1;
+    }
 }
 
 .main__content-marketingArrow {
@@ -338,11 +358,9 @@
 }
 
 .arrows:hover .main__content-marketingArrow {
-    background-image: url(/public/UI/arrowMarketingHover.svg);
-    background-repeat: no-repeat;
     width: 150px;
     height: 15px;
-    transition: 0.5s;
+    animation: Arrow 0.5s forwards;
 }
 
 .main__content-marketingTextGradient {

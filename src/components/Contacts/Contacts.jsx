@@ -5,14 +5,13 @@ import Footer from '../Footer/Footer'
 
 import './contacts.css'
 import '../fonts/Fonts.css'
+import { Link } from 'react-router-dom'
 
 function Contacts () {
     return (
         <div>
             <header>
                 <div className='contacts__header'>
-
-                <div className='gradients'>
 
                     <div className='contacts__header-nav'>
                         <NavBar/>
@@ -28,20 +27,19 @@ function Contacts () {
                             <div className='contacts__header-contactsTextContainer'>
                                 <div className='contacts__header-contactsBox'>
                                     <p className='contacts__header-contactsTextTitle'>ПОЧТА ДЛЯ СОТРУДНИЧЕСТВА</p>
-                                    <p className='contacts__header-contactsText'>PR@STARTOKMEDIA.RU</p>
+                                    <Link className='contacts__header-contactsText'>PR@STARTOKMEDIA.RU</Link>
                                 </div>
                                 <div className='contacts__header-contactsBox'>
                                     <p className='contacts__header-contactsTextTitle'>СРЕДСТВА СВЯЗИ</p>
                                     <div className='conntections'>
-                                        <p className='contacts__header-contactsText'>WECHAT</p>
-                                        <p className='contacts__header-contactsText'>TELEGRAM</p>
-                                        <p className='contacts__header-contactsText'>WHATSAPP</p>
+                                        <Link className='contacts__header-contactsText'>WECHAT</Link>
+                                        <Link className='contacts__header-contactsText'>TELEGRAM</Link>
+                                        <Link className='contacts__header-contactsText'>WHATSAPP</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </header>
 

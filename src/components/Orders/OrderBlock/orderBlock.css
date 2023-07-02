@@ -27,9 +27,12 @@
     font-weight: 500;
     color: #ffffff;
     border: none;
-    background-color: #000000;
+    background: #000000;
     width: 200px;
     height: 50px;
     border-radius: 10px;
     cursor: pointer;
+}
+.orderBlock__content-button:hover {
+    background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
 }

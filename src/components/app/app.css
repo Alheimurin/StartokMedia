@@ -4,3 +4,7 @@ body {
     min-width: 1000px;
     width: 100%;
 }
+
+a:hover {
+    color: rgba(189, 189, 189, 1);
+}

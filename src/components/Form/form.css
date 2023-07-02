@@ -161,6 +161,9 @@
     box-sizing: border-box;
     padding: 0;
 }
+.form__right__buttonUpload:hover {
+    background-color: rgba(240, 240, 240, 1);
+}
 
 .upload {
     display: flex;
@@ -171,6 +174,7 @@
     font-size: 18px;
     font-weight: 300;
     height: 45px;
+    cursor: pointer;
 }
 
 .button-clip {
@@ -190,8 +194,12 @@
     font-size: 18px;
     font-weight: 500;
     color: #ffffff;
-    background-color: #000000;
+    background: #000000;
     border-radius: 10px;
     border: none;
     padding: 0;
+    cursor: pointer;
+}
+.form__submit:hover {
+    background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
 }
