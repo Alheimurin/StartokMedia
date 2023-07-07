@@ -1,14 +1,19 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 import NavBar from '../NavBar/NavBar'
 import Form from '../Form/Form'
 import Footer from '../Footer/Footer'
 import BlackTickerString from '../Tickers/RequestBlackWords/BlackWords'
+import FormPopUp from '../popup/FormPopUp/FormPopUp'
 
 import './main.css'
 import '../fonts/Fonts.css'
 
 function Main () {
+
+    const [show, setShow] = useState(true)
+
     return (
         <div>
             <header className='main__header'>
@@ -41,7 +46,7 @@ function Main () {
                     <p className='main__header-tickerItem'></p>
                 </div>
 
-                <main >
+                <main>
                     <div className='main__content'>
                         <div className='main__content-cards'>
                             <div className='main__content-cardsItemOne'>
@@ -136,13 +141,15 @@ function Main () {
                             </div>
                         </div>
                 </div>
-
                     <BlackTickerString/>
                     <Form/>
-
                 </main>
                 <footer>
                     <Footer/>
+                    <FormPopUp
+                    active={show}
+                    setActive={setShow}
+                />
                 </footer>
         </div>
     )

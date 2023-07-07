@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
+import { useState } from "react"
 
 import './navbar.css'
 import '../fonts/Fonts.css'
 
 function NavBar () {
+
+    const [show, setShow] = useState(true)
+
     return (
         <div className="navBarComponent">
             <div className="navBar">
@@ -44,7 +48,7 @@ function NavBar () {
                             <button disabled='disabled' className="navBar__listLang-item">CH</button>
                         </div>
                     </nav>
-                    <button className="navBar__button">Оставить заявку</button>
+                    <button className="navBar__button" onClick={()=>setShow(true)}>Оставить заявку</button>
                 </div>
             </div>
         </div>
