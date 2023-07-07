@@ -28,17 +28,22 @@ function Main () {
                                 <h1 className='main__header-containerItemTwo'>MARKETING AGENCY</h1>
                             </div>
                         </div>
-                        <nav className='main__header-cards'>
-                            <Link className='main__header-cardsInfluenceMusic mainHeaderCard'>
-                                <img className='cardImg' src="/UI/mainHeaderCards/Branding.svg" alt="" />
-                            </Link>
-                            <Link className='main__header-cardsInfluenceCompany mainHeaderCard'>
-                                <img className='cardImg' src="/UI/mainHeaderCards/Branding.svg" alt="" />
-                            </Link>
-                            <Link className='main__header-cardsBranding mainHeaderCard'>
-                                <img className='cardImg' src="/UI/mainHeaderCards/Branding.svg" alt="" />
-                            </Link>
-                        </nav>
+                        <div className='main__header-cards'>
+                            <div>
+                                <p className='main__header-cards_desc'></p>
+                            </div>
+                            <nav className='main__header-cards_cards'>
+                                <Link to='/music' className='main__header-cardsInfluenceMusic mainHeaderCard'>
+                                    <img className='cardImg' src="/UI/mainHeaderCards/Music.svg" alt="" />
+                                </Link>
+                                <Link to='/company' className='main__header-cardsInfluenceCompany mainHeaderCard'>
+                                    <img className='cardImg' src="/UI/mainHeaderCards/Brand.svg" alt="" />
+                                </Link>
+                                <Link to='/identity' className='main__header-cardsBranding mainHeaderCard'>
+                                    <img className='cardImg' src="/UI/mainHeaderCards/Branding.svg" alt="" />
+                                </Link>
+                            </nav>
+                        </div>
                     </div>
                 </header>
 
@@ -95,7 +100,7 @@ function Main () {
                         <div className='main__content-marketing'>
 
                         <div className='main__content-marketingContainer'>
-                            <Link className='main__content-marketingCompany arrows'>
+                            <Link to='/company' className='main__content-marketingCompany arrows'>
                                 <div>
                                     <h3 className='main__content-marketingTitle'>Influencer Marketing</h3>
                                     <p className='main__content-marketingText'>COMPANY <span className='main__content-marketingTextGradient'>&</span> BRAND</p>
@@ -104,7 +109,7 @@ function Main () {
                                     </div>
                                 </div>
                             </Link>
-                            <Link className='main__content-marketingMusic arrows'>
+                            <Link to='/music' className='main__content-marketingMusic arrows'>
                                 <div>
                                     <h3 className='main__content-marketingTitle'>Influencer Marketing</h3>
                                     <p className='main__content-marketingText'> MUSIC <br /> <span className='main__content-marketingTextGradient'>&</span> ARTISTS</p>
@@ -114,7 +119,7 @@ function Main () {
                                 </div>
                             </Link>
                         </div>
-                            <Link className='main__content-marketingBranding arrows'>
+                            <Link to='/identity' className='main__content-marketingBranding arrows'>
                                 <div>
                                     <h3 className='main__content-marketingTitle'>Branding, websites</h3>
                                     <div className='main__content-marketingTextImg'>
@@ -147,8 +152,6 @@ function Main () {
                 <footer>
                     <Footer/>
                     <FormPopUp
-                    active={show}
-                    setActive={setShow}
                 />
                 </footer>
         </div>

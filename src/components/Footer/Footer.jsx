@@ -41,29 +41,29 @@ function Footer () {
                     <div className='footer__right-item'>
                         <h2 className='footer__right-itemTitle'>МЕНЮ</h2>
                         <div className='footer__right-itemLinks'>
-                            <Link className='footer__right-itemLink'>INFLUENCE BRAND</Link>
-                            <Link className='footer__right-itemLink'>INFLUENCE MUSIC</Link>
-                            <Link className='footer__right-itemLink'>BRANDING</Link>
-                            <Link className='footer__right-itemLink'>КОНТАКТЫ</Link>
+                            <Link to='/company' className='footer__right-itemLink'>INFLUENCE BRAND</Link>
+                            <Link to='/music' className='footer__right-itemLink'>INFLUENCE MUSIC</Link>
+                            <Link to='/identity' className='footer__right-itemLink'>BRANDING</Link>
+                            <Link to='/contacts' className='footer__right-itemLink'>КОНТАКТЫ</Link>
                         </div>
                     </div>
                     <div className='footer__right-item'>
                         <h2 className='footer__right-itemTitle'>СОЦСЕТИ</h2>
                         <div className='footer__right-itemLinks'>
-                            <Link className='footer__right-itemLink'>VKONTAKTE</Link>
-                            <Link className='footer__right-itemLink'>INSTAGRAM*</Link>
-                            <Link className='footer__right-itemLink'>FACEBOOK*</Link>
-                            <Link className='footer__right-itemLink'>TELEGRAM</Link>
+                            <Link to='//vk.com/startokmedia' target='blank' className='footer__right-itemLink'>VKONTAKTE</Link>
+                            <Link to='//instagram.com/startokmedia' target='blank' className='footer__right-itemLink'>INSTAGRAM*</Link>
+                            <Link to='//www.facebook.com/startokmedia' target='blank' className='footer__right-itemLink'>FACEBOOK*</Link>
+                            <Link to='//t.me/startokmedia_info' target='blank' className='footer__right-itemLink'>TELEGRAM</Link>
                         </div>
                     </div>
                     <div className='footer__right-item'>
                         <h2 className='footer__right-itemTitle'>КОНТАКТЫ</h2>
                         <div className='footer__right-itemLinks'>
-                            <Link className='footer__right-itemLink'>PR@STARTOKMEDIA.RU</Link>
+                            <Link target='blank' className='footer__right-itemLink'>PR@STARTOKMEDIA.RU</Link>
                             <Link className='footer__right-itemLink'>WECHAT</Link>
-                            <Link className='footer__right-itemLink'>LINKEDIN</Link>
-                            <Link className='footer__right-itemLink'>TELEGRAM</Link>
-                            <Link className='footer__right-itemLink'>WHATSAPP*</Link>
+                            <Link to='//www.linkedin.com/company/startok-media/' target='blank' className='footer__right-itemLink'>LINKEDIN</Link>
+                            <Link to='//t.me/startokmedia' target='blank' className='footer__right-itemLink'>TELEGRAM</Link>
+                            <Link to='//wa.me/87055338422' target='blank' className='footer__right-itemLink'>WHATSAPP*</Link>
                         </div>
                     </div>
                 </div>

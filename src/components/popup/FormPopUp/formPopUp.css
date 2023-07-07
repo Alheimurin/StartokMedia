@@ -133,7 +133,7 @@ input::placeholder {
 .formPopUp__buttonsSubmit {
     color: #ffffff;
     background: #000000;
-    border: none;
+    border: 1px solid;
 }
 
 .formPopUp__buttonsSubmit:hover {

@@ -2,12 +2,25 @@ import NavBar from '../NavBar/NavBar'
 import Form from '../Form/Form'
 import WhiteWords from '../Tickers/RequestWhiteWords/WhiteWords'
 import Footer from '../Footer/Footer'
+import QRPopUp from '../popup/QRPopUp/QRPopUp'
 
 import './contacts.css'
 import '../fonts/Fonts.css'
+
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { set } from 'mobx'
 
 function Contacts () {
+
+    const [QRShow, setQRShow] = useState(false)
+
+    function QR (e, name) {
+        setQRShow(true)
+        e.target.name = name
+        console.log(name)
+    }
+
     return (
         <div>
             <header>
@@ -32,9 +45,9 @@ function Contacts () {
                                 <div className='contacts__header-contactsBox'>
                                     <p className='contacts__header-contactsTextTitle'>СРЕДСТВА СВЯЗИ</p>
                                     <div className='conntections'>
-                                        <Link className='contacts__header-contactsText'>WECHAT</Link>
-                                        <Link className='contacts__header-contactsText'>TELEGRAM</Link>
-                                        <Link className='contacts__header-contactsText'>WHATSAPP</Link>
+                                        <button onClick={QR} name='adasdas' className='contacts__header-contactsText'>WECHAT</button>
+                                        <Link to='//t.me/startokmedia' target='blank' className='contacts__header-contactsText'>TELEGRAM</Link>
+                                        <Link to='//wa.me/87055338422' target='blank' className='contacts__header-contactsText'>WHATSAPP</Link>
                                     </div>
                                 </div>
                             </div>
@@ -51,6 +64,10 @@ function Contacts () {
             <footer>
                 <Footer/>
             </footer>
+            <QRPopUp
+                active={QRShow}
+                setActive={setQRShow}
+            />
         </div>
     )
 }

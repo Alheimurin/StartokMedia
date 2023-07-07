@@ -75,6 +75,16 @@
 
 .main__header-cards {
     min-width: 1200px;
+}
+
+.main__header-cards_desc {
+    width: 332px;
+    font-family: FordAntenna;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.main__header-cards_cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -441,7 +451,7 @@
         transform: rotate(0);
     }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
 }
 
@@ -450,6 +460,6 @@
         transform: rotate(0);
     }
     100% {
-        transform: rotate(-360deg);
+        transform: rotate(360deg);
     }
 }
