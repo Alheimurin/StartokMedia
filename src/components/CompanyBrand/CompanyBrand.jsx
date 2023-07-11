@@ -5,17 +5,27 @@ import BlackTickerString from '../Tickers/RequestBlackWords/BlackWords'
 import Form from '../Form/Form'
 import Footer from '../Footer/Footer'
 import Integration from '../IntegrationFor/Integration'
+import FormPopUp from '../popup/FormPopUp/FormPopUp'
 
 import './companyBrand.css'
 import '../fonts/Fonts.css'
 
+import { useState } from 'react'
+
 function CompanyBrand() {
+
+    const [formShow, setFormShow] = useState(false)
+
+    const showModalForm = (x) => {
+        setFormShow(true)
+    }
+
     return (
         <div>
             <header>
                 <div className='company__header'>
                     <div className='company__header-nav'>
-                        <NavBar />
+                        <NavBar  showModalForm={showModalForm}/>
                     </div>
 
                     <div className='company__header-container'>
@@ -86,6 +96,10 @@ function CompanyBrand() {
             <footer>
                 <Footer />
             </footer>
+            <FormPopUp
+                active={formShow}
+                setActive={setFormShow}
+            />
         </div>
     )
 }

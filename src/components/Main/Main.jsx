@@ -12,13 +12,19 @@ import '../fonts/Fonts.css'
 
 function Main () {
 
-    const [show, setShow] = useState(true)
+    const [hover, setHover] = useState(false)
+
+
+    const [formShow, setFormShow] = useState(false)
+    const showModalForm = (x) => {
+        setFormShow(true)
+    }
 
     return (
         <div>
             <header className='main__header'>
                     <div className='main__header-nav'>
-                        <NavBar/>
+                        <NavBar showModalForm={showModalForm}/>
                     </div>
 
                     <div className='main__header-container'>
@@ -33,14 +39,14 @@ function Main () {
                                 <p className='main__header-cards_desc'></p>
                             </div>
                             <nav className='main__header-cards_cards'>
-                                <Link to='/music' className='main__header-cardsInfluenceMusic mainHeaderCard'>
-                                    <img className='cardImg' src="/UI/mainHeaderCards/Music.svg" alt="" />
+                                <Link to='/music' className='mainHeaderCard'>
+                                    <img onPointerOver={()=>setHover(true)} onPointerOut={()=>setHover(false)} className={hover ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
                                 </Link>
-                                <Link to='/company' className='main__header-cardsInfluenceCompany mainHeaderCard'>
-                                    <img className='cardImg' src="/UI/mainHeaderCards/Brand.svg" alt="" />
+                                <Link to='/company' className='mainHeaderCard IC'>
+                                    <img onPointerOver={()=>setHover(true)} onPointerOut={()=>setHover(false)} className={hover ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Brand.svg" alt="" />
                                 </Link>
-                                <Link to='/identity' className='main__header-cardsBranding mainHeaderCard'>
-                                    <img className='cardImg' src="/UI/mainHeaderCards/Branding.svg" alt="" />
+                                <Link to='/identity' className='mainHeaderCard'>
+                                    <img onPointerOver={()=>setHover(true)} onPointerOut={()=>setHover(false)}  className={hover ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Branding.svg" alt="" />
                                 </Link>
                             </nav>
                         </div>
@@ -152,7 +158,9 @@ function Main () {
                 <footer>
                     <Footer/>
                     <FormPopUp
-                />
+                    active={formShow}
+                    setActive={setFormShow}
+                    />
                 </footer>
         </div>
     )

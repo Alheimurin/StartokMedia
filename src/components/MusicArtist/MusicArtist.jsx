@@ -5,17 +5,27 @@ import OtherServices from '../OtherServices/OtherServices'
 import BlackTickerString from '../Tickers/RequestBlackWords/BlackWords'
 import Form from '../Form/Form'
 import GradientCard from  '../Cards/GradientCard/Card'
+import FormPopUp from '../popup/FormPopUp/FormPopUp'
 
 import '../fonts/Fonts.css'
 import './musicArtist.css'
 
+import { useState } from 'react'
+
 function MusicArtist () {
+
+    const [formShow, setFormShow] = useState(false)
+
+    const showModalForm = (x) => {
+        setFormShow(true)
+    }
+
     return (
         <div>
             <header>
                 <div className='musicArtists__header'>
                     <div className='musicArtists__nav'>
-                        <NavBar/>
+                        <NavBar showModalForm={showModalForm}/>
                     </div>
 
                     <div className='musicArtists__header-container'>
@@ -69,6 +79,10 @@ function MusicArtist () {
             <footer>
                 <Footer/>
             </footer>
+            <FormPopUp
+                active={formShow}
+                setActive={setFormShow}
+            />
         </div>
     )
 }

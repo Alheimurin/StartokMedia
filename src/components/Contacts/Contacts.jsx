@@ -3,22 +3,21 @@ import Form from '../Form/Form'
 import WhiteWords from '../Tickers/RequestWhiteWords/WhiteWords'
 import Footer from '../Footer/Footer'
 import QRPopUp from '../popup/QRPopUp/QRPopUp'
+import FormPopUp from '../popup/FormPopUp/FormPopUp'
 
 import './contacts.css'
 import '../fonts/Fonts.css'
 
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { set } from 'mobx'
 
 function Contacts () {
 
     const [QRShow, setQRShow] = useState(false)
+    const [formShow, setFormShow] = useState(false)
 
-    function QR (e, name) {
-        setQRShow(true)
-        e.target.name = name
-        console.log(name)
+    const showModalForm = (x) => {
+        setFormShow(true)
     }
 
     return (
@@ -27,7 +26,7 @@ function Contacts () {
                 <div className='contacts__header'>
 
                     <div className='contacts__header-nav'>
-                        <NavBar/>
+                        <NavBar showModalForm={showModalForm}/>
                     </div>
 
                     <div className='contacts__header-container'>
@@ -45,7 +44,7 @@ function Contacts () {
                                 <div className='contacts__header-contactsBox'>
                                     <p className='contacts__header-contactsTextTitle'>СРЕДСТВА СВЯЗИ</p>
                                     <div className='conntections'>
-                                        <button onClick={QR} name='adasdas' className='contacts__header-contactsText'>WECHAT</button>
+                                        <Link onClick={()=>setQRShow(true)} className='contacts__header-contactsText'>WECHAT</Link>
                                         <Link to='//t.me/startokmedia' target='blank' className='contacts__header-contactsText'>TELEGRAM</Link>
                                         <Link to='//wa.me/87055338422' target='blank' className='contacts__header-contactsText'>WHATSAPP</Link>
                                     </div>
@@ -67,6 +66,12 @@ function Contacts () {
             <QRPopUp
                 active={QRShow}
                 setActive={setQRShow}
+                name = 'WeChat'
+                img = 'WeChat.svg'
+            />
+            <FormPopUp
+                active={formShow}
+                setActive={setFormShow}
             />
         </div>
     )

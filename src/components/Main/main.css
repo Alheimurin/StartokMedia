@@ -104,14 +104,14 @@
     backdrop-filter: blur(7px);
     border-radius: 10px;
 }
-.cardImg:hover {
+.cardImgHover {
     transform: rotate(-2deg);
     transition: 0.6s;
     background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
     backdrop-filter: none;
 }
 
-.main__header-cardsInfluenceCompany {
+.IC {
     margin-top: 100px;
 }
 

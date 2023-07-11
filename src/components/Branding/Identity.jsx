@@ -8,16 +8,26 @@ import OtherServices from '../OtherServices/OtherServices'
 import RequestBlackWords from '../Tickers/RequestBlackWords/BlackWords'
 import From from '../Form/Form'
 import Footer from '../Footer/Footer'
+import FormPopUp from '../popup/FormPopUp/FormPopUp'
 
 import './identity.css'
 import '../fonts/Fonts.css'
 
+import { useState } from 'react'
+
 function Identity () {
+
+    const [formShow, setFormShow] = useState(false)
+
+    const showModalForm = (x) => {
+        setFormShow(true)
+    }
+
     return (
         <div>
             <header className='identity__header'>
                 <div className='identityNav'>
-                    <NavBar/>
+                    <NavBar showModalForm={showModalForm}/>
                 </div>
 
                 <div className='identity__header-container'>
@@ -139,6 +149,10 @@ function Identity () {
                     <Footer/>
                 </div>
             </footer>
+            <FormPopUp
+                active={formShow}
+                setActive={setFormShow}
+            />
         </div>
     )
 }
