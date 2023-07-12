@@ -39,7 +39,7 @@ function Contacts () {
                             <div className='contacts__header-contactsTextContainer'>
                                 <div className='contacts__header-contactsBox'>
                                     <p className='contacts__header-contactsTextTitle'>ПОЧТА ДЛЯ СОТРУДНИЧЕСТВА</p>
-                                    <Link className='contacts__header-contactsText'>PR@STARTOKMEDIA.RU</Link>
+                                    <Link href="mailto:PR@STARTOKMEDIA.RU" className='contacts__header-contactsText'>PR@STARTOKMEDIA.RU</Link>
                                 </div>
                                 <div className='contacts__header-contactsBox'>
                                     <p className='contacts__header-contactsTextTitle'>СРЕДСТВА СВЯЗИ</p>
