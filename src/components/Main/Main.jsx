@@ -12,7 +12,19 @@ import '../fonts/Fonts.css'
 
 function Main () {
 
-    const [hover, setHover] = useState(false)
+    const [hover, setHover] = useState({
+        music: false,
+        company: false,
+        identity: false
+    })
+    const cardDesc = []
+    function musicDesc () {
+        setHover({music:true})
+        cardDesc.push('Успешно продвигаем музыкальные проекты через блогеров с момента появления TikTok.')
+    }
+
+    console.log(hover)
+    console.log(cardDesc)
 
     const [formShow, setFormShow] = useState(false)
     const showModalForm = (x) => {
@@ -34,18 +46,20 @@ function Main () {
                             </div>
                         </div>
                         <div className='main__header-cards'>
-                            <div>
-                                <p className='main__header-cards_desc'></p>
-                            </div>
                             <nav className='main__header-cards_cards'>
                                 <Link to='/music' className='mainHeaderCard'>
-                                    <img onPointerOver={()=>setHover(true)} onPointerOut={()=>setHover(false)} className={hover ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
+                                    <img  onPointerOver={musicDesc} onPointerOut={()=>setHover(false)} className={hover.music ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
                                 </Link>
-                                <Link to='/company' className='mainHeaderCard IC'>
-                                    <img onPointerOver={()=>setHover(true)} onPointerOut={()=>setHover(false)} className={hover ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Brand.svg" alt="" />
-                                </Link>
+                                <div>
+                                    <div className='main__header-cards_desc_container'>
+                                        <p className='main__header-cards_desc'>{cardDesc}</p>
+                                    </div>
+                                    <Link to='/company' className='mainHeaderCard IC'>
+                                    <img onPointerOver={()=>setHover({company:true})} onPointerOut={()=>setHover(false)} className={hover.company ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Brand.svg" alt="" />
+                                    </Link>
+                                </div>
                                 <Link to='/identity' className='mainHeaderCard'>
-                                    <img onPointerOver={()=>setHover(true)} onPointerOut={()=>setHover(false)}  className={hover ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Branding.svg" alt="" />
+                                    <img onPointerOver={()=>setHover({identity:true})} onPointerOut={()=>setHover(false)}  className={hover.identity ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Branding.svg" alt="" />
                                 </Link>
                             </nav>
                         </div>

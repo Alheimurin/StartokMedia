@@ -1,12 +1,17 @@
 import './orderBlock.css'
 import '../../fonts/Fonts.css'
 
-function OrderBlock (props) {
+function OrderBlock ({ showModalForm, ...props}) {
+
+    const func = (x) => {
+        x = true
+    }
+
     return (
         <div className='orderBlock-container'>
             <div className='orderBlock__content'>
                 <p className='orderBlock__content-text'>{props.text}</p>
-                <button className='orderBlock__content-button'>Заказать</button>
+                <button onClick={()=>showModalForm(func)} className='orderBlock__content-button'>Заказать</button>
             </div>
         </div>
     )

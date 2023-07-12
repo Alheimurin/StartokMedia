@@ -12,13 +12,13 @@ function OtherServices (props) {
                         <div className='otherServices__content'>
                             <h3 className='otherServices__contentTitle'>{props.leftTitle}</h3>
                             <p className='otherServices__contentText'>{props.leftText}</p>
-                            <Link className='otherServices__contentLink'>Подробнее</Link>
+                            <Link to={props.leftLink} className='otherServices__contentLink'>Подробнее</Link>
                         </div>
 
                         <div className='otherServices__content'>
                             <h3 className='otherServices__contentTitle'>{props.rightTitle}</h3>
                             <p className='otherServices__contentText'>{props.rightText}</p>
-                            <Link className='otherServices__contentLink'>Подробнее</Link>
+                            <Link to={props.rightLink} className='otherServices__contentLink'>Подробнее</Link>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 import NavBar from '../NavBar/NavBar'
 import GradientCard from '../Cards/GradientCard/Card'
 import OrderBlock from '../Orders/OrderBlock/OrderBlock'
@@ -19,7 +17,7 @@ function Identity () {
 
     const [formShow, setFormShow] = useState(false)
 
-    const showModalForm = (x) => {
+    const showModalForm = () => {
         setFormShow(true)
     }
 
@@ -71,6 +69,7 @@ function Identity () {
                                 <div className='identity__style-rightButton'>
                                     <OrderBlock
                                         text='Создадим дизайн, который выделит вашу компанию.'
+                                        showModalForm={showModalForm}
                                     />
                                 </div>
                             </div>
@@ -94,6 +93,7 @@ function Identity () {
                             <div className='identity__dev-button'>
                                 <OrderBlock
                                     text='Разработаем сайт, который будет отвечать необходимым требованиям. '
+                                    showModalForm={showModalForm}
                                 />
                             </div>
                         </div>
@@ -128,10 +128,12 @@ function Identity () {
                         leftText='Направление influence для брендов решает важную задачу доверия целевой аудитории. 
                         Правильная стратегия и промо-план позволит не только расположить людей к бренду, 
                         но и охватить их максимальное количество.'
+                        leftLink='/company'
                         rightTitle='INFLUENCE MUSIC'
                         rightText='При правильном подходе к тестированию и аналитике можно создать вирусную повторяющую механику, 
                         а также получить максимально быстрый и эффективный результат упоминаний на других площадках, 
                         что прямо пропорционально влияет на стриминг.'
+                        rightLink='/music'
                     />
                 </div>
 

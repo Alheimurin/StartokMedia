@@ -16,7 +16,7 @@ function CompanyBrand() {
 
     const [formShow, setFormShow] = useState(false)
 
-    const showModalForm = (x) => {
+    const showModalForm = () => {
         setFormShow(true)
     }
 
@@ -66,6 +66,7 @@ function CompanyBrand() {
                     underImgTwo='Размещение в СНГ, Азии и ОАЭ'
                     imgThree='lamp.svg'
                     underImgThree='Реализовано более 60 проектов с брендами'
+                    showModalForm={showModalForm}
                 />
 
                 <div className='conception__content'>
@@ -74,7 +75,7 @@ function CompanyBrand() {
                             Не знаете, как правильно подготовить <br /> промо-план и осуществить интеграцию авторов?
                         </p>
                         <h2 className='conception-title'>РАЗРАБАТЫВАЕМ КОНЦЕПЦИЮ РЕКЛАМНОЙ КОМПАНИИ ОТ ИДЕИ ДО РЕАЛИЗАЦИИ</h2>
-                        <button className='conception-button'>Связаться</button>
+                        <button onClick={showModalForm} className='conception-button'>Связаться</button>
                     </div>
                 </div>
 
@@ -84,10 +85,12 @@ function CompanyBrand() {
                             можно создать вирусную повторяющую механику, а также получить максимально быстрый 
                             и эффективный результат упоминаний на других площадках, 
                         что прямо пропорционально влияет на стриминг.'
+                    leftLink='/music'
                     rightTitle='BRANDING'
                     rightText='Бренд — образ в голове клиентов, а брендинг — процесс по созданию образа. 
                         Визуальная часть помогает правильно раскрыть заложенный смысл компании. 
                         Бренд должен быть узнаваемым, а дизайн — понятным.'
+                    rightLink='/identity'
                 />
                 <BlackTickerString />
                 <Form />

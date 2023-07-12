@@ -4,7 +4,12 @@ import './integration.css'
 
 import { integrationImg } from '../../constants/constants'
 
-function Integration (props) {
+function Integration ( {showModalForm, ...props}) {
+
+    const func = (x) => {
+        x = true
+    }
+
     return (
         <div className='integrationComponent'>
             <div className='integration__container'>
@@ -44,7 +49,7 @@ function Integration (props) {
                     <p className='integration__contentText connectText'>
                         Оставьте заявку и мы свяжемся с вами в течение 1 часа.
                     </p>
-                    <button className='integration__connectButton'>
+                    <button onClick={()=>showModalForm(func)} className='integration__connectButton'>
                         Связаться
                     </button>
                 </div>

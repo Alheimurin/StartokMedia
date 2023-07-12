@@ -68,27 +68,30 @@
     min-height: 112px;
 }
 
-.main__header-cardDesc {
-    width: 330px;
-    color: #ffffff;
-}
-
 .main__header-cards {
     min-width: 1200px;
 }
 
+.main__header-cards_desc_container {
+    display: flex;
+    justify-content: center;
+}
+
 .main__header-cards_desc {
-    width: 332px;
+    width: 330px;
+    height: 70px;
     font-family: FordAntenna;
     font-size: 16px;
     font-weight: 300;
+    color: #ffffff;
+    text-align: center;
 }
 
 .main__header-cards_cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 340px;
+    /* height: 340px; */
     padding-top: 10px;
 }
 
@@ -112,7 +115,7 @@
 }
 
 .IC {
-    margin-top: 100px;
+    margin-top: 15px;
 }
 
 .main__header-ticker{

@@ -61,16 +61,19 @@ function MusicArtist () {
                     underImgTwo='Выгодный CPM'
                     imgThree='clock.svg'
                     underImgThree='Работа в сжатые сроки'
+                    showModalForm={showModalForm}
                 />
                 <OtherServices
                     leftTitle='INFLUENCE BRAND'
                     leftText='Направление influence для брендов решает важную задачу 
                             доверия целевой аудитории. Правильная стратегия и промо-план позволит 
                             не только расположить людей к бренду, но и повысить его узнаваемость.'
-                    rightTitle='BRANDING'
+                    leftLink='/company'
+                            rightTitle='BRANDING'
                     rightText='Бренд — образ в голове клиентов, а брендинг —процесс по созданию образа. 
                             Визуальная часть помогает правильно раскрыть заложенный смысл компании. 
                             Бренд должен быть узнаваемым, а дизайн — понятным.'
+                    rightLink='/identity'
                 />
                 <BlackTickerString/>
                 <Form/>
