@@ -14,17 +14,17 @@ function Main () {
 
     const [hover, setHover] = useState({
         music: false,
-        company: false,
+        company: true,
         identity: false
     })
-    const cardDesc = []
-    function musicDesc () {
-        setHover({music:true})
-        cardDesc.push('Успешно продвигаем музыкальные проекты через блогеров с момента появления TikTok.')
-    }
 
-    console.log(hover)
-    console.log(cardDesc)
+    const [cardInfo, setCardInfo] = useState('')
+
+    const info = {
+        musicInfo: 'Успешно продвигаем музыкальные проекты через блогеров с момента появления TikTok.',
+        companyInfo: 'Подберем релевантных блогеров, разработаем концепцию рекламной кампании для вашего продукта.',
+        identityInfo: 'Дизайним бренды, разрабатываем сайты с акцентом на решении ваших бизнес задач.'
+    }
 
     const [formShow, setFormShow] = useState(false)
     const showModalForm = (x) => {
@@ -48,18 +48,18 @@ function Main () {
                         <div className='main__header-cards'>
                             <nav className='main__header-cards_cards'>
                                 <Link to='/music' className='mainHeaderCard'>
-                                    <img  onPointerOver={musicDesc} onPointerOut={()=>setHover(false)} className={hover.music ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
+                                    <img  onPointerOver={()=>{setCardInfo(info.musicInfo); setHover({music:true})}} onPointerOut={()=>{setCardInfo(info.companyInfo) ;setHover({company:true})}} className={hover.music ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
                                 </Link>
                                 <div>
                                     <div className='main__header-cards_desc_container'>
-                                        <p className='main__header-cards_desc'>{cardDesc}</p>
+                                        <p className='main__header-cards_desc'>{cardInfo ? cardInfo : info.companyInfo}</p>
                                     </div>
                                     <Link to='/company' className='mainHeaderCard IC'>
-                                    <img onPointerOver={()=>setHover({company:true})} onPointerOut={()=>setHover(false)} className={hover.company ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Brand.svg" alt="" />
+                                    <img onPointerOver={()=>{setCardInfo(info.companyInfo); setHover({company:true})}} onPointerOut={()=>{setCardInfo(info.companyInfo); setHover({company:true})}} className={hover.company ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Brand.svg" alt="" />
                                     </Link>
                                 </div>
                                 <Link to='/identity' className='mainHeaderCard'>
-                                    <img onPointerOver={()=>setHover({identity:true})} onPointerOut={()=>setHover(false)}  className={hover.identity ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Branding.svg" alt="" />
+                                    <img onPointerOver={()=>{setCardInfo(info.identityInfo); setHover({identity:true})}} onPointerOut={()=>{setCardInfo(info.companyInfo); setHover({company:true})}}  className={hover.identity ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Branding.svg" alt="" />
                                 </Link>
                             </nav>
                         </div>

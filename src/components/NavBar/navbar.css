@@ -42,8 +42,15 @@
     font-weight: 400;
     text-decoration: none;
     color: #000000;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
+}
+.list-itemGradient {
+    color: none;
+    background: linear-gradient(122.33deg, #FFD916 -12.52%, #FF1914 39.36%, #6705FF 83.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .navBar__list__menu {

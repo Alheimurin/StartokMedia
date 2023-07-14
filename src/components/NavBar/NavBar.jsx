@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom"
+import { useState } from "react"
 
 import './navbar.css'
 import '../fonts/Fonts.css'
 
 function NavBar ( {showModalForm} ) {
+
+    const [active, setActiv] = useState({
+        branding: false,
+        contacts: false
+    })
 
     const func = (x) => {
         x = true
@@ -36,8 +42,8 @@ function NavBar ( {showModalForm} ) {
                                     </div>
                                 </div>
                             </div>
-                            <Link to='/identity' className="navBar__list-item">BRANDING</Link>
-                            <Link to='/contacts' className="navBar__list-item">КОНТАКТЫ</Link>
+                            <Link to='/identity' onClick={()=> setActiv({branding:true})} className={ active.branding ? "navBar__list-item list-itemGradient" : "navBar__list-item"}>BRANDING</Link>
+                            <Link to='/contacts' onClick={()=> setActiv({contacts:true})} className={ active.contacts ? "navBar__list-item list-itemGradient" : "navBar__list-item"}>КОНТАКТЫ</Link>
                         </div>
                     </nav>
                 </div>
