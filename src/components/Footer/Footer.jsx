@@ -1,8 +1,22 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+
+import QRPopUp from '../popup/QRPopUp/QRPopUp'
 
 import './footer.css'
 
 function Footer () {
+
+    const [showQR, setShowQR] = useState(false)
+    const [descQR, setDescQR] = useState({
+        name: '',
+        img: ''
+    })
+    function desc () {
+        setDescQR({name: 'dasdasdas', img: 'wechat.svg'})
+    }
+    console.log(descQR)
+
     return (
         <footer className='footer__content'>
             <div className='footer__container'>
@@ -71,20 +85,20 @@ function Footer () {
                 <div className='footer__rightBOTTOM'>
                     <div className='footer__right-QR'>
                         <div className='footer__right-QRItem'>
-                            <Link className='footer__right-QRWe QRBlock'></Link>
-                            <Link className='footer__right-QRTitle'>WeChat</Link>
+                            <Link onClick={()=>{setShowQR(true); desc()}} className='footer__right-QRWe QRBlock'></Link>
+                            <Link onClick={()=>setShowQR(true)} className='footer__right-QRTitle'>WeChat</Link>
                         </div>
                         <div className='footer__right-QRItem'>
-                            <Link className='footer__right-QRLinked QRBlock'></Link>
-                            <Link className='footer__right-QRTitle'>LinkedIn</Link>
+                            <Link /* onClick={setShowQR(true)} */ className='footer__right-QRLinked QRBlock'></Link>
+                            <Link /* onClick={setShowQR(true)} */ className='footer__right-QRTitle'>LinkedIn</Link>
                         </div>
                         <div className='footer__right-QRItem'>
-                            <Link className='footer__right-QREmail QRBlock'></Link>
-                            <Link className='footer__right-QRTitle'>Email</Link>
+                            <Link /* onClick={setShowQR(true)} */ className='footer__right-QREmail QRBlock'></Link>
+                            <Link /* onClick={setShowQR(true)} */ className='footer__right-QRTitle'>Email</Link>
                         </div>
                         <div className='footer__right-QRItem'>
-                            <Link className='footer__right-QRWApp QRBlock'></Link>
-                            <Link className='footer__right-QRTitle'>WhatsApp</Link>
+                            <Link /* onClick={setShowQR(true)} */ className='footer__right-QRWApp QRBlock'></Link>
+                            <Link /* onClick={setShowQR(true)} */ className='footer__right-QRTitle'>WhatsApp</Link>
                         </div>
                     </div>
                 </div>
@@ -97,6 +111,11 @@ function Footer () {
                         <h2 className='footer__bottomText'>© Copyright 2023, Все права защищены</h2>
                     </div>
             </div>
+            <QRPopUp
+            active={showQR}
+            setActive={setShowQR}
+            info={setDescQR}
+            />
         </footer>
     )
 }

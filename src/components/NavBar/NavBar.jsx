@@ -3,13 +3,9 @@ import { useState } from "react"
 
 import './navbar.css'
 import '../fonts/Fonts.css'
+import { set } from "mobx"
 
-function NavBar ( {showModalForm} ) {
-
-    const [active, setActiv] = useState({
-        branding: false,
-        contacts: false
-    })
+function NavBar ( {showModalForm, contacts, identity, influence} ) {
 
     const func = (x) => {
         x = true
@@ -23,7 +19,7 @@ function NavBar ( {showModalForm} ) {
                     <nav className="navBar__center">
                         <div className="navBar__list">
                             <div className="navBar__list__menu">
-                                <div className="navBar__list-item">INFLUENCE</div>
+                                <div className={ influence ? "navBar__list-item list-itemGradient" : "navBar__list-item" }>INFLUENCE</div>
                                 <svg className="menuArrow"></svg>
                                 <div className="dropdown">
                                     <div className="dropdown__content">
@@ -42,8 +38,8 @@ function NavBar ( {showModalForm} ) {
                                     </div>
                                 </div>
                             </div>
-                            <Link to='/identity' onClick={()=> setActiv({branding:true})} className={ active.branding ? "navBar__list-item list-itemGradient" : "navBar__list-item"}>BRANDING</Link>
-                            <Link to='/contacts' onClick={()=> setActiv({contacts:true})} className={ active.contacts ? "navBar__list-item list-itemGradient" : "navBar__list-item"}>КОНТАКТЫ</Link>
+                            <Link to='/identity'  className={ identity ? "navBar__list-item list-itemGradient" : "navBar__list-item" }>BRANDING</Link>
+                            <Link to='/contacts'  className={ contacts ? "navBar__list-item list-itemGradient" : "navBar__list-item" }>КОНТАКТЫ</Link>
                         </div>
                     </nav>
                 </div>

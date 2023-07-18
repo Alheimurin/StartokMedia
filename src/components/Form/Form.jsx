@@ -22,7 +22,7 @@ function Form () {
                         </div>
                         <input className='form__left-input' type="text" placeholder='Комментарий' />
                         <div className='form__left-inputCheckbox'>
-                            <input className='form__left-inputCheck' type="checkbox" checked />
+                            <input className='form__left-inputCheck' type="checkbox" defaultChecked />
                             <label className='label-checkbox' htmlFor="">Нажимая кнопку «Отправить», вы принимаете правила <Link className='label-policy'>политики конфиденциальности</Link></label>
                         </div>
                     </div>

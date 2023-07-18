@@ -24,7 +24,7 @@ function FormPopUp ({active, setActive}) {
                         </div>
                         <input className='formPopUp__inputBottom' type="text" placeholder='Комментарий' />
                         <div className='formPopUp__inputChecbox'>
-                            <input className='formPopUp__inputChecboxItem' type="checkbox" checked />  
+                            <input className='formPopUp__inputChecboxItem' type="checkbox" defaultChecked />  
                             <label className='formPopUp__Text' htmlFor="">Нажимая кнопку «Отправить», вы принимаете правила политики конфиденциальности</label>
                         </div>
                     </div>

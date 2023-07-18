@@ -25,7 +25,9 @@ function Identity () {
         <div>
             <header className='identity__header'>
                 <div className='identityNav'>
-                    <NavBar showModalForm={showModalForm}/>
+                    <NavBar showModalForm={showModalForm}
+                    identity={true}
+                    />
                 </div>
 
                 <div className='identity__header-container'>

@@ -25,7 +25,9 @@ function MusicArtist () {
             <header>
                 <div className='musicArtists__header'>
                     <div className='musicArtists__nav'>
-                        <NavBar showModalForm={showModalForm}/>
+                        <NavBar showModalForm={showModalForm}
+                        influence={true}
+                        />
                     </div>
 
                     <div className='musicArtists__header-container'>

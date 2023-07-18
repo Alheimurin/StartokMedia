@@ -25,7 +25,9 @@ function CompanyBrand() {
             <header>
                 <div className='company__header'>
                     <div className='company__header-nav'>
-                        <NavBar  showModalForm={showModalForm}/>
+                        <NavBar  showModalForm={showModalForm}
+                        influence={true}
+                        />
                     </div>
 
                     <div className='company__header-container'>
