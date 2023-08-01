@@ -3,7 +3,6 @@ import { useState } from "react"
 
 import './navbar.css'
 import '../fonts/Fonts.css'
-import { set } from "mobx"
 
 function NavBar ( {showModalForm, contacts, identity, influence} ) {
 
