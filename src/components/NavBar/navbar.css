@@ -6,7 +6,6 @@
 
 .navBar {
     width: 1400px;
-    /* height: 50px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,8 +41,6 @@
     font-weight: 400;
     text-decoration: none;
     color: #000000;
-    /* display: flex;
-    align-items: center; */
 }
 .list-itemGradient {
     color: none;
@@ -186,4 +183,21 @@
 }
 .navBar__button:hover {
     background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
+}
+
+
+@media screen and (max-device-width: 597px) {
+    .navBar {
+        border-radius: 0;
+        background-color: inherit;
+    }
+    .navBar__list {
+        display: none;
+    }
+    .navBar__listLang {
+        display: none;
+    }
+    .navBar__button {
+        display: none;
+    }
 }
