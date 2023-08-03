@@ -203,3 +203,77 @@
 .form__submit:hover {
     background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
 }
+
+@media screen and (max-device-width: 597px) {
+    .form__left-text {
+        font-size: 20px;
+        width: 240px;
+        height: 65px;
+    }
+
+    .form{
+        margin: 80px 0;
+        height: auto;
+        justify-content: center;
+    }
+
+    .form__item {
+        width: 300px;
+        flex-wrap: wrap;
+        gap: 30px;    
+    }
+
+    .form__left {
+        display: block;
+        width: 280px;
+    }
+
+    .form__left-inputs {
+        width: 280px;
+        gap: 30px;
+    }
+    .form__left-inputCheckbox {
+        display: none;
+    }
+    .inputs-labelLeft {
+        font-size: 10px;
+        min-width: 57px;
+    }
+    .form__left-input::placeholder {
+        font-size: 10px;
+    }
+
+    .form__right-container {
+        width: 280px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form__right-img {
+        display: none;
+    }
+    .inputs-labelRight {
+        font-size: 10px;
+    }
+    .form__right-input::placeholder {
+        font-size: 10px;
+    }
+
+    .input__right-to {
+        width: 280px;
+    }
+
+    .form__right-upSub {
+        margin-top: 30px;
+    }
+
+    .form__right__buttonUpload {
+        font-size: 12px;
+        width: 280px;
+    }
+    .form__submit {
+        font-size: 12px;
+        width: 280px;
+    }
+}

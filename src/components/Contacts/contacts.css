@@ -73,3 +73,44 @@
     display: flex;
     gap: 14px;
 }
+
+@media screen and (max-device-width: 597px) {
+    .contacts__header {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .contacts__header-container {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        width: 240px;
+    }
+    .contacts__header-contactsContainer {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        min-width: 0;
+    }
+    .contacts__header-img {
+        width: 220px;
+        height: 220px;
+        background-size: contain;
+    }
+    .contacts__header-contactsTextContainer {
+        flex-wrap: wrap;
+    }
+    .contacts__header-contactsTitle {
+        font-size: 30px;
+    }
+    .contacts__header-contactsBox {
+        display: flex;
+        justify-content: center;
+    }
+    .contacts__header-contactsTextTitle {
+        font-size: 12px;
+    }
+    .contacts__header-contactsText {
+        font-size: 10px;
+    }
+}
