@@ -204,7 +204,7 @@
     background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
 }
 
-@media screen and (max-device-width: 597px) {
+@media screen and (max-device-width: 1200px) {
     .form__left-text {
         font-size: 20px;
         width: 240px;
@@ -266,14 +266,18 @@
 
     .form__right-upSub {
         margin-top: 30px;
+        justify-content: center;
     }
 
     .form__right__buttonUpload {
+        min-width: 280px;
+    }
+
+    .upload {
         font-size: 12px;
-        width: 280px;
     }
     .form__submit {
         font-size: 12px;
-        width: 280px;
+        min-width: 280px;
     }
 }

@@ -186,7 +186,7 @@
 }
 
 
-@media screen and (max-device-width: 597px) {
+@media screen and (max-device-width: 320px) {
     .navBar {
         border-radius: 0;
         background-color: inherit;

@@ -74,16 +74,20 @@
     gap: 14px;
 }
 
-@media screen and (max-device-width: 597px) {
+@media screen and (max-device-width: 1200px) {
     .contacts__header {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        background-repeat: repeat;
+        background-size: cover;
     }
+
     .contacts__header-container {
         flex-wrap: wrap-reverse;
         justify-content: center;
-        width: 240px;
+        min-width: 240px;
+        max-width: 1140px;
     }
     .contacts__header-contactsContainer {
         text-align: center;
@@ -99,6 +103,7 @@
     }
     .contacts__header-contactsTextContainer {
         flex-wrap: wrap;
+        justify-content: center;
     }
     .contacts__header-contactsTitle {
         font-size: 30px;

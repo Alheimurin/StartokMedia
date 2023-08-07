@@ -165,3 +165,61 @@
     font-size: 14px;
     font-weight: 300;
 }
+
+@media screen and (max-device-width: 1200px) {
+
+    .footer__content {
+        padding-top: 20px;
+    }
+
+    .footer__container {
+        display: block;
+        width: 320px;
+    }
+
+    .footer__left-img {
+        margin-left: 20px;
+    }
+
+    .footer__left-policy {
+        display: none;
+    }
+
+    .footer__right {
+        justify-content: center;
+        width: 320px;
+    }
+
+    .footer__rightTOP {
+        flex-wrap: wrap;
+        width: 290px;
+        gap: 0;
+        justify-content: center;
+        row-gap: 40px;
+        margin-top: 50px;
+    }
+    
+    .footer__right-item {
+        width: 145px;
+    }
+
+    .footer__right-itemTitle {
+        font-size: 12px;
+    }
+
+    .footer__right-itemLink {
+        font-size: 12px;
+    }
+
+    .footer__rightBOTTOM {
+        display: none;
+    }
+    
+    .footer__bottom {
+        padding-top: 50px;
+    }
+
+    .footer__bottomText {
+        font-size: 10px;
+    }
+}

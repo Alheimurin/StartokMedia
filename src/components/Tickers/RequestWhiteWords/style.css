@@ -6,7 +6,7 @@
     animation: scroll 30s linear infinite
 }
 
-@media screen and (max-device-width: 597px) {
+@media screen and (max-device-width: 1200px) {
     .requestWhiteTicker {
         display: none;
     }
