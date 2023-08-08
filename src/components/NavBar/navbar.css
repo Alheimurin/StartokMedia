@@ -4,6 +4,10 @@
     height: 50px;
 }
 
+.navBarMobile {
+    display: none;
+}
+
 .navBar {
     width: 1400px;
     display: flex;
@@ -186,18 +190,30 @@
 }
 
 
-@media screen and (max-device-width: 320px) {
-    .navBar {
-        border-radius: 0;
-        background-color: inherit;
-    }
-    .navBar__list {
+@media screen and (max-device-width: 1200px) {
+    .navBarComponent {
         display: none;
     }
-    .navBar__listLang {
-        display: none;
+
+    .navBarMobile {
+        width: 320px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    .navBar__button {
-        display: none;
+
+    .navBar__mobileLogo {
+        display: block;
+        background-image: url(/public/UI/mobileLogo.svg);
+        width: 177px;
+        height: 34px;
+        margin-left: 22px;
+    }
+
+    .navBar__burger {
+        margin-right: 22px;
+        background-image: url(/public/UI/burger.svg);
+        width: 30px;
+        height: 30px;
     }
 }

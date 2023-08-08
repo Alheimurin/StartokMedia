@@ -82,6 +82,10 @@
         background-repeat: repeat;
         background-size: cover;
     }
+    
+    .contacts__header-nav {
+        padding-top: 18px;
+    }
 
     .contacts__header-container {
         flex-wrap: wrap-reverse;

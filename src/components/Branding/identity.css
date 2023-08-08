@@ -183,3 +183,45 @@
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
 }
+
+@media screen and (max-device-width: 1200px) {
+    .identityNav {
+        padding-top: 18px;
+    }
+
+    .identity__header {
+        background-size: cover;
+        height: auto;
+    }
+
+    .identity__header-container {
+        margin: 50px 0;
+    }
+
+    .identity__header-content {
+        flex-wrap: wrap;
+        height: 345px;
+        width: 320px;
+        justify-content: center;
+    }
+
+    .identity__header-title {
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .identity__header-text {
+        font-size: 30px;
+        width: 260px;
+        text-align: center;
+    }
+
+    .identity__header-card {
+        /* margin-top: 35px; */
+        display: flex;
+        justify-content: center;
+        width: 280px;
+        height: auto;
+        transform: rotate(-2deg);
+    }
+}

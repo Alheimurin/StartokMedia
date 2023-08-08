@@ -44,3 +44,15 @@
     width: 195px;
     text-align: center;
 }
+
+@media screen and (max-device-width: 1200px) {
+    .card__container {
+        transform: scaleY(0.8) scale(0.95);
+    }
+/*     .card__title {
+        transform: scaleY(0.8); 
+    }
+    .card__text {
+        transform: scaleY(0.8);
+    } */
+}

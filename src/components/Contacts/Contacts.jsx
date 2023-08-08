@@ -25,10 +25,10 @@ function Contacts () {
             <header>
                 <div className='contacts__header'>
 
-                    {/* {<div className='contacts__header-nav'>
+                    <div className='contacts__header-nav'>
                         <NavBar showModalForm={showModalForm} 
                         contacts={true}/>
-                    </div>} */}
+                    </div>
 
                     <div className='contacts__header-container'>
                         <div>
