@@ -5,3 +5,9 @@
     background-color: white;
     animation: scroll 30s linear infinite
 }
+
+@media screen and (max-device-width: 1200px) {
+    .requestBlackTicker {
+        display: none;
+    }
+}

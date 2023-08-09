@@ -37,3 +37,38 @@
     text-align: center;
     height: 150px;
 }
+
+@media screen and (max-device-width: 1200px) {
+
+    .subBranding-container {
+        width: 320px;
+        height: auto;
+    }
+    
+    .subBranding-content {
+        width: 320px;
+        gap: 10px;
+        margin: 80px 0 50px 0;
+    }
+
+    .subBranding-img {
+        height: auto;
+    }
+
+    .subBranding-imgItem {
+        width: 75px;
+        height: 75px;
+    }
+
+    .subBranding-title {
+        font-size: 20px;
+        width: 280px;
+        text-align: center;
+    }
+
+    .subBranding-text {
+        font-size: 10px;
+        width: 276px;
+        height: auto;
+    }
+}

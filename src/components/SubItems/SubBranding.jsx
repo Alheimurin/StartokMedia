@@ -9,7 +9,7 @@ function SubBranding (props) {
                     <div className='subBranding-content'>
                         <div className='subBranding-img'>
                             <div>
-                                <img src={props.img} alt="" />
+                                <img className='subBranding-imgItem' src={props.img} alt="" />
                             </div>
                         </div>
                         <h2 className='subBranding-title'>{props.title}</h2>

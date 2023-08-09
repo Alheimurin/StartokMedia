@@ -217,11 +217,135 @@
     }
 
     .identity__header-card {
-        /* margin-top: 35px; */
         display: flex;
         justify-content: center;
         width: 280px;
         height: auto;
         transform: rotate(-2deg);
+    }
+
+    .identity__style {
+        margin-top: 80px;
+    }
+
+    .identity-container {
+        gap: 30px;
+        width: 320px;
+        margin: 0;
+        flex-wrap: wrap-reverse;
+    }
+
+    .identity__content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 320px;
+        gap: 30px;
+    }
+
+    .identity__style-left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .identity__style-leftIMG {
+        width: 282px;
+        height: 424px;
+    }
+    
+    .identity-title {
+        font-size: 20px;
+        width: 283px;
+    }
+
+    .identity__style-right {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 320px;
+    }
+
+    .identity__style-Text {
+        gap: 20px;
+        width: 285px;
+        justify-content: flex-start;
+    }
+
+    .identity-text {
+        font-size: 10px;
+        width: 270px;
+    }
+
+    .identity__style-rightButton {
+        display: none;
+    }
+
+    .identity__dev {
+        margin: 80px 0;
+    }
+
+    .identity__dev-container {
+        margin-top: 80px;
+        width: 320px;
+        gap: 30px;
+    }
+
+    .dev-text {
+        margin-top: 20px;
+    }
+
+    .identity__dev-button {
+        display: none;
+    }
+
+    @keyframes SlideBack {
+        0% {
+            transform: translateX(80px);
+            z-index: 0;
+        }
+        20% {
+            transform: translateX(80px);
+            z-index: 0;
+        }
+        50% {
+            transform: translateX(10px);
+        }
+        80% {
+            transform: translateX(80px) scale(1.163);
+            z-index: 1;
+        }
+        100% {
+            transform: translateX(80px) scale(1.163);
+            z-index: 1;
+        }
+    }
+    
+    @keyframes SlideFront {
+        0% {
+            transform: translateX(-80px);
+        }
+        20% {
+            transform: translateX(-80px);
+        }
+        50% {
+            transform: translateX(10px) scale(0.865);
+        }
+        80% {
+            transform: translateX(-80px) scale(0.865);
+            z-index: 0;
+        }
+        100% {
+            transform: translateX(-80px) scale(0.865);
+            z-index: 0;
+        }
+    }
+
+    .identity__dev-sub {
+        flex-wrap: wrap;
+    }
+
+    .identity__dev-subHR {
+        height: 1px;
+        width: 100%;
     }
 }

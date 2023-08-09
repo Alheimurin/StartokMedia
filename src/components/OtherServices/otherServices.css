@@ -67,3 +67,48 @@
     background-color: rgba(240, 240, 240, 1);
     color: #000000;
 }
+
+@media screen and (max-device-width: 1200px) {
+
+    .otherServicesComponent {
+        border-bottom: 1px solid black;
+    }
+
+    .otherServices__container {
+        margin: 80px 0;
+        display: flex;
+        flex-wrap: wrap ;
+        justify-content: center;
+    }
+
+    .otherServices__title {
+        font-size: 12px;
+        width: 280px;
+    }
+    
+    .otherServices__content-container {
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 25px;
+        justify-content: center;
+    }
+
+    .otherServices__content {
+        width: 270px;
+        gap: 20px;
+    }
+
+    .otherServices__contentTitle {
+        font-size: 20px;
+    }
+
+    .otherServices__contentText {
+        font-size: 10px;
+    }
+
+    .otherServices__contentLink {
+        font-size: 12px;
+        width: 140px;
+        height: 40px;
+    }
+}

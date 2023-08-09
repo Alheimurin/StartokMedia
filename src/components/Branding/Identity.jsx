@@ -53,7 +53,7 @@ function Identity () {
                         <h2 className='identity-title'>РАЗРАБОТКА <span className='identity-gradient'> ФИРМЕННОГО </span> СТИЛЯ</h2>
                         <div className='identity-container'>
                             <div className='identity__style-left'>
-                                <img src="UI/identityStyle.svg" alt="" />
+                                <img className='identity__style-leftIMG' src="UI/identityStyle.svg" alt="" />
                             </div>
                             <div className='identity__style-right'>
                                 <div className='identity__style-Text'>
@@ -115,7 +115,7 @@ function Identity () {
                         удобства использования первично проецируется архитектура сайта, 
                         а затем происходит прототипирование и дизайн.'
                     />
-                    <hr />
+                    <hr className='identity__dev-subHR'/>
                     <SubBranding
                         img='UI/devStar.svg'
                         title='WEB-РАЗРАБОТКА'
