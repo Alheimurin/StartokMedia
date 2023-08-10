@@ -21,3 +21,30 @@
     font-size: 20px;
     font-weight: 500;
 }
+
+
+@media screen and (max-device-width: 1200px) {
+    .integration__content-wImg {
+        width: 280px;
+    }
+
+    .imgContainer {
+        height: auto;
+        align-items: center;
+    }
+
+    .integration__contentImg {
+        width: 135px;
+        height: 80px;
+    }
+
+    .integration__img {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .integration__contentImgText {
+        font-size: 12px;
+        width: 120px;
+    }
+}

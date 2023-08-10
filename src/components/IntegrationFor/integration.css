@@ -79,3 +79,65 @@
     font-weight: 500;
     margin-right: 50px;
 }
+
+@media screen and (max-device-width: 1200px) {
+
+    .integrationComponent {
+        border-bottom: 1px solid black;
+    }
+
+    .integration__container {
+        margin: 80px 0;
+        width: 320px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .integration___content-container {
+        width: 320px;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .integration__contentTitle {
+        font-size: 20px;
+        width: 280px;
+    }
+
+    .integration__contentText {
+        font-size: 10px;
+        width: 280px;
+    }
+
+    .integration__cards {
+        flex-wrap: wrap;
+        width: 320px;
+        gap: 15px;
+        margin: 50px 0 30px 0;
+        justify-content: center;
+    }
+
+    .centerLine {
+        display: none;
+    }
+
+    .integration__connection {
+        width: 280px;
+        height: 65px;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .integration__connectButton {
+        width: 130px;
+        height: 40px;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .connectText {
+        margin: 0;
+        width: 120px;
+    }
+}

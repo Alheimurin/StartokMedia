@@ -53,3 +53,56 @@
     transform: rotate(-2deg) scale(1.2);
     width: 420px;
 }
+
+@media screen and (max-device-width: 1200px) {
+
+    .musicArtists__nav {
+        padding-top: 18px;
+    }
+
+    .musicArtists__header {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
+    }
+
+    .musicArtists__header-container {
+        margin: 50px 0;
+        background-position: 250px 60px;
+        background-size: 23px;
+        height: 345px;
+    }
+
+    .musicArtists__header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+
+    .musicArtists__header-contentContainer {
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center; 
+    }
+
+    .musicArtists__title {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .musicArtists__text {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .musicArtists__card {
+        width: 280px;
+        transform: rotate(-2deg);
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+}
