@@ -45,9 +45,6 @@
     font-size: 90px;
     font-weight: 600;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 112px;
 }
 .main__header-containerItemTwo {
@@ -55,8 +52,6 @@
     font-size: 90px;
     font-weight: 600;
     text-align: center;
-    display: flex;
-    align-items: center;
     background-image: url(/public/UI/sure.svg);
     background-repeat: no-repeat;
     background-position: 97%;
@@ -86,8 +81,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* height: 340px; */
     padding-top: 10px;
+}
+
+.main__header-cards__button {
+    display: none;
 }
 
 .mainHeaderCard {
@@ -459,5 +457,84 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-device-width: 1200px) {
+
+    .main__header {
+        height: auto;
+    }
+
+    .main__header-container {
+        gap: 25px;
+        margin: 50px 0;
+    }
+
+    .main__header-nav {
+        padding-top: 18px;
+    }
+
+    .main__header-ticker {
+        display: none;
+    }
+
+    .main__header-containerTitle {
+        width: 320px;
+        min-height: auto;
+        background-image: none;
+    }
+
+    .main__header-containerItemOne{
+        font-size: 32px;
+        height: auto;
+    }
+    .main__header-containerItemTwo {
+        font-size: 32px;
+        min-height: auto;
+        background-image: none;
+    }
+
+    .main__header-cards {
+        width: 320px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__header-cards_cards {
+        justify-content: center;
+        width: 320px;
+        gap: 25px;;
+        padding: 0;
+    }
+
+    .main__header-cards_desc_container {
+        display: none;
+    }
+
+    .main__header-cards__button {
+        display: block;
+        width: 206px;
+        height: 40px;
+        border-radius: 100px;
+        background-color: #000000;
+        border: 1px solid white;
+        font-family: FordAntenna;
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+        padding: 0;
+    }
+
+    .mainHeaderCard {
+        width: 240px;
+        height: 140px;
+        order: 2;
+    }
+
+    .IC {
+        margin: 0;
+        order: 1;
     }
 }

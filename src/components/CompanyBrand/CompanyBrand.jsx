@@ -73,11 +73,15 @@ function CompanyBrand() {
 
                 <div className='conception__content'>
                     <div className="conception__content-container">
-                        <p className='conception-text'>
+                        <div>
+                            <p className='conception-text'>
                             Не знаете, как правильно подготовить <br /> промо-план и осуществить интеграцию авторов?
-                        </p>
-                        <h2 className='conception-title'>РАЗРАБАТЫВАЕМ КОНЦЕПЦИЮ РЕКЛАМНОЙ КОМПАНИИ ОТ ИДЕИ ДО РЕАЛИЗАЦИИ</h2>
-                        <button onClick={showModalForm} className='conception-button'>Связаться</button>
+                            </p>
+                            <h2 className='conception-title'>РАЗРАБАТЫВАЕМ КОНЦЕПЦИЮ РЕКЛАМНОЙ КОМПАНИИ ОТ ИДЕИ ДО РЕАЛИЗАЦИИ</h2>
+                            <button onClick={showModalForm} className='conception-button'>Связаться</button>
+                        </div>
+                        
+                        <img className='conception-img' srcSet="UX/conceptionRight.svg" alt="" />
                     </div>
                 </div>
 

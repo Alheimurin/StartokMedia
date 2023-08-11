@@ -47,6 +47,7 @@ function Main () {
                         </div>
                         <div className='main__header-cards'>
                             <nav className='main__header-cards_cards'>
+                                <button className='main__header-cards__button'>Оставить заявку</button>
                                 <Link to='/music' className='mainHeaderCard'>
                                     <img  onPointerOver={()=>{setCardInfo(info.musicInfo); setHover({music:true})}} onPointerOut={()=>{setCardInfo(info.companyInfo) ;setHover({company:true})}} className={hover.music ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
                                 </Link>

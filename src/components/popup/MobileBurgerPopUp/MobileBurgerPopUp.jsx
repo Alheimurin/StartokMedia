@@ -25,7 +25,7 @@ function MobileBurger ({showBurger, setShowBurger}) {
                     <hr className='burgerBox__line'/>
                     <div className='burgerBox__dropdown'>
                         <div onClick={()=>setDrop(!drop)} className='burgerBox__drop'>
-                            <div>INFLUENCE</div>
+                            <h3 className='burgerBox__link'>INFLUENCE</h3>
                             <div className={drop ? 'burgerBox__arrow rot' : 'burgerBox__arrow'}></div>
                         </div>
                         <div className={drop ?'dropdownMenuShow' : 'dropdownMenu'}>

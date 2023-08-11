@@ -67,12 +67,12 @@
 }
 
 .conception__content-container {
-    background-image: url(/public/UX/conceptionRight.svg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain ;
     width: 1200px;
     color: #ffffff;
+    display: flex;
 }
 
 .conception-text {
@@ -104,7 +104,82 @@
 }
 
 .conception-img {
-    background-image: url(/public/UX/conceptionRight.svg);
-    width: 540px;
-    height: 345px;
+    height: 350px;
+}
+
+@media screen and (max-device-width: 1200px) {
+
+    .company__header {
+        height: auto;
+        background-size: cover;
+    }
+
+    .company__header-nav {
+        padding-top: 18px;
+    }
+
+    .company__header-container {
+        margin: 50px 0;
+    }
+
+    .company__header-сontent {
+        width: 320px;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 345px;
+        background-position: 260px 15px;
+        background-size: 23px;
+    }
+
+    .company__header-containerTitle {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .company__header-containerText {
+        font-size: 30px;
+        width: 230px;
+        text-align: center;
+    }
+
+    .company__header-containerCard {
+        display: flex;
+        justify-content: center;
+        width: 280px;
+        transform: rotate(-2deg) 
+    }
+
+    .conception__content {
+        align-items: normal;
+        height: auto;
+    }
+
+    .conception__content-container {
+        width: 320px;
+        margin: 50px 20px;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .conception-img {
+        width: 280px;
+        height: 165px;
+    }
+
+    .conception-text {
+        font-size: 10px;
+        width: 280px;
+    }
+
+    .conception-title {
+        font-size: 16px;
+        width: 285px;
+    }
+
+    .conception-button {
+        width: 140px;
+        height: 40px;
+        font-size: 12px;
+        margin-top: 30px;
+    }
 }
