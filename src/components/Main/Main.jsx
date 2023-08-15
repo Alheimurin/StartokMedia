@@ -113,7 +113,6 @@ function Main () {
                                         <p className='main__content-cardsItemTextBig'>Менеджмент для достижения поставленных целей в кратчайшие сроки</p>
                                     </div>
                                 </div>
-                                
                             </div>
                         </div>
 
@@ -121,18 +120,28 @@ function Main () {
 
                         <div className='main__content-marketingContainer'>
                             <Link to='/company' className='main__content-marketingCompany arrows'>
-                                <div>
+                                <div className='main__content-marketingContent'>
                                     <h3 className='main__content-marketingTitle'>Influencer Marketing</h3>
                                     <p className='main__content-marketingText'>COMPANY <span className='main__content-marketingTextGradient'>&</span> BRAND</p>
+                                    <p className='main__content-marketingInfo'>Подберем релевантных блогеров, 
+                                        разработаем концепцию рекламной кампании 
+                                        для вашего продукта.
+                                    </p>
+                                    <Link className='main__content-makertingButton'>Подробнее</Link>
                                     <div className='main__content-marketingArrowContainer'>
                                         <svg className='main__content-marketingArrow main__content-marketingArrowAfter'></svg>
                                     </div>
                                 </div>
                             </Link>
                             <Link to='/music' className='main__content-marketingMusic arrows'>
-                                <div>
+                                <div className='main__content-marketingContent'>
                                     <h3 className='main__content-marketingTitle'>Influencer Marketing</h3>
                                     <p className='main__content-marketingText'> MUSIC <br /> <span className='main__content-marketingTextGradient'>&</span> ARTISTS</p>
+                                    <p className='main__content-marketingInfo'>Подберем релевантных блогеров, 
+                                        разработаем концепцию рекламной кампании 
+                                        для вашего продукта.
+                                    </p>
+                                    <Link className='main__content-makertingButton'>Подробнее</Link>
                                     <div className='main__content-marketingArrowContainer'>
                                         <svg className='main__content-marketingArrow'></svg>
                                     </div>
@@ -140,13 +149,18 @@ function Main () {
                             </Link>
                         </div>
                             <Link to='/identity' className='main__content-marketingBranding arrows'>
-                                <div>
+                                <div className='main__content-marketingContent'>
                                     <h3 className='main__content-marketingTitle'>Branding, websites</h3>
                                     <div className='main__content-marketingTextImg'>
                                         <p className='main__content-marketingTextBig'>
                                             IDENTITY<span className='main__content-marketingTextGradient'> & </span> 
                                             UX/UI-DESIGN
                                         </p>
+                                        <p className='main__content-marketingInfo'> Подберем релевантных блогеров, 
+                                            разработаем концепцию рекламной кампании 
+                                            для вашего продукта.
+                                        </p>
+                                        <Link className='main__content-makertingButton'>Подробнее</Link>
                                         <div className='main__content-marketingArrowContainer'>
                                             <svg className='main__content-marketingArrow'></svg>
                                         </div>
@@ -156,13 +170,13 @@ function Main () {
                         </div>
                         <div className='main__content-idea'>
                             <div className="main__content-ideaContainer">
-                            <div className='main__content-ideaLeft'>
-                                <p className='main__content-ideaLeftText'>ЕСЛИ ЕСТЬ ИДЕЯ, ЗНАЧИТ, ЕСТЬ РЕШЕНИЕ</p>
-                            </div>
-                            <div className='main__content-ideaRight'>
-                                <svg className='main__content-ideaRightImg'></svg>
-                                <svg className='main__content-ideaRightText'></svg>
-                            </div>
+                                <div className='main__content-ideaLeft'>
+                                    <p className='main__content-ideaLeftText'>ЕСЛИ ЕСТЬ ИДЕЯ, ЗНАЧИТ, ЕСТЬ РЕШЕНИЕ</p>
+                                </div>
+                                <div className='main__content-ideaRight'>
+                                    <svg className='main__content-ideaRightImg'></svg>
+                                    <svg className='main__content-ideaRightText'></svg>
+                                </div>
                             </div>
                         </div>
                 </div>

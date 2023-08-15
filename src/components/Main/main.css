@@ -270,6 +270,10 @@
     border-bottom: 1px solid #000000;
 }
 
+.main__content-marketingInfo, .main__content-makertingButton {
+    display: none;
+}
+
 .main__content-marketingCompany {
     display: flex;
     flex-wrap: wrap;
@@ -616,5 +620,99 @@
 
     .main__content-marketingContainer {
         flex-wrap: wrap;
+        border-bottom: none;
+    }
+
+    .main__content-marketingContent {
+        width: 280px;
+    }
+
+    .main__content-marketingTitle {
+        font-size: 10px;
+        margin: 50px 0 10px 0;
+    }
+
+    .main__content-marketingText, .main__content-marketingTextGradient {
+        font-size: 26px;
+        margin: 0;
+        margin-bottom: 20px;
+        width: 200px;
+    }
+
+    .main__content-marketingCompany, .main__content-marketingMusic, .main__content-marketingBranding {
+        height: auto;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    .main__content-marketingArrowContainer {
+        display: none;
+    }
+
+    .main__content-marketingTextBig {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .main__content-marketingTextImg {
+        flex-wrap: wrap;
+        gap: 0;
+
+    }
+
+    .main__content-marketingInfo {
+        font-family: FordAntenna;
+        font-size: 10px;
+        font-weight: 300;
+        width: 230px;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .main__content-makertingButton {
+        width: 140px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 7px;
+        background-color: white;
+        font-family: FordAntenna;
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .main__content-idea {
+        width: 320px;
+        height: 200px;
+    }
+
+    .main__content-ideaContainer {
+        justify-content: center;
+    }
+
+    .main__content-ideaLeft {
+        display: none;
+    }
+
+    .main__content-ideaRight {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__content-ideaRightImg {
+        position: absolute;
+    }
+
+    .main__content-ideaRightText {
+        background-image: url(/public/UI/mobileIdea.svg);
+        background-position: center;
+        width: auto;
+        height: auto;
     }
 }
