@@ -50,7 +50,19 @@ input::placeholder {
 .formPopUp__Logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 10px;
+}
+
+.formPopUp__LogoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.formPopUp__cancel {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 .formPopUp__Title {

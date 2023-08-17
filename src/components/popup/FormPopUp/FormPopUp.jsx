@@ -7,8 +7,11 @@ function FormPopUp ({active, setActive}) {
             <div className='formPopUpComponent' onClick={e=>e.stopPropagation()}>
                 <form className='formPopUp__Container'>
                     <div className='formPopUp__Logo'>
-                        <img src="/UI/formPUpLogo.svg" alt="" />
-                        <h2 className='formPopUp__Title'>STARTOK MEDIA</h2>
+                        <div className='formPopUp__LogoContainer'>
+                            <img src="/UI/formPUpLogo.svg" alt="" />
+                            <h2 className='formPopUp__Title'>STARTOK MEDIA</h2>
+                        </div>
+                        <img onClick={()=>setActive(false)} className='formPopUp__cancel' src="/UI/QRxross.svg" alt="" />
                     </div>
                     <div>
                         <p className='formPopUp__Text'>Заполните форму, чтобы мы могли связаться с вами</p>
