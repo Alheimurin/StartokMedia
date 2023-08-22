@@ -46,6 +46,12 @@ function Form () {
                         </div>
 
                         <div className='form__right-upSub'>
+
+                            <div className='form__left-inputCheckbox mobile_checkbox'>
+                                <input className='form__left-inputCheck' type="checkbox" defaultChecked />
+                                <label className='label-checkbox' htmlFor="">Нажимая кнопку «Отправить», вы принимаете правила <Link className='label-policy'>политики конфиденциальности</Link></label>
+                            </div>
+
                             <div>
                                 <button type='button' className='form__right__buttonUpload'>
                                     <label className='upload' htmlFor='upload'>

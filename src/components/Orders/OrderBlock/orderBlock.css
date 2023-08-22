@@ -37,3 +37,29 @@
 .orderBlock__content-button:hover {
     background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
 }
+
+@media screen and (max-device-width: 1200px) {
+    .orderBlock-container {
+        width: 280px;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .orderBlock__content {
+        padding: 0;
+        width: 260px;
+    }
+    
+    .orderBlock__content-text {
+        font-size: 10px;
+        width: 120px;
+    }
+
+    .orderBlock__content-button {
+        width: 130px;
+        height: 40px;
+        font-size: 12px;
+        padding: 0;
+    }
+}

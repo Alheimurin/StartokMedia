@@ -204,6 +204,10 @@
     background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
 }
 
+.mobile_checkbox {
+    display: none;
+}
+
 @media screen and (max-device-width: 1200px) {
     .form__left-text {
         font-size: 20px;
@@ -279,5 +283,21 @@
     .form__submit {
         font-size: 12px;
         min-width: 280px;
+    }
+
+    .mobile_checkbox {
+        display: flex;
+        width: 280px;
+        gap: 5px;
+    }
+
+    .label-checkbox {
+        font-size: 10px;
+        width: 270px;
+    }
+    
+    .form__left-inputCheck {
+        width: 10px;
+        height: 10px;
     }
 }

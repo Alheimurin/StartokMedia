@@ -184,6 +184,10 @@
     border-bottom: 1px solid #000000;
 }
 
+.mobile {
+    display: none;
+}
+
 @media screen and (max-device-width: 1200px) {
     .identityNav {
         padding-top: 18px;
@@ -280,6 +284,11 @@
         display: none;
     }
 
+    .mobile {
+        margin: 0;
+        display: block;
+    }
+
     .identity__dev {
         margin: 80px 0;
     }
@@ -292,10 +301,6 @@
 
     .dev-text {
         margin-top: 20px;
-    }
-
-    .identity__dev-button {
-        display: none;
     }
 
     @keyframes SlideBack {
@@ -342,6 +347,10 @@
 
     .identity__dev-sub {
         flex-wrap: wrap;
+    }
+
+    .identity__dev-button {
+        display: none;
     }
 
     .identity__dev-subHR {

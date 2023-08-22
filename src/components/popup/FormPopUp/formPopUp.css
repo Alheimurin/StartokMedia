@@ -152,3 +152,9 @@ input::placeholder {
 .formPopUp__buttonsSubmit:hover {
     background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
 }
+
+@media screen and (max-device-width: 1200px) {
+    .modalForm {
+        display: none;
+    }
+}

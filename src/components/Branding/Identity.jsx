@@ -76,6 +76,13 @@ function Identity () {
                                 </div>
                             </div>
                         </div>
+
+                        <div className='mobile'>
+                                    <OrderBlock
+                                        text='Создадим дизайн, который выделит вашу компанию.'
+                                        showModalForm={showModalForm}
+                                    />
+                        </div>
                     </div>
                 </div>
 
@@ -103,6 +110,13 @@ function Identity () {
                         <div className='identity__dev-img'>
                             <img className='dev-imgOne' src="UI/identityDev2.svg" alt="" />
                             <img className='dev-imgTwo' src="UI/identityDev.svg" alt="" />
+                        </div>
+
+                        <div className='mobile'>
+                                    <OrderBlock
+                                        text='Создадим дизайн, который выделит вашу компанию.'
+                                        showModalForm={showModalForm}
+                                    />
                         </div>
                     </div>
                 </div>
