@@ -22,6 +22,7 @@ function QRPopUp({active, setActive, name, img}) {
                         </button>
                     </div>
                 </div>
+                <button onClick={(e)=>setActive(false)} className='mobile__close'>Закрыть</button>
             </div>
         </div>
     )

@@ -1,0 +1,57 @@
+.confirm {
+    display: none;
+}
+.confirmActive {
+    display: none;
+} 
+
+.confirm__container {
+    border: 1px solid black;
+    width: 270px;
+    height: 280px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm__content {
+    width: 200px;
+    height: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* @media screen and (max-device-width: 1200px) { */
+    .confirm {
+        /* width: 100vw;
+        height: 100vh; */
+        background-color: white;
+    }
+
+    .confirmActive {
+        /* display: none; */
+    }
+
+    .confirm__container {
+        border: 1px solid black;
+        width: 270px;
+        height: 280px;
+        text-align: center;
+    }
+
+    .confirm__title {
+        font-family: Unbounded;
+        font-size: 20px;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    .confirm__text {
+        font-family: FordAntenna;
+        font-size: 14px;
+        font-weight: 300;
+        width: 200px;
+    }
+/* } */

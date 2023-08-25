@@ -30,15 +30,15 @@ function MobileBurger ({showBurger, setShowBurger}) {
                         </div>
                         <div className={drop ?'dropdownMenuShow' : 'dropdownMenu'}>
                             <hr className='burgerBox__line'/>
-                            <Link className='burgerBox__link'>BRAND</Link>
+                            <Link to='/company' className='burgerBox__link'>BRAND</Link>
                             <hr className='burgerBox__line'/>
-                            <Link className='burgerBox__link'>MUSIC </Link>
+                            <Link to='/music' className='burgerBox__link'>MUSIC </Link>
                         </div>
                     </div>
                     <hr className='burgerBox__line'/>
-                    <Link className='burgerBox__link'>BRANDING</Link>
+                    <Link to='/identity' className='burgerBox__link'>BRANDING</Link>
                     <hr className='burgerBox__line'/>
-                    <Link className='burgerBox__link'>КОНТАКТЫ</Link>
+                    <Link to='/contacts' className='burgerBox__link'>КОНТАКТЫ</Link>
                     <hr className='burgerBox__line'/>
                 </div>
             </div>

@@ -97,14 +97,26 @@ function Footer () {
                     </div>
                 </div>
                 </div>
-
-                
             </div>
+
+            <div className='footer__left-policy mobile_policy'>
+                <h2 className='footer__left-policyTitle'>
+                    Политика конфиденциальности
+                </h2>
+                <p className='footer__left-policyText'>
+                    *продукт компании Meta, 
+                    признанной экстремистской организацией 
+                    и деятельность которой запрещена 
+                    в Российской Федерации
+                </p>
+            </div>
+
             <div className='footer__bottom'>
                     <div className='footer__bottomItem'>
                         <h2 className='footer__bottomText'>© Copyright 2023, Все права защищены</h2>
                     </div>
             </div>
+
             <QRPopUp
             active={showQR}
             setActive={setShowQR}

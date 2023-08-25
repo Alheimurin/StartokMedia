@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 import './form.css'
 import '../fonts/Fonts.css'
 
+import Confirm from '../popup/Confirm/Confirm'
+
 function Form () {
+
+const [active, setActive] = useState(false)
+
     return (
         <div className="form">
             <form className='form__item' action="">
@@ -63,12 +69,17 @@ function Form () {
                             </div>
                             
                             <div>
-                                <button className='form__submit' type='submit'>Отправить заявку</button>
+                                <button onClick={(e)=>{setActive(true)}} className='form__submit' type='submit'>Отправить заявку</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <Confirm
+            active={active}
+            setActive={setActive}
+            />
             </form>
+            
         </div>
     )
 }

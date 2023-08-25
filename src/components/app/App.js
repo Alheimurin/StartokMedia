@@ -5,6 +5,7 @@ import ContactPage from '../../pages/ContactPage'
 import CompanyBrandPage from '../../pages/CompanyBrandPage'
 import MusicArtistPage from '../../pages/MusicArtistPage'
 import IdentityPage from '../../pages/IdentityPage'
+import Error from "../404/404";
 
 import './app.css'
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "identity",
     element: <IdentityPage/>
+  },
+  {
+    path: "404",
+    element: <Error/>
   }
 ])
 
@@ -40,6 +45,7 @@ function App() {
         <Route path="company" element={<CompanyBrandPage/>}></Route>
         <Route path="music" element={<MusicArtistPage/>}></Route>
         <Route path="identity" element={<IdentityPage/>}></Route>
+        <Route path="404" element={<Error/>}></Route>
       </Routes>
     </BrowserRouter>
   );

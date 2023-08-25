@@ -188,6 +188,7 @@
     .footer__right {
         justify-content: center;
         width: 320px;
+        order: 1;
     }
 
     .footer__rightTOP {
@@ -221,5 +222,20 @@
 
     .footer__bottomText {
         font-size: 10px;
+    }
+
+    .mobile_policy {
+        display: flex;
+        width: 280px;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .footer__left-policyTitle {
+        font-size: 10px;
+    }
+
+    .footer__left-policyText {
+        font-size: 10px
     }
 }

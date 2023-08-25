@@ -100,3 +100,54 @@
     padding: 9px 22px;
     margin-left: 10px;
 }
+
+.mobile__close {
+    display: none;
+}
+
+@media screen and (max-device-width: 1200px) {
+    .QRmodal__container {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 260px;
+        height: 410px;
+    }
+
+    .QRmodal__container-cancel {
+        display: none;
+    }
+
+    .QRmodal__container-right_descContainer {
+        width: 280px;
+        justify-content: center;
+    }
+
+    .QRmodal__container-right_descTitle {
+        font-size: 20px;
+        width: 210px;
+        text-align: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .QRName {
+        font-size: 14px;
+        margin: 0;
+        padding: 9px 22px
+    }
+
+    .QRmodal__container-right_descText {
+        display: none;
+    }
+
+    .mobile__close {
+        height: 25px;
+        width: 80px;
+        border: none;
+        border-bottom: 1px solid black;
+        background: inherit;
+        font-family: FordAntenna;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
