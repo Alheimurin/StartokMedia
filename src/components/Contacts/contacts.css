@@ -85,13 +85,14 @@
     
     .contacts__header-nav {
         padding-top: 18px;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .contacts__header-container {
         flex-wrap: wrap-reverse;
         justify-content: center;
-        min-width: 240px;
-        max-width: 1140px;
+        width: 250px;
     }
     .contacts__header-contactsContainer {
         text-align: center;

@@ -63,7 +63,7 @@ function NavBar ( {showModalForm, contacts, identity, influence} ) {
             <div>
                 <div className="navBarMobile">
                     <div>
-                        <Link className="navBar__mobileLogo"></Link>
+                        <Link to="/" className="navBar__mobileLogo"></Link>
                     </div>
                     <div onClick={()=>setShow(true)} className="navBar__burger"></div>
                 </div>

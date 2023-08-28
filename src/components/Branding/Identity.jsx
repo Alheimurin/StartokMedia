@@ -78,10 +78,10 @@ function Identity () {
                         </div>
 
                         <div className='mobile'>
-                                    <OrderBlock
-                                        text='Создадим дизайн, который выделит вашу компанию.'
-                                        showModalForm={showModalForm}
-                                    />
+                            <OrderBlock
+                                text='Создадим дизайн, который выделит вашу компанию.'
+                                showModalForm={showModalForm}
+                            />
                         </div>
                     </div>
                 </div>
@@ -113,10 +113,10 @@ function Identity () {
                         </div>
 
                         <div className='mobile'>
-                                    <OrderBlock
-                                        text='Создадим дизайн, который выделит вашу компанию.'
-                                        showModalForm={showModalForm}
-                                    />
+                            <OrderBlock
+                                text='Создадим дизайн, который выделит вашу компанию.'
+                                showModalForm={showModalForm}
+                            />
                         </div>
                     </div>
                 </div>

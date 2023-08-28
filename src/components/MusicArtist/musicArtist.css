@@ -58,6 +58,9 @@
 
     .musicArtists__nav {
         padding-top: 18px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
     .musicArtists__header {
@@ -77,6 +80,7 @@
         flex-wrap: wrap;
         justify-content: center;
         height: auto;
+        width: 320px;
     }
 
     .musicArtists__header-contentContainer {

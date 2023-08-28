@@ -13,7 +13,7 @@
 }
 
 .main__header-nav {
-    min-width: 100%;
+    width: 100%;
     padding-top: 30px;
     display: flex;
     justify-content: center;    
@@ -478,6 +478,7 @@
 
     .main__header-nav {
         padding-top: 18px;
+        justify-content: space-between;
     }
 
     .main__header-ticker {
@@ -545,6 +546,7 @@
     .main__content-cards {
         margin-top: 50px;
         gap: 30px;
+        width: 320px;
     }
 
     .main__content-cardsItemOne {
@@ -643,6 +645,7 @@
         height: auto;
         border: none;
         border-bottom: 1px solid black;
+        width: 1200px;
     }
 
     .main__content-marketingArrowContainer {
@@ -705,6 +708,7 @@
         display: flex;
         justify-content: center;
         order: 2;
+        background-image: none;
     }
 
     .main__content-ideaLeftText {

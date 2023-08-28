@@ -16,7 +16,7 @@ function MobileBurger ({showBurger, setShowBurger}) {
     return (
         <div className={showBurger? "burgerBox burgerBox__show" : "burgerBox"}>
             <div className='burgerBox__head'>
-                <Link className="burgerBox__logo"></Link>
+                <Link to="/" className="burgerBox__logo"></Link>
                 <div onClick={()=> setShowBurger(false)} className='burgerBox__close'></div>
             </div>
             <div className='burgerBox__menu'>

@@ -1,15 +1,15 @@
-import { BrowserRouter, Route, Routes, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes, /* createBrowserRouter */ } from "react-router-dom";
 
 import MainPage from '../../pages/MainPage'
 import ContactPage from '../../pages/ContactPage'
 import CompanyBrandPage from '../../pages/CompanyBrandPage'
 import MusicArtistPage from '../../pages/MusicArtistPage'
 import IdentityPage from '../../pages/IdentityPage'
-import Error from "../404/404";
+import ErrorPage from "../../pages/ErrorPage";
 
 import './app.css'
 
-const router = createBrowserRouter([
+/* const router = createBrowserRouter([
   {
   path: "/",
   element: <MainPage/>
@@ -31,10 +31,10 @@ const router = createBrowserRouter([
     element: <IdentityPage/>
   },
   {
-    path: "404",
-    element: <Error/>
+    path: "*",
+    element: <ErrorPage/>
   }
-])
+]) */
 
 function App() {
   return (
@@ -45,7 +45,7 @@ function App() {
         <Route path="company" element={<CompanyBrandPage/>}></Route>
         <Route path="music" element={<MusicArtistPage/>}></Route>
         <Route path="identity" element={<IdentityPage/>}></Route>
-        <Route path="404" element={<Error/>}></Route>
+        <Route path="*" element={<ErrorPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );

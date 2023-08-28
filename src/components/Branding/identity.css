@@ -64,7 +64,7 @@
     font-family: Unbounded;
     font-size: 35px;
     font-weight: 600;
-    width: 500px;
+    width: 502px;
 }
 
 .identity-container {
@@ -297,6 +297,10 @@
         margin-top: 80px;
         width: 320px;
         gap: 30px;
+    }
+
+    .identity__dev-img {
+        height: 375px;
     }
 
     .dev-text {

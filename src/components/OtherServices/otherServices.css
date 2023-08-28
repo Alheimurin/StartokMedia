@@ -79,6 +79,7 @@
         display: flex;
         flex-wrap: wrap ;
         justify-content: center;
+        width: 320px;
     }
 
     .otherServices__title {
@@ -94,7 +95,7 @@
     }
 
     .otherServices__content {
-        width: 270px;
+        width: 280px;
         gap: 20px;
     }
 

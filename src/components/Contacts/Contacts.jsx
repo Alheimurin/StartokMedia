@@ -24,7 +24,6 @@ function Contacts () {
         <div>
             <header>
                 <div className='contacts__header'>
-
                     <div className='contacts__header-nav'>
                         <NavBar showModalForm={showModalForm} 
                         contacts={true}/>

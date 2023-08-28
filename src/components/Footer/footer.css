@@ -166,10 +166,20 @@
     font-weight: 300;
 }
 
+.mobile_policy {
+    display: none;
+}
+
 @media screen and (max-device-width: 1200px) {
 
     .footer__content {
         padding-top: 20px;
+    }
+
+    .footer__content-container {
+        width: 1200px;
+        display: flex;
+        justify-content: center;
     }
 
     .footer__container {
@@ -188,7 +198,6 @@
     .footer__right {
         justify-content: center;
         width: 320px;
-        order: 1;
     }
 
     .footer__rightTOP {
@@ -233,6 +242,8 @@
 
     .footer__left-policyTitle {
         font-size: 10px;
+        border-bottom: 1px solid;
+        width: 166px;
     }
 
     .footer__left-policyText {
