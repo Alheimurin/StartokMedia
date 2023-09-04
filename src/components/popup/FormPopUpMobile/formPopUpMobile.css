@@ -1,0 +1,148 @@
+.modalFormMobile__component {
+    display: none;
+}
+
+@media screen and (max-device-width:1200px) {
+    .modalFormMobile__component {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        transition: 0.5s;
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        background-color: white;
+    }
+    
+    .modalFormMobileActive {
+        opacity: 1;
+        pointer-events: all;
+        z-index: 3;
+    }
+    
+    .modalFormMobile {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px 0 80px 0;
+        color: black;
+    }
+    
+    .modalFormMobile__img {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .cancelButton {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background-color: white;
+        border: none;
+        background-image: url(/public/UI/QRxross.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 22px;
+    }
+
+    .modalFormMobile__container {
+        width: 320px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .modalFormMobile__title {
+        width: 280px;
+    }
+    
+    .modalFormMobile__titleItem {
+        font-family: Unbounded;
+        font-size: 20px;
+        font-weight: 600;
+        width: 240px;
+    }
+    
+    .mobileGradient {
+        background: linear-gradient(122.33deg, #FFD916 -12.52%, #FF1914 39.36%, #6705FF 83.03%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .modalFormMobile__form {
+        width: 280px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .modaFormMobile__label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: Unbounded;
+        font-size: 10px;
+        font-weight: 300;
+    }
+    
+    .modalFormMobile__input {
+        width: 280px;
+        height: 25px;
+        font-family: Unbounded;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .modalFormMobile__input::placeholder {
+        font-family: Unbounded;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    
+    .inputTo {
+        color: #A4A4A4;
+    }
+    
+    .mobileLabel {
+        width: 225px;
+    }
+    
+    .checkbox {
+        font-family: FordAntenna;
+        font-size: 10px;
+        font-weight: 300;
+    }
+    
+    .modalFormMobile__loader {
+        width: 280px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 7px;
+        background-color: white;
+    }
+    
+    .loader__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .modalFormMobile__button {
+        width: 280px;
+        height: 40px;
+        background-color: black;
+        color: white;
+        border-radius: 7px;
+        font-family: FordAntenna;
+        font-size: 12px;
+        font-weight: 500;
+        border: none;
+    }
+}

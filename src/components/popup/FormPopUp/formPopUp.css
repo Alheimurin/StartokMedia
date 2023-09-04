@@ -154,7 +154,8 @@ input::placeholder {
 }
 
 @media screen and (max-device-width: 1200px) {
-    .modalForm {
+    .modalForm, .active {
         display: none;
     }
 }
+

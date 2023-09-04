@@ -6,6 +6,7 @@ import Form from '../Form/Form'
 import Footer from '../Footer/Footer'
 import Integration from '../IntegrationFor/Integration'
 import FormPopUp from '../popup/FormPopUp/FormPopUp'
+import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
 
 import './companyBrand.css'
 import '../fonts/Fonts.css'
@@ -18,7 +19,10 @@ function CompanyBrand() {
 
     const showModalForm = () => {
         setFormShow(true)
+        setMobileForm(true)
     }
+
+    const [mobileForm, setMobileForm] = useState(false)
 
     return (
         <div>
@@ -78,7 +82,7 @@ function CompanyBrand() {
                             Не знаете, как правильно подготовить <br /> промо-план и осуществить интеграцию авторов?
                             </p>
                             <h2 className='conception-title'>РАЗРАБАТЫВАЕМ КОНЦЕПЦИЮ РЕКЛАМНОЙ КОМПАНИИ ОТ ИДЕИ ДО РЕАЛИЗАЦИИ</h2>
-                            <button onClick={showModalForm} className='conception-button'>Связаться</button>
+                            <button onClick={()=>{setMobileForm(true);showModalForm()}} className='conception-button'>Связаться</button>
                         </div>
                         
                         <img className='conception-img' srcSet="UX/conceptionRight.svg" alt="" />
@@ -108,6 +112,10 @@ function CompanyBrand() {
             <FormPopUp
                 active={formShow}
                 setActive={setFormShow}
+            />
+            <ModalFormMobile
+                MobileForm={mobileForm}
+                setMobileForm={setMobileForm}
             />
         </div>
     )

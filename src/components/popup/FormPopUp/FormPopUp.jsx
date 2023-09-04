@@ -8,7 +8,7 @@ function FormPopUp ({active, setActive}) {
                 <form className='formPopUp__Container'>
                     <div className='formPopUp__Logo'>
                         <div className='formPopUp__LogoContainer'>
-                            <img src="/UI/formPUpLogo.svg" alt="" />
+                            <img className='formPopUp__img' src="/UI/formPUpLogo.svg" alt="" />
                             <h2 className='formPopUp__Title'>STARTOK MEDIA</h2>
                         </div>
                         <img onClick={()=>setActive(false)} className='formPopUp__cancel' src="/UI/QRxross.svg" alt="" />

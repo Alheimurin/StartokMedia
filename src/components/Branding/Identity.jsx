@@ -7,6 +7,7 @@ import RequestBlackWords from '../Tickers/RequestBlackWords/BlackWords'
 import From from '../Form/Form'
 import Footer from '../Footer/Footer'
 import FormPopUp from '../popup/FormPopUp/FormPopUp'
+import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
 
 import './identity.css'
 import '../fonts/Fonts.css'
@@ -17,8 +18,11 @@ function Identity () {
 
     const [formShow, setFormShow] = useState(false)
 
+    const [mobileForm, setMobileForm] = useState(false)
+
     const showModalForm = () => {
         setFormShow(true)
+        setMobileForm(true)
     }
 
     return (
@@ -170,6 +174,10 @@ function Identity () {
             <FormPopUp
                 active={formShow}
                 setActive={setFormShow}
+            />
+            <ModalFormMobile
+                MobileForm={mobileForm}
+                setMobileForm={setMobileForm}
             />
         </div>
     )

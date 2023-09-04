@@ -6,11 +6,12 @@ import Form from '../Form/Form'
 import Footer from '../Footer/Footer'
 import BlackTickerString from '../Tickers/RequestBlackWords/BlackWords'
 import FormPopUp from '../popup/FormPopUp/FormPopUp'
+import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
 
 import './main.css'
 import '../fonts/Fonts.css'
 
-function Main () {
+function Main ({setMobileFormMenu}) {
 
     const [hover, setHover] = useState({
         music: false,
@@ -31,6 +32,8 @@ function Main () {
         setFormShow(true)
     }
 
+    const [MobileForm, setMobileForm] = useState(false)
+
     return (
         <div>
             <header className='main__header'>
@@ -47,7 +50,7 @@ function Main () {
                         </div>
                         <div className='main__header-cards'>
                             <nav className='main__header-cards_cards'>
-                                <button className='main__header-cards__button'>Оставить заявку</button>
+                                <button onClick={()=>setMobileForm(true)} className='main__header-cards__button'>Оставить заявку</button>
                                 <Link to='/music' className='mainHeaderCard'>
                                     <img  onPointerOver={()=>{setCardInfo(info.musicInfo); setHover({music:true})}} onPointerOut={()=>{setCardInfo(info.companyInfo) ;setHover({company:true})}} className={hover.music ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
                                 </Link>
@@ -185,11 +188,15 @@ function Main () {
                 </main>
                 <footer>
                     <Footer/>
-                    <FormPopUp
+                </footer>
+                <FormPopUp
                     active={formShow}
                     setActive={setFormShow}
-                    />
-                </footer>
+                />
+                <ModalFormMobile
+                    MobileForm={MobileForm}
+                    setMobileForm={setMobileForm}
+                />
         </div>
     )
 }

@@ -6,6 +6,7 @@ import BlackTickerString from '../Tickers/RequestBlackWords/BlackWords'
 import Form from '../Form/Form'
 import GradientCard from  '../Cards/GradientCard/Card'
 import FormPopUp from '../popup/FormPopUp/FormPopUp'
+import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
 
 import '../fonts/Fonts.css'
 import './musicArtist.css'
@@ -16,8 +17,11 @@ function MusicArtist () {
 
     const [formShow, setFormShow] = useState(false)
 
+    const [mobileForm, setMobileForm] = useState(false)
+
     const showModalForm = (x) => {
         setFormShow(true)
+        setMobileForm(true)
     }
 
     return (
@@ -87,6 +91,10 @@ function MusicArtist () {
             <FormPopUp
                 active={formShow}
                 setActive={setFormShow}
+            />
+            <ModalFormMobile
+                MobileForm={mobileForm}
+                setMobileForm={setMobileForm}
             />
         </div>
     )
