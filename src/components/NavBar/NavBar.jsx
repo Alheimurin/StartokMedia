@@ -10,6 +10,12 @@ function NavBar ( {showModalForm, contacts, identity, influence} ) {
 
     const [show, setShow] = useState(false)
 
+    const [lang, setLang] = useState({
+        RU: true,
+        EN: false,
+        CN: false
+    })
+
     const func = (x) => {
         x = true
     }
@@ -50,7 +56,7 @@ function NavBar ( {showModalForm, contacts, identity, influence} ) {
                     <div className="navBar__right">
                         <nav className="navBar__navigation">
                             <div className="navBar__listLang">
-                                <button autoFocus className="navBar__listLang-item">RU</button>
+                                <button onClick={(e)=>setLang({RU:true})} className={lang.RU? "navBar__listLang-item LangActive": "navBar__listLang-item"}>RU</button>
                                 <button disabled='disabled' className="navBar__listLang-item">EN</button>
                                 <button disabled='disabled' className="navBar__listLang-item">CH</button>
                             </div>

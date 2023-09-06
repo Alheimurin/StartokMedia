@@ -190,11 +190,13 @@
 
 @media screen and (max-device-width: 1200px) {
     .identityNav {
-        padding-top: 18px;
+        padding-top: 20px;
     }
 
     .identity__header {
         background-size: cover;
+        background-image: url(/public/assets/mobileBackground.svg);
+        background-position: inherit;
         height: auto;
     }
 

@@ -57,7 +57,7 @@
 @media screen and (max-device-width: 1200px) {
 
     .musicArtists__nav {
-        padding-top: 18px;
+        padding-top: 20px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -65,7 +65,7 @@
 
     .musicArtists__header {
         background-size: cover;
-        background-repeat: no-repeat;
+        background-image: url(/public/assets/mobileBackground.svg);
         height: auto;
     }
 

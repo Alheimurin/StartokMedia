@@ -162,15 +162,20 @@
     background-color: white;
     padding: 0;
 }
+.LangActive {
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: #ffffff;
+}
 
-.navBar__listLang-item:hover {
+/* .navBar__listLang-item:hover {
     border: 1px solid #000000;
 }
 .navBar__listLang-item:focus {
     border: 1px solid #000000;
     background-color: #000000;
     color: #ffffff;
-}
+} */
 
 
 .navBar__button {
@@ -207,11 +212,11 @@
         background-image: url(/public/UI/mobileLogo.svg);
         width: 177px;
         height: 34px;
-        margin-left: 22px;
+        margin-left: 20px;
     }
 
     .navBar__burger {
-        margin-right: 22px;
+        margin-right: 20px;
         background-image: url(/public/UI/burger.svg);
         width: 30px;
         height: 30px;

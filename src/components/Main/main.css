@@ -469,6 +469,9 @@
 
     .main__header {
         height: auto;
+        background-image: url(/public/assets/mobileBackground.svg);
+        background-position: inherit;
+        background-size: cover;
     }
 
     .main__header-container {
@@ -477,7 +480,7 @@
     }
 
     .main__header-nav {
-        padding-top: 18px;
+        padding-top: 20px;
         justify-content: space-between;
     }
 

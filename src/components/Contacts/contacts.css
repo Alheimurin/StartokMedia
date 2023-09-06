@@ -79,12 +79,13 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        background-repeat: repeat;
+        background-image: url(/public/assets/mobileBackground.svg);
+        background-position: inherit;
         background-size: cover;
     }
     
     .contacts__header-nav {
-        padding-top: 18px;
+        padding-top: 20px;
         width: 100%;
         justify-content: space-between;
     }

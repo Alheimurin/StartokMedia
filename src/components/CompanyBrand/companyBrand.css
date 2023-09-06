@@ -112,10 +112,11 @@
     .company__header {
         height: auto;
         background-size: cover;
+        background-image: url(/public/assets/mobileBackground.svg);
     }
 
     .company__header-nav {
-        padding-top: 18px;
+        padding-top: 20px;
         width: 100%;
         justify-content: space-between;
     }
