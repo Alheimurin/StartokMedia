@@ -17,8 +17,8 @@ function MobileBurger ({showBurger, setShowBurger, setMobileFormMenu}) {
     const [mobileForm, setMobileForm] = useState(false)
 
     return (
-        <div className={showBurger? "burgerBox burgerBox__show" : "burgerBox"}>
-            <div>
+        <div>
+            <div className={showBurger? "burgerBox burgerBox__show" : "burgerBox"}>
                 <div className='burgerBox__head'>
                     <Link to="/" className="burgerBox__logo"></Link>
                     <div onClick={()=> setShowBurger(false)} className='burgerBox__close'></div>

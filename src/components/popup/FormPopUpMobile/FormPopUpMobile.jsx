@@ -35,7 +35,7 @@ function ModalFormMobile ({MobileForm, setMobileForm}) {
                             <input readOnly value='PR@STARTOKMEDIA.RU' className='modalFormMobile__input mobileLabel inputTo' type="text" />
                         </label>
                         <label className='modaFormMobile__label checkbox' htmlFor="">
-                            <input type="checkbox" />
+                            <input type="checkbox" defaultChecked />
                             Нажимая кнопку «Отправить», вы принимаете правила политики конфиденциальности
                         </label>
                         <button type='button' className='modalFormMobile__loader'>

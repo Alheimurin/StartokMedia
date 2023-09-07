@@ -59,19 +59,32 @@
     width: 834px;
     height: 40px;
     border: none;
-    border-bottom: 1px solid #000000;
+    /* border-bottom: 1px solid #000000; */
     padding: 0;
-    font-family: Unbounded;
-    font-size: 14px;
-    font-weight: 500;
+    font-family: FordAntenna;
+    font-size: 16px;
+    font-weight: 300;
 }::placeholder {
     font-family: FordAntenna;
     font-size: 16px;
     font-weight: 300;
+    color: black;
 }
 
-.wLabel::placeholder {
-    padding-left: 10px;
+.req {
+    display: flex;
+    align-items: center;
+}
+.requiredItem {
+    font-family: FordAntenna;
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+    position: absolute
+}
+.required {
+    display: flex;
+    align-items: center;
 }
 
 .form__left-inputCheckbox {
@@ -242,6 +255,10 @@
     .inputs-labelLeft {
         font-size: 10px;
         min-width: 57px;
+    }
+
+    .form__left-input{
+        font-size: 10px;
     }
     .form__left-input::placeholder {
         font-size: 10px;

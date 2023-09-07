@@ -3,12 +3,47 @@ import { useState } from 'react'
 
 import './form.css'
 import '../fonts/Fonts.css'
-
 import Confirm from '../popup/Confirm/Confirm'
 
 function Form () {
-
 const [active, setActive] = useState(false)
+
+const [phoneNumber, setPhoneNumber] = useState ('')
+const [email, setEmail] = useState('')
+const validField = [{
+    o: '',
+    v: '/UI/formV.svg',
+    x: '/UI/formX.svg'
+}]
+
+
+    let validPhone = [{
+        phone: '',
+        mark: ''
+    }]
+    if (phoneNumber.length > 0) {
+        validPhone = []
+    }
+    if (phoneNumber.length === 0) {
+        validPhone.phone = 'Телефон'
+        validPhone.mark = '*'
+    }
+
+    let validEmail = [{
+        email: '',
+        mark: ''
+    }]
+    if (email.length > 0) {
+        validEmail = []
+        /* validField.v */
+    }
+    if (email.length === 0) {
+        validEmail.email = 'Email'
+        validEmail.mark = '*'
+    }
+
+    
+
 
     return (
         <div className="form">
@@ -19,12 +54,23 @@ const [active, setActive] = useState(false)
                         <div className='inputs-form'>
                             <label className='inputs-labelLeft' htmlFor="">От кого</label>
                             <input className='form__left-input wLabel' type="text" placeholder='Компания' />
+                            <div></div>
                         </div>
                         <input className='form__left-input' type="text" placeholder='Имя'/>
-                        <input className='form__left-input' type="text" placeholder='Телефон' />
+                        <div className='req'>
+                            <input className='form__left-input' onChange={(e)=>setPhoneNumber(e.target.value)} id='phone' type="text" />
+                            <label className='requiredItem' htmlFor="phone">{validPhone.phone} <span style={{color:'red'}}>{validPhone.mark}</span></label>
+                            <div>{validField.v}</div>
+                        </div>
+                        
                         <div className='inputs-form'>
                             <label className='inputs-labelLeft' htmlFor="">Откуда</label>
-                            <input className='form__left-input wLabel' type="text" placeholder='Email' />
+                            <div className='required'>
+                                <input className='form__left-input wLabel' onChange={(e)=>setEmail(e.target.value)} id='email' type="text" />
+                            <label className='requiredItem' htmlFor="email">{validEmail.email} <span style={{color:'red'}}>{validEmail.mark}</span></label> 
+                            <div></div>     
+                            </div>
+                                    
                         </div>
                         <input className='form__left-input' type="text" placeholder='Комментарий' />
                         <div className='form__left-inputCheckbox'>
@@ -79,7 +125,6 @@ const [active, setActive] = useState(false)
             setActive={setActive}
             />
             </form>
-            
         </div>
     )
 }

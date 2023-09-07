@@ -1,8 +1,7 @@
 .burgerBox {
-    width: 100%;
+    width: 320px;
     height: 100vh;
     color: white;
-    background-color: black;
     position: fixed;
     top: 0;
     pointer-events: none;
@@ -10,6 +9,7 @@
     opacity: 0;
     position: fixed;
     right: 0;
+    background-color: black;
 }
 
 .burgerBox__show {
