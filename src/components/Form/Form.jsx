@@ -5,17 +5,16 @@ import './form.css'
 import '../fonts/Fonts.css'
 import Confirm from '../popup/Confirm/Confirm'
 
-function Form () {
-const [active, setActive] = useState(false)
+function Form (props) {
 
-const [phoneNumber, setPhoneNumber] = useState ('')
-const [email, setEmail] = useState('')
-const validField = [{
-    o: '',
-    v: '/UI/formV.svg',
-    x: '/UI/formX.svg'
-}]
+    const [active, setActive] = useState(false)
 
+    const [phoneNumber, setPhoneNumber] = useState ('')
+    const [email, setEmail] = useState('')
+    const [validField, setValidField] = useState({
+        v: true, 
+        x: true
+    })
 
     let validPhone = [{
         phone: '',
@@ -23,6 +22,7 @@ const validField = [{
     }]
     if (phoneNumber.length > 0) {
         validPhone = []
+        validField.v = false
     }
     if (phoneNumber.length === 0) {
         validPhone.phone = 'Телефон'
@@ -35,7 +35,6 @@ const validField = [{
     }]
     if (email.length > 0) {
         validEmail = []
-        /* validField.v */
     }
     if (email.length === 0) {
         validEmail.email = 'Email'
@@ -54,13 +53,16 @@ const validField = [{
                         <div className='inputs-form'>
                             <label className='inputs-labelLeft' htmlFor="">От кого</label>
                             <input className='form__left-input wLabel' type="text" placeholder='Компания' />
-                            <div></div>
+                            <img style={validField.v ? {display: 'none'} : {display: 'block'}} src="/UI/formV.svg" alt="" /> <img style={validField.x ? {display: 'none'} : {display: 'block'}} src="/UI/formX.svg" alt="" />
                         </div>
-                        <input className='form__left-input' type="text" placeholder='Имя'/>
+                        <div style={{display: 'flex'}}>
+                            <input className='form__left-input' type="text" placeholder='Имя'/>
+                            <img style={validField.v ? {display: 'none'} : {display: 'block'}} src="/UI/formV.svg" alt="" /> <img style={validField.x ? {display: 'none'} : {display: 'block'}} src="/UI/formX.svg" alt="" />
+                        </div>
                         <div className='req'>
                             <input className='form__left-input' onChange={(e)=>setPhoneNumber(e.target.value)} id='phone' type="text" />
                             <label className='requiredItem' htmlFor="phone">{validPhone.phone} <span style={{color:'red'}}>{validPhone.mark}</span></label>
-                            <div>{validField.v}</div>
+                            <img style={validField.v ? {display: 'none'} : {display: 'block'}} src="/UI/formV.svg" alt="" /> <img style={validField.x ? {display: 'none'} : {display: 'block'}} src="/UI/formX.svg" alt="" />
                         </div>
                         
                         <div className='inputs-form'>
@@ -68,11 +70,14 @@ const validField = [{
                             <div className='required'>
                                 <input className='form__left-input wLabel' onChange={(e)=>setEmail(e.target.value)} id='email' type="text" />
                             <label className='requiredItem' htmlFor="email">{validEmail.email} <span style={{color:'red'}}>{validEmail.mark}</span></label> 
-                            <div></div>     
+                            <img style={validField.v ? {display: 'none'} : {display: 'block'}} src="/UI/formV.svg" alt="" /> <img style={validField.x ? {display: 'none'} : {display: 'block'}} src="/UI/formX.svg" alt="" />    
                             </div>
                                     
                         </div>
-                        <input className='form__left-input' type="text" placeholder='Комментарий' />
+                        <div style={{display: 'flex'}}>
+                            <input className='form__left-input' type="text" placeholder='Комментарий' />
+                            <img style={validField.v ? {display: 'none'} : {display: 'block'}} src="/UI/formV.svg" alt="" /> <img style={validField.x ? {display: 'none'} : {display: 'block'}} src="/UI/formX.svg" alt="" />
+                        </div>
                         <div className='form__left-inputCheckbox'>
                             <input className='form__left-inputCheck' type="checkbox" defaultChecked />
                             <label className='label-checkbox' htmlFor="">Нажимая кнопку «Отправить», вы принимаете правила <Link className='label-policy'>политики конфиденциальности</Link></label>
