@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import './form.css'
 import '../fonts/Fonts.css'
@@ -9,34 +9,35 @@ import '../fonts/Fonts.css'
 function Form (props) {
 
     /* const [active, setActive] = useState(false) */
-
-    const [phoneNumber, setPhoneNumber] = useState ('')
-    const [email, setEmail] = useState('')
     
     const [value, setValue] = useState({
-        iniValue: 0
+        company: 0,
+        name: 0,
+        phone: 0,
+        mail: 0,
+        comment: 0,
     })
 
-    let validPhone = [{
-        phone: '',
-        mark: ''
-    }]
-    if (phoneNumber.length > 0) {
+    let validPhone = {
+        phone: 'Телефон',
+        mark: '*'
+    }
+    if (value.phone.length > 0) {
         validPhone = []
     }
-    if (phoneNumber.length === 0) {
+    if (value.phone.length === 0) {
         validPhone.phone = 'Телефон'
         validPhone.mark = '*'
     }
 
-    let validEmail = [{
-        email: '',
-        mark: ''
-    }]
-    if (email.length > 0) {
+    let validEmail = {
+        email: 'Email',
+        mark: '*'
+    }
+    if (value.mail.length > 0) {
         validEmail = []
     }
-    if (email.length === 0) {
+    if (value.mail.length === 0) {
         validEmail.email = 'Email'
         validEmail.mark = '*'
     }
@@ -72,36 +73,38 @@ function Form (props) {
                     <div className='form__left-inputs'>
                         <div className='inputs-form'>
                             <label className='inputs-labelLeft' htmlFor="">От кого</label>
-                            <input onChange={(e)=>{setValue((e.target.value))}} className='form__left-input wLabel' type="text" placeholder='Компания' />
-                            <img style={value.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                            <img style={value.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
+                            <div className='required'>
+                                <input onChange={(e)=>{setValue({...value, company: e.target.value})}} className='form__left-input wLabel' type="text" placeholder='Компания' />
+                                <img style={value.company.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
+                                <img style={value.company.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
+                            </div>
                         </div>
-                        <div style={{display: 'flex'}}>
-                            <input onChange={(e)=>{setValue(e.target.value)}} className='form__left-input' type="text" placeholder='Имя'/>
-                            <img style={value.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                            <img style={value.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
+                        <div className='required'>
+                            <input onChange={(e)=>{setValue({...value, name: e.target.value})}} className='form__left-input' type="text" placeholder='Имя'/>
+                            <img style={value.name.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
+                            <img style={value.name.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
                         </div>
-                        <div className='req'>
-                            <input onChange={(e)=>{setValue(e.target.value)}} className='form__left-input' onChange={(e)=>setPhoneNumber(e.target.value)} id='phone' type="text" />
+                        <div className='required'>
+                            <input onChange={(e)=>setValue({...value, phone: e.target.value})} className='form__left-input' id='phone' type="text" />
                             <label className='requiredItem' htmlFor="phone">{validPhone.phone} <span style={{color:'red'}}>{validPhone.mark}</span></label>
-                            <img style={value.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                            <img style={value.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
+                            <img style={value.phone.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
+                            <img style={value.phone.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
                         </div>
                         
                         <div className='inputs-form'>
                             <label className='inputs-labelLeft' htmlFor="">Откуда</label>
                             <div className='required'>
-                                <input className='form__left-input wLabel' onChange={(e)=>setEmail(e.target.value)} id='email' type="text" />
+                            <input onChange={(e)=>setValue({...value, mail: e.target.value})} className='form__left-input wLabel' id='email' type="text" />
                             <label className='requiredItem' htmlFor="email">{validEmail.email} <span style={{color:'red'}}>{validEmail.mark}</span></label> 
-                            <img style={value.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                            <img style={value.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />    
+                            <img style={value.mail.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
+                            <img style={value.mail.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />  
                             </div>
                                     
                         </div>
-                        <div style={{display: 'flex'}}>
-                            <input onChange={(e)=>{setValue(e.target.value)}} className='form__left-input' type="text" placeholder='Комментарий' />
-                            <img style={value.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                            <img style={value.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
+                        <div className='required'>
+                            <input onChange={(e)=>{setValue({...value, comment: e.target.value})}} className='form__left-input' type="text" placeholder='Комментарий' />
+                            <img style={value.comment.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
+                            <img style={value.comment.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
                         </div>
                         <div className='form__left-inputCheckbox'>
                             <input className='form__left-inputCheck' type="checkbox" defaultChecked />
