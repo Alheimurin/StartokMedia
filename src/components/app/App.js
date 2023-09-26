@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes, /* createBrowserRouter */ } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { IntlProvider } from "react-intl";
 
 import MainPage from '../../pages/MainPage'
 import ContactPage from '../../pages/ContactPage'
@@ -9,45 +10,26 @@ import ErrorPage from "../../pages/ErrorPage";
 
 import './app.css'
 
-/* const router = createBrowserRouter([
-  {
-  path: "/",
-  element: <MainPage/>
-  },
-  {
-    path: "contacts",
-    element: <ContactPage/>
-  },
-  {
-    path: "company",
-    element: <CompanyBrandPage/>
-  },
-  {
-    path: "music",
-    element: <MusicArtistPage/>
-  },
-  {
-    path: "identity",
-    element: <IdentityPage/>
-  },
-  {
-    path: "*",
-    element: <ErrorPage/>
-  }
-]) */
+import { LOCALES } from '../../i18n/locales'
+import { messages } from '../../i18n/messages'
 
 function App() {
+
+  const locale = LOCALES.RUSSIAN
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainPage/>}></Route>
-        <Route path="contacts" element={<ContactPage/>}></Route>
-        <Route path="company" element={<CompanyBrandPage/>}></Route>
-        <Route path="music" element={<MusicArtistPage/>}></Route>
-        <Route path="identity" element={<IdentityPage/>}></Route>
-        <Route path="*" element={<ErrorPage/>}></Route>
-      </Routes>
-    </BrowserRouter>
+    <IntlProvider messages={messages[locale]} locale={locale} defaultLocale={LOCALES.RUSSIAN}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage/>}></Route>
+          <Route path="contacts" element={<ContactPage/>}></Route>
+          <Route path="company" element={<CompanyBrandPage/>}></Route>
+          <Route path="music" element={<MusicArtistPage/>}></Route>
+          <Route path="identity" element={<IdentityPage/>}></Route>
+          <Route path="*" element={<ErrorPage/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </IntlProvider>
   );
 }
 

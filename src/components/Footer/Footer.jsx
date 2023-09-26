@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import QRPopUp from '../popup/QRPopUp/QRPopUp'
 
@@ -22,13 +23,10 @@ function Footer () {
                         </div>
                         <div className='footer__left-policy'>
                             <h2 className='footer__left-policyTitle'>
-                                Политика конфиденциальности
+                                <FormattedMessage id='footerPolicy'/>
                             </h2>
                             <p className='footer__left-policyText'>
-                                *продукт компании Meta, 
-                                признанной экстремистской организацией 
-                                и деятельность которой запрещена 
-                                в Российской Федерации
+                                <FormattedMessage id='footerPolicyDesc'/>
                             </p>
                         </div>
                     </div>
@@ -37,7 +35,9 @@ function Footer () {
 
                     <div className='footer__rightTOP'>
                         <div className='footer__right-item'>
-                            <h2 className='footer__right-itemTitle'>ЯЗЫК</h2>
+                            <h2 className='footer__right-itemTitle'>
+                                <FormattedMessage id='footerLang'/>
+                            </h2>
                             <div className='footer__right-itemLinks'>
                                 <Link className='footer__right-itemLink'>RU</Link>
                                 <Link className='footer__right-itemLink'>EN</Link>
@@ -45,16 +45,28 @@ function Footer () {
                             </div>
                         </div>
                         <div className='footer__right-item'>
-                            <h2 className='footer__right-itemTitle'>МЕНЮ</h2>
+                            <h2 className='footer__right-itemTitle'>
+                                <FormattedMessage id='menu'/>
+                            </h2>
                             <div className='footer__right-itemLinks'>
-                                <Link to='/company' className='footer__right-itemLink'>INFLUENCE BRAND</Link>
-                                <Link to='/music' className='footer__right-itemLink'>INFLUENCE MUSIC</Link>
-                                <Link to='/identity' className='footer__right-itemLink'>BRANDING</Link>
-                                <Link to='/contacts' className='footer__right-itemLink'>КОНТАКТЫ</Link>
+                                <Link to='/company' className='footer__right-itemLink'>
+                                    INFLUENCE BRAND
+                                </Link>
+                                <Link to='/music' className='footer__right-itemLink'>
+                                    INFLUENCE MUSIC
+                                </Link>
+                                <Link to='/identity' className='footer__right-itemLink'>
+                                    BRANDING
+                                </Link>
+                                <Link to='/contacts' className='footer__right-itemLink'>
+                                    <FormattedMessage id='contacts'/>
+                                </Link>
                             </div>
                         </div>
                         <div className='footer__right-item'>
-                            <h2 className='footer__right-itemTitle'>СОЦСЕТИ</h2>
+                            <h2 className='footer__right-itemTitle'>
+                                <FormattedMessage id='social'/>
+                            </h2>
                             <div className='footer__right-itemLinks'>
                                 <Link to='//vk.com/startokmedia' target='blank' className='footer__right-itemLink'>VKONTAKTE</Link>
                                 <Link to='//instagram.com/startokmedia' target='blank' className='footer__right-itemLink'>INSTAGRAM*</Link>
@@ -63,7 +75,9 @@ function Footer () {
                             </div>
                         </div>
                         <div className='footer__right-item'>
-                            <h2 className='footer__right-itemTitle'>КОНТАКТЫ</h2>
+                            <h2 className='footer__right-itemTitle'>
+                                <FormattedMessage id='contactus'/>
+                            </h2>
                             <div className='footer__right-itemLinks'>
                                 <Link target='blank' className='footer__right-itemLink'>PR@STARTOKMEDIA.RU</Link>
                                 <Link className='footer__right-itemLink'>WECHAT</Link>
@@ -99,19 +113,18 @@ function Footer () {
             </div>
             <div className='footer__left-policy mobile_policy'>
                 <h2 className='footer__left-policyTitle'>
-                    Политика конфиденциальности
+                    <FormattedMessage id='footerPolicy'/>
                 </h2>
                 <p className='footer__left-policyText'>
-                    *продукт компании Meta, 
-                    признанной экстремистской организацией 
-                    и деятельность которой запрещена 
-                    в Российской Федерации
+                    <FormattedMessage id='footerPolicyDesc'/>
                 </p>
             </div>
 
             <div className='footer__bottom'>
                     <div className='footer__bottomItem'>
-                        <h2 className='footer__bottomText'>© Copyright 2023, Все права защищены</h2>
+                        <h2 className='footer__bottomText'>
+                            <FormattedMessage id='copyright'/>
+                        </h2>
                     </div>
             </div>
 

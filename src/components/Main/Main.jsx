@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import NavBar from '../NavBar/NavBar'
 import Form from '../Form/Form'
@@ -22,9 +23,9 @@ function Main ({setMobileFormMenu}) {
     const [cardInfo, setCardInfo] = useState('')
 
     const info = {
-        musicInfo: 'Успешно продвигаем музыкальные проекты через блогеров с момента появления TikTok.',
-        companyInfo: 'Подберем релевантных блогеров, разработаем концепцию рекламной кампании для вашего продукта.',
-        identityInfo: 'Дизайним бренды, разрабатываем сайты с акцентом на решении ваших бизнес задач.'
+        musicInfo: <FormattedMessage id='mainHeaderCardMusic' />,
+        companyInfo: <FormattedMessage id='mainHeaderCardCompany' />,
+        identityInfo: <FormattedMessage id='mainHeaderCardIdentity' />
     }
 
     const [formShow, setFormShow] = useState(false)
@@ -78,29 +79,42 @@ function Main ({setMobileFormMenu}) {
                     <div className='main__content'>
                         <div className='main__content-cards'>
                             <div className='main__content-cardsItemOne'>
-                                <h2 className='main__content-cardsItemOneTitle'><span className='item-gradient'>ПРЕИМУЩЕСТВА </span>РАБОТЫ С НАМИ</h2>
-                                <p className='main__content-cardsItemOneText'>Или почему нам доверяют?</p>
+                                <h2 className='main__content-cardsItemOneTitle'>
+                                    <span className='item-gradient'>
+                                        <FormattedMessage id='advant'/>
+                                    </span>
+                                    <FormattedMessage id='mainContentCardAdvantTitle'/>
+                                </h2>
+                                <p className='main__content-cardsItemOneText'>
+                                    <FormattedMessage id='mainContentCardAdvantText'/>
+                                </p>
                             </div>
                             <div className='main__content-cardsItem'>
                                 <h2 className='main__content-cardsItemTitle'>
-                                    4 года
-                                    <svg className='item-img'></svg>
-                                    </h2>
-                                <p className='main__content-cardsItemText'>Сопровождаем и создаем проекты с участием авторов</p>
-                            </div>
-                            <div className='main__content-cardsItem'>
-                                <h2 className='main__content-cardsItemTitle'>
-                                    Индивидуально
+                                    <FormattedMessage id='mainContentCardFourTitle'/>
                                     <svg className='item-img'></svg>
                                 </h2>
-                                <p className='main__content-cardsItemText'>Подходим к каждому запросу и подбираем релевантные решения для достижения целей</p>
+                                <p className='main__content-cardsItemText'>
+                                    <FormattedMessage id='mainContentCardFourText'/>
+                                </p>
                             </div>
                             <div className='main__content-cardsItem'>
                                 <h2 className='main__content-cardsItemTitle'>
-                                    Более 700
+                                    <FormattedMessage id='mainContentCardIndividTitle'/>
                                     <svg className='item-img'></svg>
                                 </h2>
-                                <p className='main__content-cardsItemText'>Авторов в СНГ с возможностью индивидуального подбора блогеров в ОАЭ, Китае и Индии</p>
+                                <p className='main__content-cardsItemText'>
+                                    <FormattedMessage id='mainContentCardIndividText'/>
+                                </p>
+                            </div>
+                            <div className='main__content-cardsItem'>
+                                <h2 className='main__content-cardsItemTitle'>
+                                    <FormattedMessage id='mainContentCardMoreTitle'/>
+                                    <svg className='item-img'></svg>
+                                </h2>
+                                <p className='main__content-cardsItemText'>
+                                    <FormattedMessage id='mainContentCardMoreText'/>
+                                </p>
                             </div>
                             <div className='main__content-cardsItemBig'>
                                 <div className='image-big'>
@@ -109,11 +123,13 @@ function Main ({setMobileFormMenu}) {
                             
                                 <div className='main__content-cardsItemBigContent'>
                                     <h2 className='main__content-cardsItemTitleBig'>
-                                        Оперативный
+                                        <FormattedMessage id='mainContentCardPromptTitle'/>
                                     </h2>
 
                                     <div className='main__content-bigText'>
-                                        <p className='main__content-cardsItemTextBig'>Менеджмент для достижения поставленных целей в кратчайшие сроки</p>
+                                        <p className='main__content-cardsItemTextBig'>
+                                            <FormattedMessage id='mainContentCardPromptText'/>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -126,11 +142,12 @@ function Main ({setMobileFormMenu}) {
                                 <div className='main__content-marketingContent'>
                                     <h3 className='main__content-marketingTitle'>Influencer Marketing</h3>
                                     <p className='main__content-marketingText'>COMPANY <span className='main__content-marketingTextGradient'>&</span> BRAND</p>
-                                    <p className='main__content-marketingInfo'>Подберем релевантных блогеров, 
-                                        разработаем концепцию рекламной кампании 
-                                        для вашего продукта.
+                                    <p className='main__content-marketingInfo'>
+                                        <FormattedMessage id='mainHeaderCardCompany'/>
                                     </p>
-                                    <Link className='main__content-makertingButton'>Подробнее</Link>
+                                    <Link className='main__content-makertingButton'>
+                                        <FormattedMessage id='more'/>
+                                    </Link>
                                     <div className='main__content-marketingArrowContainer'>
                                         <svg className='main__content-marketingArrow main__content-marketingArrowAfter'></svg>
                                     </div>
@@ -140,11 +157,12 @@ function Main ({setMobileFormMenu}) {
                                 <div className='main__content-marketingContent'>
                                     <h3 className='main__content-marketingTitle'>Influencer Marketing</h3>
                                     <p className='main__content-marketingText'> MUSIC <br /> <span className='main__content-marketingTextGradient'>&</span> ARTISTS</p>
-                                    <p className='main__content-marketingInfo'>Подберем релевантных блогеров, 
-                                        разработаем концепцию рекламной кампании 
-                                        для вашего продукта.
+                                    <p className='main__content-marketingInfo'>
+                                        <FormattedMessage id='mainHeaderCardMusic'/>
                                     </p>
-                                    <Link className='main__content-makertingButton'>Подробнее</Link>
+                                    <Link className='main__content-makertingButton'>
+                                        <FormattedMessage id='more'/>
+                                    </Link>
                                     <div className='main__content-marketingArrowContainer'>
                                         <svg className='main__content-marketingArrow'></svg>
                                     </div>
@@ -159,11 +177,12 @@ function Main ({setMobileFormMenu}) {
                                             IDENTITY<span className='main__content-marketingTextGradient'> & </span> 
                                             UX/UI-DESIGN
                                         </p>
-                                        <p className='main__content-marketingInfo'> Подберем релевантных блогеров, 
-                                            разработаем концепцию рекламной кампании 
-                                            для вашего продукта.
+                                        <p className='main__content-marketingInfo'>
+                                            <FormattedMessage id='identity'/>
                                         </p>
-                                        <Link className='main__content-makertingButton'>Подробнее</Link>
+                                        <Link className='main__content-makertingButton'>
+                                            <FormattedMessage id='more'/>
+                                        </Link>
                                         <div className='main__content-marketingArrowContainer'>
                                             <svg className='main__content-marketingArrow'></svg>
                                         </div>
@@ -174,7 +193,9 @@ function Main ({setMobileFormMenu}) {
                         <div className='main__content-idea'>
                             <div className="main__content-ideaContainer">
                                 <div className='main__content-ideaLeft'>
-                                    <p className='main__content-ideaLeftText'>ЕСЛИ ЕСТЬ ИДЕЯ, ЗНАЧИТ, ЕСТЬ РЕШЕНИЕ</p>
+                                    <p className='main__content-ideaLeftText'>
+                                        <FormattedMessage id='idea'/>
+                                    </p>
                                 </div>
                                 <div className='main__content-ideaRight'>
                                     <svg className='main__content-ideaRightImg'></svg>

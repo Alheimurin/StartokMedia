@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import { FormattedMessage } from "react-intl"
 
 import './navbar.css'
 import '../fonts/Fonts.css'
@@ -61,7 +62,7 @@ function NavBar ( {showModalForm, contacts, identity, influence} ) {
                                 <button disabled='disabled' className="navBar__listLang-item">CH</button>
                             </div>
                         </nav>
-                        <button onClick={() => showModalForm(func)} className="navBar__button">Оставить заявку</button>
+                        <button onClick={() => showModalForm(func)} className="navBar__button"><FormattedMessage id='submitRequest'/></button>
                     </div>
                 </div>
             </div>

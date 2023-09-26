@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import { FormattedMessage } from 'react-intl'
+
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import Integration from '../IntegrationFor/Integration'
@@ -10,8 +13,6 @@ import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
 
 import '../fonts/Fonts.css'
 import './musicArtist.css'
-
-import { useState } from 'react'
 
 function MusicArtist () {
 
@@ -54,32 +55,25 @@ function MusicArtist () {
 
             <main>
                 <Integration
-                    for='МУЗЫКАНТОВ'
-                    intTextOne='Более четырех лет выполняем размещения рекламы для лейблов, 
-                            дистрибьюторов, продюсеров и артистов.'
-                    intTextTwo='За этот срок успели выступить и побывать на интересных форумах 
-                            и мероприятиях, поработать с западными «хитмейкерами» и начинающими артистами.'
-                    intTextThree='Выполним рекламные размещения по доступному CPM, 
-                            в утвержденные и сжатые сроки.'
-                    imgOne='music.svg'
-                    underImgOne='Реализовано более 560 музыкальных проектов'
-                    imgTwo='target.svg'
-                    underImgTwo='Выгодный CPM'
-                    imgThree='clock.svg'
-                    underImgThree='Работа в сжатые сроки'
+                    for = {<FormattedMessage id='musicTitle'/>}
+                    intTextOne = {<FormattedMessage id='musicDescOne'/>} 
+                    intTextTwo = {<FormattedMessage id='musicDescTwo'/>}
+                    intTextThree = {<FormattedMessage id='musicDescThree'/>}
+                    imgOne = 'music.svg'
+                    underImgOne = {<FormattedMessage id='musicCardDescLeft'/>}
+                    imgTwo = 'target.svg'
+                    underImgTwo = {<FormattedMessage id='musicCardDescCenter'/>}
+                    imgThree = 'clock.svg'
+                    underImgThree = {<FormattedMessage id='musicCardDescRight'/>}
                     showModalForm={showModalForm}
                 />
                 <OtherServices
-                    leftTitle='INFLUENCE BRAND'
-                    leftText='Направление influence для брендов решает важную задачу 
-                            доверия целевой аудитории. Правильная стратегия и промо-план позволит 
-                            не только расположить людей к бренду, но и повысить его узнаваемость.'
-                    leftLink='/company'
-                            rightTitle='BRANDING'
-                    rightText='Бренд — образ в голове клиентов, а брендинг —процесс по созданию образа. 
-                            Визуальная часть помогает правильно раскрыть заложенный смысл компании. 
-                            Бренд должен быть узнаваемым, а дизайн — понятным.'
-                    rightLink='/identity'
+                    leftTitle = 'INFLUENCE BRAND'
+                    leftText = {<FormattedMessage id='musicLeftOther'/>}
+                    leftLink = '/company'
+                    rightTitle = 'BRANDING'
+                    rightText = {<FormattedMessage id='musicRightOther'/>}
+                    rightLink = '/identity'
                 />
                 <BlackTickerString/>
                 <Form/>

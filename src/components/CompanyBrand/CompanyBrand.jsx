@@ -12,6 +12,7 @@ import './companyBrand.css'
 import '../fonts/Fonts.css'
 
 import { useState } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 function CompanyBrand() {
 
@@ -56,22 +57,16 @@ function CompanyBrand() {
 
             <main>
                 <Integration
-                    for='БРЕНДОВ'
-                    intTextOne='Есть идея или концепция рекламной кампании? 
-                            Подберем блогеров и интегрируем рекламу вашего продукта во всех социальных сетях, 
-                            на любой площадке и в любом формате.'
-                    intTextTwo='Опыт работы помог нам выделить основные преимущества: оперативность, 
-                            высокое качество контента и вовлеченности аудитории у привлекаемых авторов, низкий CPM, 
-                            соблюдение технического задания и дедлайнов.'
-                    intTextThree='Только за счет выгодных, персонализированных и оперативных решений, 
-                            реклама у авторов способна превзойти все ожидания и закрыть необходимый планируемый план 
-                            по заданным или планируемым метрикам.'
+                    for = {<FormattedMessage id='companyTitle'/>}
+                    intTextOne = {<FormattedMessage id='companyDescOne'/>}
+                    intTextTwo = {<FormattedMessage id='companyDescTwo'/>}
+                    intTextThree = {<FormattedMessage id='companyDescThree'/>}
                     imgOne="phone.svg"
-                    underImgOne='Партнерская сеть из более чем 700 авторов'
+                    underImgOne = {<FormattedMessage id='companyCardDescLeft'/>}
                     imgTwo='map.svg'
-                    underImgTwo='Размещение в СНГ, Азии и ОАЭ'
+                    underImgTwo = {<FormattedMessage id='companyCardDescCenter'/>}
                     imgThree='lamp.svg'
-                    underImgThree='Реализовано более 60 проектов с брендами'
+                    underImgThree = {<FormattedMessage id='companyCardDescRight'/>}
                     showModalForm={showModalForm}
                 />
 
@@ -79,10 +74,12 @@ function CompanyBrand() {
                     <div className="conception__content-container">
                         <div>
                             <p className='conception-text'>
-                            Не знаете, как правильно подготовить <br /> промо-план и осуществить интеграцию авторов?
+                                <FormattedMessage id='conceptionDesc'/>
                             </p>
-                            <h2 className='conception-title'>РАЗРАБАТЫВАЕМ КОНЦЕПЦИЮ РЕКЛАМНОЙ КОМПАНИИ ОТ ИДЕИ ДО РЕАЛИЗАЦИИ</h2>
-                            <button onClick={()=>{setMobileForm(true);showModalForm()}} className='conception-button'>Связаться</button>
+                            <h2 className='conception-title'>
+                                <FormattedMessage id='conceptionTitle'/>
+                            </h2>
+                            <button onClick={()=>{setMobileForm(true);showModalForm()}} className='conception-button'><FormattedMessage id='connectButton'/></button>
                         </div>
                         
                         <img className='conception-img' srcSet="UX/conceptionRight.svg" alt="" />
@@ -90,17 +87,12 @@ function CompanyBrand() {
                 </div>
 
                 <OtherServices
-                    leftTitle='INFLUENCE MUSIC'
-                    leftText='При правильном подходе к тестированию и аналитике 
-                            можно создать вирусную повторяющую механику, а также получить максимально быстрый 
-                            и эффективный результат упоминаний на других площадках, 
-                        что прямо пропорционально влияет на стриминг.'
-                    leftLink='/music'
-                    rightTitle='BRANDING'
-                    rightText='Бренд — образ в голове клиентов, а брендинг — процесс по созданию образа. 
-                        Визуальная часть помогает правильно раскрыть заложенный смысл компании. 
-                        Бренд должен быть узнаваемым, а дизайн — понятным.'
-                    rightLink='/identity'
+                    leftTitle = 'INFLUENCE MUSIC'
+                    leftText = {<FormattedMessage id='companyLeftOther'/>}
+                    leftLink = '/music'
+                    rightTitle ='BRANDING'
+                    rightText = {<FormattedMessage id='companyRightOther'/>}
+                    rightLink = '/identity'
                 />
                 <BlackTickerString />
                 <Form />

@@ -1,8 +1,9 @@
-    import IntForCard from '../Cards/IntegrationCard/IntForCard'
+import IntForCard from '../Cards/IntegrationCard/IntForCard'
+import { integrationImg } from '../../constants/constants'
 
 import './integration.css'
 
-import { integrationImg } from '../../constants/constants'
+import { FormattedMessage } from 'react-intl'
 
 function Integration ( {showModalForm, ...props}) {
 
@@ -15,7 +16,11 @@ function Integration ( {showModalForm, ...props}) {
             <div className='integration__container'>
                 <div className='integration___content-container'>
                     <h2 className='integration__contentTitle'>
-                        ИНТЕГРАЦИИ <span className='integration-gradient'>ДЛЯ</span> {props.for}
+                        <FormattedMessage id='integration'/>
+                        <span className='integration-gradient'>
+                            <FormattedMessage id='for'/>
+                            </span> 
+                            {props.for}
                         </h2>
                     <p className='integration__contentText small-text'>
                         {props.intTextOne}
@@ -47,10 +52,10 @@ function Integration ( {showModalForm, ...props}) {
 
                 <div className='integration__connection'>
                     <p className='integration__contentText connectText'>
-                        Оставьте заявку и мы свяжемся с вами в течение 1 часа.
+                        <FormattedMessage id='connectDesc'/>
                     </p>
                     <button onClick={()=>showModalForm(func)} className='integration__connectButton'>
-                        Связаться
+                        <FormattedMessage id='connectButton' />
                     </button>
                 </div>
             </div>

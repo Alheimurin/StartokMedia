@@ -40,11 +40,11 @@
     background-clip: text;
 }
 
-    .integration__cards {
-        display: flex;
-        justify-content: space-between;
-        margin: 80px 0 80px 0;
-    }
+.integration__cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0 80px 0;
+}
 
 .centerLine {
     height: 150px;
