@@ -1,6 +1,8 @@
 import './formPopUp.css'
 import '../../fonts/Fonts.css'
 
+import { FormattedMessage } from 'react-intl'
+
 function FormPopUp ({active, setActive}) {
     return (
         <div className={active ? 'modalForm active': 'modalForm'} onClick={()=> setActive(false)}>
@@ -14,7 +16,9 @@ function FormPopUp ({active, setActive}) {
                         <img onClick={()=>setActive(false)} className='formPopUp__cancel' src="/UI/QRxross.svg" alt="" />
                     </div>
                     <div>
-                        <p className='formPopUp__Text'>Заполните форму, чтобы мы могли связаться с вами</p>
+                        <p className='formPopUp__Text'>
+                            <FormattedMessage id='formDesc'/>
+                        </p>
                     </div>
                     <div className='formPopUp__inputsBox'>
                         <div className='formPopUp__inputs'>
@@ -28,7 +32,12 @@ function FormPopUp ({active, setActive}) {
                         <input className='formPopUp__inputBottom' type="text" placeholder='Комментарий' />
                         <div className='formPopUp__inputChecbox'>
                             <input className='formPopUp__inputChecboxItem' type="checkbox" defaultChecked />  
-                            <label className='formPopUp__Text' htmlFor="">Нажимая кнопку «Отправить», вы принимаете правила политики конфиденциальности</label>
+                            <label className='formPopUp__Text' htmlFor="">
+                                <FormattedMessage id='formPolicy'/>
+                                <span className='formPopUpPolicy'>
+                                    <FormattedMessage id='formPolicyEnd'/>
+                                </span>
+                            </label>
                         </div>
                     </div>
                     <div className='formPopUp__buttons'>

@@ -4,6 +4,8 @@ export const messages = {
     [LOCALES.ENGLISH]: {
         // Nav
         submitRequest: 'Submit Request',
+        navContacts: 'CONTACTS',
+        navLang: 'Language',
         // Main,
         mainHeaderCardMusic: 'Since the emergence of TikTok, we have been successfully running the music promoting campaigns with bloggers.',
         mainHeaderCardCompany: 'We are going to select suitable bloggers and develop the concept of an advertising campaign for your product.',
@@ -44,6 +46,7 @@ export const messages = {
         where: [],
         attach: 'Attachments',
         formSubmit: 'Submit',
+        formDesc: 'Fill out the form and we can contact you',
 
         // Footer
         footerPolicy: 'Privacy Policy',
@@ -79,6 +82,9 @@ export const messages = {
         // OtherServices
         oST: 'OTHER SERVICES',
 
+        // Order
+        order: 'Get in touch',
+
         // Music
         musicTitle: 'MUSICIANS ',
         musicDescOne: 'For more than four years, we have been performing advertising placements for labels, distributors, producers, and artistes.',
@@ -92,10 +98,46 @@ export const messages = {
         musicLeftOther: 'The influence direction for brands solves the important task of reling the target audience. The well-developed strategy and promo plan will appear more likability for to the brand, and also increase its recognition.',
         musicRightOther: 'Brand — image in the perception of customers, and branding — process to create an image. The visual part helps to properly reveal the underlying meaning of the company. The brand have to be recognizable and the design have to be clear.',
 
+        // Identity
+        devTitle: 'CORPORATE IDENTITY ',
+        devColor: 'DEVELOPMENT ',
+        devTitleEnd: 'DESIGN',
+        devDescTop: 'Branding includes a complex of work on the visual transformation of the company. Corporate identity not only helps to stand out against of great competition, but also to manage the attention of customers.',
+        devDescBot: 'During the branding development process, we immerse in the business, research and analyse the target audience and competitors. We align with the company’s ideology to create an image that helps solve your marketing challenges.',
+        devOrderDesc: 'We will create a design, which will make your company standing out of rivals.',
+
+        designTitle: 'UX/UI-DESIGN ',
+        designTitleEnd: 'AND WEB-DEVELOPMENT',
+        designDescTop: 'A well-designed website increases important metrics: involvement of the audience, time spent on website, and conversion.',
+        designDescBot: 'Team of at least four people will work on the project when developing the website: the UX/UI designer, the marketer, the frontend developer, and the backend developer.',
+        designOrderDesc: 'We will develop a website that meets all which requirements.',
+
+        subDesignTitle: 'UX/UI-DESIGN',
+        subDesignDesc: 'Based on the company identity, user experience and usability, the site architecture is first projected, and then the prototyping and design takes place.',
+
+        subDevTitle: 'WEB DEVELOPMENT',
+        subDevDesc: 'Even the most complex idea will not remain without implementation, our team of IT-specialists implements layout of any complexity.',
+        
+        identityLeftOther: 'The influence direction for brands solves the important task of reling the target audience. The well-developed strategy and promo plan will appear more likability for to the brand, and also increase its recognition.',
+        identityRightOther: 'With the right approach to testing and analytics, you can create a viral repeating mechanic, as well as get the fastest and most effective result mentions on other sites, which directly affects streaming.',
+    
+        // Contacts
+        contactsTitle: 'CONTACT US',
+        contactsMail: 'MAIL FOR COOPERATION',
+        communications: 'COMMUNICATION FACILITIES',
+
+        // QR
+        qrTitle: 'SCAN ',
+        qrColor: 'QR ',
+        qrTitleEnd: '-CODE',
+        qrDesc: 'Point your phone camera',
     },
     [LOCALES.RUSSIAN]: {
         // Nav
         submitRequest: 'Оставить заявку',
+        navContacts: 'КОНТАКТЫ',
+        navLang: 'Язык',
+
         // Main,
         mainHeaderCardMusic: 'Успешно продвигаем музыкальные проекты через блогеров с момента появления TikTok.',
         mainHeaderCardCompany: 'Подберем релевантных блогеров, разработаем концепцию рекламной кампании для вашего продукта.',
@@ -137,6 +179,7 @@ export const messages = {
         where: 'Куда',
         attach: 'Прикрепить файл',
         formSubmit: 'Отправить заявку',
+        formDesc: 'Заполните форму, чтобы мы могли связаться с вами',
 
         // Footer
         footerPolicy: 'Политика конфиденциальности',
@@ -173,6 +216,9 @@ export const messages = {
         // OtherServices
         oST: 'ДРУГИЕ УСЛУГИ',
 
+        // Order
+        order: 'Заказать',
+
         // Music
         musicTitle: 'МУЗЫКАНТОВ ',
         musicDescOne: 'Более четырех лет выполняем размещения рекламы для лейблов, дистрибьюторов, продюсеров и артистов.',
@@ -185,5 +231,40 @@ export const messages = {
 
         musicLeftOther: 'Направление influence для брендов решает важную задачу доверия целевой аудитории. Правильная стратегия и промо-план позволит не только расположить людей к бренду, но и повысить его узнаваемость.',
         musicRightOther: 'Бренд — образ в голове клиентов, а брендинг —процесс по созданию образа. Визуальная часть помогает правильно раскрыть заложенный смысл компании. Бренд должен быть узнаваемым, а дизайн — понятным.',
+    
+        // Identity
+        devTitle: 'РАЗРАБОТКА ',
+        devColor: 'ФИРМЕННОГО ',
+        devTitleEnd: 'СТИЛЯ',
+        devDescTop: 'Айдентика включает в себя комплекс работ по визуальному преображению компании. Фирменный стиль позволяет не только выделяться на фоне большой конкуренции, но и управлять вниманием клиентов.',
+        devDescBot: 'В процессе разработки айдентики погружаемся в бизнес, исследуем и анализируем нужную аудиторию и конкурентов, отталкиваемся от идеологии компании и создаем образ, который поможет решить ваши маркетинговые задачи.',
+        devOrderDesc: 'Создадим дизайн, который выделит вашу компанию.',
+
+        designTitle: 'UX/UI-ДИЗАЙН ',
+        designTitleEnd: 'И WEB-РАЗРАБОТКА',
+        designDescTop: 'Хорошо спроектированный сайт позволит повысить важные метрики: глубину просмотра, время на сайте и конверсию.',
+        designDescBot: 'При разработке сайта над проектом будет работать команда специалистов минимум из четырех человек: UX/UI-дизайнер, маркетолог, frontend и backend-разработчики.',
+        designOrderDesc: 'Разработаем сайт, который будет отвечать необходимым требованиям. ',
+
+        subDesignTitle: 'UX/UI-ДИЗАЙН',
+        subDesignDesc: 'Отталкиваясь от айдентики компании, пользовательского опыта и удобства использования первично проецируется архитектура сайта, а затем происходит прототипирование и дизайн.',
+
+        subDevTitle: 'WEB-РАЗРАБОТКА',
+        subDevDesc: 'Даже самая сложная идея не останется без реализации, наша команда IT-специалистов реализует верстку любой сложности.',
+
+        identityLeftOther: 'Направление influence для брендов решает важную задачу доверия целевой аудитории. Правильная стратегия и промо-план позволит не только расположить людей к бренду, но и охватить их максимальное количество.',
+        identityRightOther: 'При правильном подходе к тестированию и аналитике можно создать вирусную повторяющую механику, а также получить максимально быстрый и эффективный результат упоминаний на других площадках, что прямо пропорционально влияет на стриминг.',
+        
+        // Contacts
+        contactsTitle: 'КОНТАКТЫ',
+        contactsMail: 'ПОЧТА ДЛЯ СОТРУДНИЧЕСТВА',
+        communications: 'CРЕДСТВА СВЯЗИ',
+
+        // QR
+        qrTitle: 'ОТСКАНИРУЙТЕ ',
+        qrColor: 'QR ',
+        qrTitleEnd: '-CODE',
+        qrDesc: 'Наведите камеру телефона',
+
     }
 }

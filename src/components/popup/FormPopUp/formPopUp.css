@@ -153,6 +153,10 @@ input::placeholder {
     background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
 }
 
+.formPopUpPolicy {
+    border-bottom: 1px solid black
+}
+
 @media screen and (max-device-width: 1200px) {
     .modalForm, .active {
         display: none;

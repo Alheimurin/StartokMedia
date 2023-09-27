@@ -178,7 +178,7 @@ function Main ({setMobileFormMenu}) {
                                             UX/UI-DESIGN
                                         </p>
                                         <p className='main__content-marketingInfo'>
-                                            <FormattedMessage id='identity'/>
+                                            <FormattedMessage id='mainHeaderCardIdentity'/>
                                         </p>
                                         <Link className='main__content-makertingButton'>
                                             <FormattedMessage id='more'/>

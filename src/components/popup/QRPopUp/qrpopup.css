@@ -44,6 +44,10 @@
     display: flex;
 }
 
+.qrTitle {
+    width: 100%;
+}
+
 .QRmodal__container-right_desc {
     width: 350px;
     display: flex;

@@ -10,6 +10,7 @@ import '../fonts/Fonts.css'
 
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 function Contacts () {
 
@@ -35,14 +36,14 @@ function Contacts () {
                         </div>
                             
                         <div className='contacts__header-contactsContainer'>
-                            <h2 className='contacts__header-contactsTitle'>КОНТАКТЫ</h2>
+                            <h2 className='contacts__header-contactsTitle'><FormattedMessage id='contactsTitle'/></h2>
                             <div className='contacts__header-contactsTextContainer'>
                                 <div className='contacts__header-contactsBox'>
-                                    <p className='contacts__header-contactsTextTitle'>ПОЧТА ДЛЯ СОТРУДНИЧЕСТВА</p>
+                                    <p className='contacts__header-contactsTextTitle'><FormattedMessage id='contactsMail'/></p>
                                     <Link href="mailto:PR@STARTOKMEDIA.RU" className='contacts__header-contactsText'>PR@STARTOKMEDIA.RU</Link>
                                 </div>
                                 <div className='contacts__header-contactsBox'>
-                                    <p className='contacts__header-contactsTextTitle'>СРЕДСТВА СВЯЗИ</p>
+                                    <p className='contacts__header-contactsTextTitle'><FormattedMessage id='communications'/></p>
                                     <div className='conntections'>
                                         <Link onClick={()=>setQRShow(true)} className='contacts__header-contactsText'>WECHAT</Link>
                                         <Link to='//t.me/startokmedia' target='blank' className='contacts__header-contactsText'>TELEGRAM</Link>

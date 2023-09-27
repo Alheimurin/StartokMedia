@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import './mobileBurgerPopUp.css'
 import '../../fonts/Fonts.css'
@@ -42,19 +43,19 @@ function MobileBurger ({showBurger, setShowBurger, setMobileFormMenu}) {
                         <hr className='burgerBox__line'/>
                         <Link to='/identity' className='burgerBox__link'>BRANDING</Link>
                         <hr className='burgerBox__line'/>
-                        <Link to='/contacts' className='burgerBox__link'>КОНТАКТЫ</Link>
+                        <Link to='/contacts' className='burgerBox__link'><FormattedMessage id='navContacts'/></Link>
                         <hr className='burgerBox__line'/>
                     </div>
                 </div>
 
                 <div className='burgerBox__lang'>
-                    <h3 className='title'>Язык</h3>
+                    <h3 className='title'><FormattedMessage id='navLang'/></h3>
                     <ul className='burgerBox__langList'>
                         <button onClick={()=>setLang({RU:true})} className={lang.RU ?'lang__item lang__itemActive' : 'lang__item'}>RU</button>
                         <button onClick={()=>setLang({EN:true})} className={lang.EN ?'lang__item lang__itemActive' : 'lang__item'}>EN</button>
                         <button onClick={()=>setLang({CN:true})} className={lang.CN ?'lang__item lang__itemActive' : 'lang__item'}>CN</button>
                     </ul>
-                    <button onClick={()=>setMobileForm(true)} className='burgerBox__button'>Оставить заявку</button>
+                    <button onClick={()=>setMobileForm(true)} className='burgerBox__button'><FormattedMessage id='submitRequest'/></button>
                 </div>
                 <ModalFormMobile
                     MobileForm={mobileForm}

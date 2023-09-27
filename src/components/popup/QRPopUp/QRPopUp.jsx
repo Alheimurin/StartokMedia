@@ -1,6 +1,7 @@
 import './qrpopup.css'
 import '../../fonts/Fonts.css'
 
+import { FormattedMessage } from 'react-intl'
 
 function QRPopUp({active, setActive, name, img}) {
     return (
@@ -12,8 +13,18 @@ function QRPopUp({active, setActive, name, img}) {
                 <div className='QRmodal__container-right'>
                     <div className='QRmodal__container-right_desc'>
                         <div className='QRmodal__container-right_descContainer'>
-                            <h3 className='QRmodal__container-right_descTitle'>ОТСКАНИРУЙТЕ <span className='QRgradient'>QR</span>-CODE <span className='QRName'>{name}</span> </h3>
-                            <p className='QRmodal__container-right_descText'>Наведите камеру телефона</p>
+                            <h3 className='QRmodal__container-right_descTitle'>
+                                <span className='qrTitle'>
+                                    <FormattedMessage id='qrTitle'/> 
+                                </span>
+                                <span className='QRgradient'>
+                                    <FormattedMessage id='qrColor'/>
+                                </span><FormattedMessage id='qrTitleEnd'/>
+                                <span className='QRName'>
+                                    {name}
+                                </span> 
+                            </h3>
+                            <p className='QRmodal__container-right_descText'><FormattedMessage id='qrDesc'/></p>
                         </div>
                     </div>
                     <div className='QRmodal__container-cancel'>

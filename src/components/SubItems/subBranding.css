@@ -28,6 +28,8 @@
     font-family: Unbounded;
     font-size: 35px;
     font-weight: 600;
+    width: 100%;
+    text-align: center;
 }
 
 .subBranding-text {

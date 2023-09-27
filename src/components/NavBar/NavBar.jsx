@@ -50,7 +50,7 @@ function NavBar ( {showModalForm, contacts, identity, influence} ) {
                                     </div>
                                 </div>
                                 <Link to='/identity'  className={ identity ? "navBar__list-item list-itemGradient" : "navBar__list-item" }>BRANDING</Link>
-                                <Link to='/contacts'  className={ contacts ? "navBar__list-item list-itemGradient" : "navBar__list-item" }>КОНТАКТЫ</Link>
+                                <Link to='/contacts'  className={ contacts ? "navBar__list-item list-itemGradient" : "navBar__list-item" }><FormattedMessage id="navContacts"/></Link>
                             </div>
                         </nav>
                     </div>
