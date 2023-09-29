@@ -12,7 +12,7 @@ import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
 import './main.css'
 import '../fonts/Fonts.css'
 
-function Main ({setMobileFormMenu}) {
+function Main ({setMobileFormMenu, setCurrLang, getLocale}) {
 
     const [hover, setHover] = useState({
         music: false,
@@ -21,7 +21,6 @@ function Main ({setMobileFormMenu}) {
     })
 
     const [cardInfo, setCardInfo] = useState('')
-
     const info = {
         musicInfo: <FormattedMessage id='mainHeaderCardMusic' />,
         companyInfo: <FormattedMessage id='mainHeaderCardCompany' />,
@@ -32,14 +31,17 @@ function Main ({setMobileFormMenu}) {
     const showModalForm = (x) => {
         setFormShow(true)
     }
-
     const [MobileForm, setMobileForm] = useState(false)
 
     return (
         <div>
             <header className='main__header'>
                     <div className='main__header-nav'>
-                        <NavBar showModalForm={showModalForm}/>
+                        <NavBar 
+                        showModalForm={showModalForm} 
+                        setCurrLang={setCurrLang}
+                        getLocale={getLocale}
+                        />
                     </div>
 
                     <div className='main__header-container'>
@@ -51,7 +53,7 @@ function Main ({setMobileFormMenu}) {
                         </div>
                         <div className='main__header-cards'>
                             <nav className='main__header-cards_cards'>
-                                <button onClick={()=>setMobileForm(true)} className='main__header-cards__button'>Оставить заявку</button>
+                                <button onClick={()=>setMobileForm(true)} className='main__header-cards__button'><FormattedMessage id='submitRequest'/></button>
                                 <Link to='/music' className='mainHeaderCard'>
                                     <img  onPointerOver={()=>{setCardInfo(info.musicInfo); setHover({music:true})}} onPointerOut={()=>{setCardInfo(info.companyInfo) ;setHover({company:true})}} className={hover.music ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
                                 </Link>

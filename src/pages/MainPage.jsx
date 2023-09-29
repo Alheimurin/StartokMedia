@@ -1,8 +1,8 @@
 import Main from '../components/Main/Main'
 
-function MainPage () {
+function MainPage ({setCurrLang, getLocale}) {
     return (
-        <Main/>
+        <Main setCurrLang={setCurrLang} getLocale={getLocale}/>
     )
 }
 

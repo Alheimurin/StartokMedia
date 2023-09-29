@@ -146,4 +146,8 @@
         font-weight: 500;
         border: none;
     }
+
+    .label-policy {
+        border-bottom: 1px solid black;
+    }
 }

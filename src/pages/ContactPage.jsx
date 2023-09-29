@@ -1,8 +1,8 @@
 import Contacts from "../components/Contacts/Contacts";
 
-function ContactPage () {
+function ContactPage ({setCurrLang, getLocale}) {
     return (
-        <Contacts/>
+        <Contacts setCurrLang={setCurrLang} getLocale={getLocale}/>
     )
 }
 

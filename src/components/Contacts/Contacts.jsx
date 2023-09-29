@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { FormattedMessage } from 'react-intl'
 
-function Contacts () {
+function Contacts ({setCurrLang, getLocale}) {
 
     const [QRShow, setQRShow] = useState(false)
     const [formShow, setFormShow] = useState(false)
@@ -26,8 +26,12 @@ function Contacts () {
             <header>
                 <div className='contacts__header'>
                     <div className='contacts__header-nav'>
-                        <NavBar showModalForm={showModalForm} 
-                        contacts={true}/>
+                        <NavBar 
+                        showModalForm={showModalForm} 
+                        contacts={true}
+                        setCurrLang={setCurrLang}
+                        getLocale={getLocale}
+                        />
                     </div>
 
                     <div className='contacts__header-container'>

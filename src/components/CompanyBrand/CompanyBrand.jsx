@@ -14,7 +14,7 @@ import '../fonts/Fonts.css'
 import { useState } from 'react'
 import { FormattedMessage } from 'react-intl'
 
-function CompanyBrand() {
+function CompanyBrand({setCurrLang, getLocale}) {
 
     const [formShow, setFormShow] = useState(false)
 
@@ -30,8 +30,11 @@ function CompanyBrand() {
             <header>
                 <div className='company__header'>
                     <div className='company__header-nav'>
-                        <NavBar  showModalForm={showModalForm}
+                        <NavBar  
+                        showModalForm={showModalForm}
                         influence={true}
+                        setCurrLang={setCurrLang}
+                        getLocale={getLocale}
                         />
                     </div>
 

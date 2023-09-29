@@ -1,8 +1,8 @@
 import CompanyBrand from '../components/CompanyBrand/CompanyBrand'
 
-function CompanyBrandPage () {
+function CompanyBrandPage ({setCurrLang, getLocale}) {
     return (
-        <CompanyBrand/>
+        <CompanyBrand setCurrLang={setCurrLang} getLocale={getLocale}/>
     )
 }
 

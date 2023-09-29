@@ -6,21 +6,30 @@ import './navbar.css'
 import '../fonts/Fonts.css'
 
 import MobileBurger from "../popup/MobileBurgerPopUp/MobileBurgerPopUp"
+import { LOCALES } from "../../i18n/locales"
 
-function NavBar ( {showModalForm, contacts, identity, influence} ) {
+function NavBar ( {showModalForm, contacts, identity, influence, setCurrLang} ) {
 
     const [show, setShow] = useState(false)
-
-    const [lang, setLang] = useState({
-        RU: true,
-        EN: false,
-        CN: false
-    })
 
     const func = (x) => {
         x = true
     }
 
+    const locale = {
+        en: LOCALES.ENGLISH,
+        ru: LOCALES.RUSSIAN
+    }
+
+    function setLocaleEN () {
+        localStorage.setItem('locale', locale.en)
+    } 
+    function setLocaleRU () {
+        localStorage.setItem('locale', locale.ru)
+    } 
+
+    const lang = localStorage.getItem('locale')
+   
     return (
         <div>
             <div className="navBarComponent">
@@ -57,8 +66,16 @@ function NavBar ( {showModalForm, contacts, identity, influence} ) {
                     <div className="navBar__right">
                         <nav className="navBar__navigation">
                             <div className="navBar__listLang">
-                                <button onClick={(e)=>setLang({RU:true})} className={lang.RU? "navBar__listLang-item LangActive": "navBar__listLang-item"}>RU</button>
-                                <button disabled='disabled' className="navBar__listLang-item">EN</button>
+                                <button 
+                                    onClick={()=>{setCurrLang(locale.ru); setLocaleRU()}} 
+                                    className={lang === 'ru' ? "navBar__listLang-item LangActive" : "navBar__listLang-item"}>
+                                    RU
+                                </button>
+                                <button 
+                                    onClick={()=>{setCurrLang(locale.en); setLocaleEN()}} 
+                                    className={lang === 'en' ? "navBar__listLang-item LangActive" : "navBar__listLang-item"}>
+                                    EN
+                                </button>
                                 <button disabled='disabled' className="navBar__listLang-item">CH</button>
                             </div>
                         </nav>
@@ -78,6 +95,7 @@ function NavBar ( {showModalForm, contacts, identity, influence} ) {
             <MobileBurger
                 showBurger={show}
                 setShowBurger={setShow}
+                setCurrLang={setCurrLang}
             />
         </div>
     )

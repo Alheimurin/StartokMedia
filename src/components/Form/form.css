@@ -164,20 +164,13 @@ input::placeholder {
     gap: 28px;
 }
 
-.form__right__buttonUpload {
+.upload {
     min-width: 295px;
     height: 50px;
     border-radius: 10px;
     background-color: #ffffff;
     border: 1px solid black;
     box-sizing: border-box;
-    padding: 0;
-}
-.form__right__buttonUpload:hover {
-    background-color: rgba(240, 240, 240, 1);
-}
-
-.upload {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,8 +178,10 @@ input::placeholder {
     font-family: FordAntenna;
     font-size: 18px;
     font-weight: 300;
-    height: 45px;
     cursor: pointer;
+}
+.upload:hover {
+    background-color: rgba(240, 240, 240, 1);
 }
 
 .button-clip {

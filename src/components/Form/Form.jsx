@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { FormattedMessage, injectIntl } from 'react-intl'
 
 import './form.css'
@@ -8,6 +8,13 @@ import '../fonts/Fonts.css'
 
 
 function Form (props) {
+
+    const inputRef = useRef(null)
+    
+    const uploadFile = () => {
+        const files = inputRef.current.files 
+        console.log(files)
+    }
 
     const { intl } = props
 
@@ -96,7 +103,7 @@ function Form (props) {
                             <img style={value.comment.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
                         </div>
                         <div className='form__left-inputCheckbox'>
-                            <input className='form__left-inputCheck' type="checkbox" defaultChecked />
+                            <input className='form__left-inputCheck' type="checkbox" defaultChecked required/>
                             <label className='label-checkbox' htmlFor="">
                                 <FormattedMessage id='formPolicy'/> 
                                 <Link className='label-policy'>
@@ -118,13 +125,13 @@ function Form (props) {
                                 <label className='inputs-labelRight' htmlFor="">
                                     <FormattedMessage id='to'/>
                                 </label>
-                                <input className='form__right-input' type="text" value='STARTOK MEDIA' disabled/>
+                                <input className='form__right-input' name='Кому' type="text" value='STARTOK MEDIA' disabled/>
                             </div>
                             <div className='inputs-form'>
                                 <label className='inputs-labelRight' htmlFor="">
                                     <FormattedMessage id='where'/>
                                 </label>
-                                <input className='form__right-input' type="text" value='PR@STARTOKMEDIA.RU' disabled />
+                                <input className='form__right-input' name='На почту' type="text" value='PR@STARTOKMEDIA.RU' disabled />
                             </div>
                         </div>
 
@@ -141,13 +148,11 @@ function Form (props) {
                             </div>
 
                             <div>
-                                <button type='button' className='form__right__buttonUpload'>
-                                    <label className='upload' htmlFor='upload'>
-                                        <svg className='button-clip'/>
-                                        <FormattedMessage id='attach'/>
-                                    </label>
-                                </button>
-                                <input id='upload' type="file" multiple accept="image/jpeg,image/png" style={{display: 'none'}}/>
+                                <label onChange={uploadFile} useref={inputRef} className='upload' htmlFor='upload'>
+                                    <svg className='button-clip'/>
+                                    <FormattedMessage id='attach'/>
+                                </label>
+                                <input  id='upload' type="file" multiple accept="image/jpeg,image/png" style={{display: 'none'}}/>
                             </div>
                             
                             <div>

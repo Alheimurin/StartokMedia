@@ -4,18 +4,29 @@ import { FormattedMessage } from 'react-intl'
 
 import './mobileBurgerPopUp.css'
 import '../../fonts/Fonts.css'
-import ModalFormMobile from '../FormPopUpMobile/FormPopUpMobile'
 
-function MobileBurger ({showBurger, setShowBurger, setMobileFormMenu}) {
+import ModalFormMobile from '../FormPopUpMobile/FormPopUpMobile'
+import { LOCALES } from '../../../i18n/locales'
+
+function MobileBurger ({showBurger, setShowBurger, setMobileFormMenu, setCurrLang}) {
 
     const [drop, setDrop] = useState(false)
-    const [lang, setLang] = useState({
-        RU: true,
-        EN: false,
-        CN: false
-    })
 
     const [mobileForm, setMobileForm] = useState(false)
+
+    const locale = {
+        en: LOCALES.ENGLISH,
+        ru: LOCALES.RUSSIAN
+    }
+
+    const lang = localStorage.getItem('locale')
+
+    function setLocaleEN () {
+        localStorage.setItem('locale', locale.en)
+    } 
+    function setLocaleRU () {
+        localStorage.setItem('locale', locale.ru)
+    }     
 
     return (
         <div>
@@ -51,9 +62,9 @@ function MobileBurger ({showBurger, setShowBurger, setMobileFormMenu}) {
                 <div className='burgerBox__lang'>
                     <h3 className='title'><FormattedMessage id='navLang'/></h3>
                     <ul className='burgerBox__langList'>
-                        <button onClick={()=>setLang({RU:true})} className={lang.RU ?'lang__item lang__itemActive' : 'lang__item'}>RU</button>
-                        <button onClick={()=>setLang({EN:true})} className={lang.EN ?'lang__item lang__itemActive' : 'lang__item'}>EN</button>
-                        <button onClick={()=>setLang({CN:true})} className={lang.CN ?'lang__item lang__itemActive' : 'lang__item'}>CN</button>
+                        <button onClick={()=>{setCurrLang(locale.ru); setLocaleRU()}} className={lang === 'ru' ? 'lang__item lang__itemActive' : 'lang__item'}>RU</button>
+                        <button onClick={()=>{setCurrLang(locale.en); setLocaleEN()}} className={lang === 'en' ? 'lang__item lang__itemActive' : 'lang__item'}>EN</button>
+                        <button disabled='disabled' className={lang === 'cn' ?'lang__item lang__itemActive' : 'lang__item'}>CN</button>
                     </ul>
                     <button onClick={()=>setMobileForm(true)} className='burgerBox__button'><FormattedMessage id='submitRequest'/></button>
                 </div>

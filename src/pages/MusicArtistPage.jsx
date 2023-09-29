@@ -1,8 +1,8 @@
 import MusicArtist from "../components/MusicArtist/MusicArtist";
 
-function MusicArtistPage () {
+function MusicArtistPage ({setCurrLang, getLocale}) {
     return (
-        <MusicArtist/>
+        <MusicArtist setCurrLang={setCurrLang} getLocale={getLocale}/>
     )
 }
 

@@ -39,6 +39,7 @@ export const messages = {
         name: 'Name',
         phone: 'Phone number',
         email: 'Email',
+        emailPlaceholder: 'Email',
         additional: 'Additional information',
         formPolicy: 'By clicking the "Submit" button, you accept the ',
         formPolicyEnd: 'privacy policy',
@@ -131,6 +132,9 @@ export const messages = {
         qrColor: 'QR ',
         qrTitleEnd: '-CODE',
         qrDesc: 'Point your phone camera',
+
+        // Error
+        errorBack: 'Go back home'
     },
     [LOCALES.RUSSIAN]: {
         // Nav
@@ -266,5 +270,7 @@ export const messages = {
         qrTitleEnd: '-CODE',
         qrDesc: 'Наведите камеру телефона',
 
+        // Error
+        errorBack: 'На главную'
     }
 }

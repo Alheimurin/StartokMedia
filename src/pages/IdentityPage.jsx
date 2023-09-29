@@ -1,3 +1,9 @@
 import Identity from "../components/Branding/Identity"
 
-export default Identity
+function identityPage ({setCurrLang, getLocale}) {
+    return (
+        <Identity setCurrLang={setCurrLang} getLocale={getLocale}/>
+    )
+}
+
+export default identityPage

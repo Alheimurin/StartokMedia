@@ -14,7 +14,7 @@ import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
 import '../fonts/Fonts.css'
 import './musicArtist.css'
 
-function MusicArtist () {
+function MusicArtist ({setCurrLang, getLocale}) {
 
     const [formShow, setFormShow] = useState(false)
 
@@ -30,8 +30,11 @@ function MusicArtist () {
             <header>
                 <div className='musicArtists__header'>
                     <div className='musicArtists__nav'>
-                        <NavBar showModalForm={showModalForm}
+                        <NavBar 
+                        showModalForm={showModalForm}
                         influence={true}
+                        setCurrLang={setCurrLang}
+                        getLocale={getLocale}
                         />
                     </div>
 

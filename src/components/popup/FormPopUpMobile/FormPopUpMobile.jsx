@@ -1,6 +1,9 @@
 import './formPopUpMobile.css'
 import '../../fonts/Fonts.css'
 
+import { FormattedMessage } from 'react-intl'
+import { Link } from 'react-router-dom'
+
 function ModalFormMobile ({MobileForm, setMobileForm}) {
     return (
         <div className={ MobileForm ? 'modalFormMobile__component modalFormMobileActive' : 'modalFormMobile__component'}>
@@ -11,41 +14,50 @@ function ModalFormMobile ({MobileForm, setMobileForm}) {
                 <div className='modalFormMobile__container'>
                     <div className='modalFormMobile__title'>
                         <h3 className='modalFormMobile__titleItem'>
-                            ФОРМА <span className='mobileGradient'>БЫСТРОЙ</span> ОБРАТНОЙ СВЯЗИ
+                            <FormattedMessage id='formTitle'/> 
+                            <span className='mobileGradient'>
+                                <FormattedMessage id='formQuick'/>
+                            </span> 
+                            <FormattedMessage id='formTitleEnd'/>
                         </h3>
                     </div>
-                    <form className='modalFormMobile__form'>
+                    <form className='modalFormMobile__form' action="https://formspree.io/f/mbjvzbeg" method="POST">
                         <label className='modaFormMobile__label' htmlFor="">
-                            От кого
-                            <input className='modalFormMobile__input mobileLabel' placeholder='Компания' type="text" />
+                            <FormattedMessage id='from'/>
+                            <input className='modalFormMobile__input mobileLabel' name='Компания' placeholder='Компания' type="text" />
                         </label>
-                        <input className='modalFormMobile__input' placeholder='Имя' type="text" />
-                        <input className='modalFormMobile__input' placeholder='Телефон' type="text" />
+                        <input className='modalFormMobile__input' name='Имя' placeholder='Имя' type="text" />
+                        <input className='modalFormMobile__input' name='Телефон' placeholder='Телефон' type="text" />
                         <label className='modaFormMobile__label' htmlFor="">
-                            Откуда
-                            <input className='modalFormMobile__input mobileLabel' placeholder='Email' type="text" />
+                            <FormattedMessage id='email'/>
+                            <input className='modalFormMobile__input mobileLabel' name='Email' placeholder='Email' type="text" />
                         </label>
-                        <input className='modalFormMobile__input' placeholder='Комментарий' type="text" />
+                        <input className='modalFormMobile__input' name='Комментарий' placeholder='Комментарий' type="text" />
                         <label className='modaFormMobile__label' htmlFor="">
-                            Кому
-                            <input readOnly value='STARTOK MEDIA' className='modalFormMobile__input mobileLabel inputTo ' type="text" />
+                            <FormattedMessage id='to'/>
+                            <input readOnly value='STARTOK MEDIA' name='Кому' className='modalFormMobile__input mobileLabel inputTo ' type="text" />
                         </label>
                         <label className='modaFormMobile__label' htmlFor="">
-                            Куда
-                            <input readOnly value='PR@STARTOKMEDIA.RU' className='modalFormMobile__input mobileLabel inputTo' type="text" />
+                            <FormattedMessage id='where'/>
+                            <input readOnly value='PR@STARTOKMEDIA.RU' name='На почту' className='modalFormMobile__input mobileLabel inputTo' type="text" />
                         </label>
                         <label className='modaFormMobile__label checkbox' htmlFor="">
-                            <input type="checkbox" defaultChecked />
-                            Нажимая кнопку «Отправить», вы принимаете правила политики конфиденциальности
+                            <input type="checkbox" defaultChecked required/>
+                            <p>
+                                <FormattedMessage id='formPolicy'/> 
+                                <Link className='label-policy'>
+                                    <FormattedMessage id='formPolicyEnd'/>
+                                </Link>
+                            </p>
                         </label>
                         <button type='button' className='modalFormMobile__loader'>
                             <label className='loader__button' htmlFor="modalLoadMoblie">
                                 <img src="UI/clip.svg" alt="" />
-                                Прикрепить файл
+                                <FormattedMessage id='attach'/>
                             </label>
                                 <input id='modalLoadMoblie' type="file" style={{display: 'none'}} />
                         </button>
-                        <button className='modalFormMobile__button' type='submit'>Оставить заявку</button>
+                        <button className='modalFormMobile__button' type='submit'><FormattedMessage id='formSubmit'/></button>
                     </form>
                 </div>
             </div>

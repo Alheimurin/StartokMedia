@@ -4,7 +4,7 @@ import OrderBlock from '../Orders/OrderBlock/OrderBlock'
 import SubBranding from '../SubItems/SubBranding'
 import OtherServices from '../OtherServices/OtherServices'
 import RequestBlackWords from '../Tickers/RequestBlackWords/BlackWords'
-import From from '../Form/Form'
+import Form from '../Form/Form'
 import Footer from '../Footer/Footer'
 import FormPopUp from '../popup/FormPopUp/FormPopUp'
 import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
@@ -15,7 +15,7 @@ import '../fonts/Fonts.css'
 import { useState } from 'react'
 import { FormattedMessage } from 'react-intl'
 
-function Identity () {
+function Identity ({setCurrLang, getLocale}) {
 
     const [formShow, setFormShow] = useState(false)
 
@@ -32,6 +32,8 @@ function Identity () {
                 <div className='identityNav'>
                     <NavBar showModalForm={showModalForm}
                     identity={true}
+                    setCurrLang={setCurrLang}
+                    getLocale={getLocale}
                     />
                 </div>
 
@@ -161,7 +163,7 @@ function Identity () {
                 </div>
                 
                 <div>
-                    <From/>
+                    <Form/>
                 </div>
             </main>
 
