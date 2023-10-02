@@ -132,6 +132,7 @@ export const messages = {
         qrColor: 'QR ',
         qrTitleEnd: '-CODE',
         qrDesc: 'Point your phone camera',
+        qrClose: 'Close',
 
         // Error
         errorBack: 'Go back home'
@@ -269,6 +270,7 @@ export const messages = {
         qrColor: 'QR ',
         qrTitleEnd: '-CODE',
         qrDesc: 'Наведите камеру телефона',
+        qrClose: 'Закрыть',
 
         // Error
         errorBack: 'На главную'

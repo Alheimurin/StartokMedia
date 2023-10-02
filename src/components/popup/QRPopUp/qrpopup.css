@@ -145,8 +145,8 @@
     }
 
     .mobile__close {
+        display: block;
         height: 25px;
-        width: 80px;
         border: none;
         border-bottom: 1px solid black;
         background: inherit;

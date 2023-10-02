@@ -105,6 +105,7 @@
 
 .conception-img {
     height: 350px;
+    width: 560px;
 }
 
 @media screen and (max-device-width: 1200px) {

@@ -24,11 +24,11 @@ function App (props) {
 
   function getLocale () {
     const savedLocale = localStorage.getItem('locale')
-    return savedLocale || LOCALES.ENGLISH
+    return savedLocale || localStorage.setItem('locale', locale.en)
   }
 
   return (
-    <IntlProvider messages={messages[currLang]} locale={currLang} defaultLocale={LOCALES.ENGLISH}>
+    <IntlProvider messages={messages[currLang]} locale={currLang} defaultLocale={locale.en}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage setCurrLang={setCurrLang}/>}/>

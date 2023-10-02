@@ -47,7 +47,9 @@
     font-family: FordAntenna;
     font-size: 14px;
     font-weight: 300;
-    width: 250px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
 }
 
 .footer__left-policyText {
@@ -59,7 +61,7 @@
 }
 
 .footer__right {
-    max-width: 715px;
+    max-width: 720px;
     display: flex;
     flex-wrap: wrap;
 }

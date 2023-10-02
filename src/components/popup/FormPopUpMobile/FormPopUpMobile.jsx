@@ -45,7 +45,7 @@ function ModalFormMobile ({MobileForm, setMobileForm}) {
                             <input type="checkbox" defaultChecked required/>
                             <p>
                                 <FormattedMessage id='formPolicy'/> 
-                                <Link className='label-policy'>
+                                <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='label-policy'>
                                     <FormattedMessage id='formPolicyEnd'/>
                                 </Link>
                             </p>

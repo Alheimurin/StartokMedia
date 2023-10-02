@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer'
 import BlackTickerString from '../Tickers/RequestBlackWords/BlackWords'
 import FormPopUp from '../popup/FormPopUp/FormPopUp'
 import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
+import { lang } from '../../constants/constants'
 
 import './main.css'
 import '../fonts/Fonts.css'
@@ -201,7 +202,7 @@ function Main ({setMobileFormMenu, setCurrLang, getLocale}) {
                                 </div>
                                 <div className='main__content-ideaRight'>
                                     <svg className='main__content-ideaRightImg'></svg>
-                                    <svg className='main__content-ideaRightText'></svg>
+                                    <svg className={lang === 'ru' ? 'main__content-ideaRightText' : 'main__content-ideaRightTextENG'}></svg>
                                 </div>
                             </div>
                         </div>

@@ -126,6 +126,8 @@
         border: 1px solid black;
         border-radius: 7px;
         background-color: white;
+        
+        display: none;
     }
     
     .loader__button {
@@ -149,5 +151,7 @@
 
     .label-policy {
         border-bottom: 1px solid black;
+        text-decoration: none;
+        color:  black;
     }
 }

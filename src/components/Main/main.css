@@ -439,11 +439,17 @@
     background-image: url(/public/assets/MainIdeaRightText.svg);
     background-repeat: no-repeat;
     background-position: center;
-    color: white;
     animation: TextScroll 20s linear infinite;
     width: 224px;
     height: 224px;
-    margin: 0;
+}
+.main__content-ideaRightTextENG {
+    background-image: url(/public/assets/RightTextENG.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: TextScroll 20s linear infinite;
+    width: 224px;
+    height: 224px;
 }
 
 @keyframes TextScroll {
@@ -727,6 +733,9 @@
     }
 
     .main__content-ideaRightText {
+        display: none;
+    }
+    .main__content-ideaRightTextENG {
         display: none;
     }
     .main__content-ideaRightImg {

@@ -2,6 +2,7 @@ import './formPopUp.css'
 import '../../fonts/Fonts.css'
 
 import { FormattedMessage } from 'react-intl'
+import { Link } from 'react-router-dom'
 
 function FormPopUp ({active, setActive}) {
     return (
@@ -34,9 +35,9 @@ function FormPopUp ({active, setActive}) {
                             <input className='formPopUp__inputChecboxItem' type="checkbox" defaultChecked />  
                             <label className='formPopUp__Text' htmlFor="">
                                 <FormattedMessage id='formPolicy'/>
-                                <span className='formPopUpPolicy'>
+                                <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='formPopUpPolicy'>
                                     <FormattedMessage id='formPolicyEnd'/>
-                                </span>
+                                </Link>
                             </label>
                         </div>
                     </div>

@@ -133,6 +133,8 @@ input::placeholder {
 .formPopUp__buttonsUpload {
     border: 1px solid #000000;
     background: #ffffff;
+
+    display: none;
 }
 .formPopUp__buttonsUpload:hover {
     background: rgba(240, 240, 240, 1);
@@ -154,7 +156,9 @@ input::placeholder {
 }
 
 .formPopUpPolicy {
-    border-bottom: 1px solid black
+    border-bottom: 1px solid black;
+    color: black;
+    text-decoration: none;
 }
 
 @media screen and (max-device-width: 1200px) {

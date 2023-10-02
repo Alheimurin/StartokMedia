@@ -22,9 +22,9 @@ function Footer () {
                             <Link to='/' className='footer__left-img'></Link>
                         </div>
                         <div className='footer__left-policy'>
-                            <h2 className='footer__left-policyTitle'>
+                            <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='footer__left-policyTitle'>
                                 <FormattedMessage id='footerPolicy'/>
-                            </h2>
+                            </Link>
                             <p className='footer__left-policyText'>
                                 <FormattedMessage id='footerPolicyDesc'/>
                             </p>
@@ -112,9 +112,9 @@ function Footer () {
                 </div>
             </div>
             <div className='footer__left-policy mobile_policy'>
-                <h2 className='footer__left-policyTitle'>
+                <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='footer__left-policyTitle'>
                     <FormattedMessage id='footerPolicy'/>
-                </h2>
+                </Link>
                 <p className='footer__left-policyText'>
                     <FormattedMessage id='footerPolicyDesc'/>
                 </p>

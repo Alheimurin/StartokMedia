@@ -25,6 +25,7 @@ function QRPopUp({active, setActive, name, img}) {
                                 </span> 
                             </h3>
                             <p className='QRmodal__container-right_descText'><FormattedMessage id='qrDesc'/></p>
+                            <button onClick={(e)=>setActive(false)} className='mobile__close'><FormattedMessage id='qrClose'/></button>
                         </div>
                     </div>
                     <div className='QRmodal__container-cancel'>
@@ -33,7 +34,6 @@ function QRPopUp({active, setActive, name, img}) {
                         </button>
                     </div>
                 </div>
-                <button onClick={(e)=>setActive(false)} className='mobile__close'>Закрыть</button>
             </div>
         </div>
     )

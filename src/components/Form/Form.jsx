@@ -38,6 +38,7 @@ function Form (props) {
         validPhone.mark = '*'
     }
 
+    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
     let validEmail = {
         email: 'Email',
         mark: '*'
@@ -50,7 +51,6 @@ function Form (props) {
         validEmail.mark = '*'
     }
 
-    
     return (
         <div className="form">
             <form className='form__item' id='form' action="https://formspree.io/f/mbjvzbeg" method="POST">
@@ -69,20 +69,17 @@ function Form (props) {
                             </label>
                             <div className='required'>
                                 <input onChange={(e)=>{setValue({...value, company: e.target.value})}} className='form__left-input wLabel' name='Компания' type="text" placeholder={intl.formatMessage({id: 'fromPlaceholder'})} />
-                                <img style={value.company.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                                <img style={value.company.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
+                                <img src={value.company.length > 0 ? 'UI/formV.svg' : ''} alt="" />
                             </div>
                         </div>
                         <div className='required'>
                             <input onChange={(e)=>{setValue({...value, name: e.target.value})}} className='form__left-input' name='Имя' type="text" placeholder={intl.formatMessage({id: 'name'})}/>
-                            <img style={value.name.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                            <img style={value.name.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
+                            <img src={value.name.length > 0 ? 'UI/formV.svg' : ''} alt="" /> 
                         </div>
                         <div className='required'>
-                            <input onChange={(e)=>setValue({...value, phone: e.target.value})} className='form__left-input' name='Телефон' id='phone' type="text" />
+                            <input onChange={(e)=>setValue({...value, phone: e.target.value})} className='form__left-input' value={null} name='Телефон' id='phone' type="number" required />
                             <label className='requiredItem' htmlFor="phone">{validPhone.phone} <span style={{color:'red'}}>{validPhone.mark}</span></label>
-                            <img style={value.phone.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                            <img style={value.phone.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
+                            <img src={value.phone.length > 0 ? 'UI/formV.svg' : 'UI/formX.svg'} alt="" />
                         </div>
                         
                         <div className='inputs-form'>
@@ -90,23 +87,21 @@ function Form (props) {
                                 <FormattedMessage id='email'/>
                             </label>
                             <div className='required'>
-                            <input onChange={(e)=>setValue({...value, mail: e.target.value})} className='form__left-input wLabel' name='Email' id='email' type="text" />
+                            <input onChange={(e)=>setValue({...value, mail: e.target.value})} className='form__left-input wLabel' name='Email' id='email' type="text" required />
                             <label className='requiredItem' htmlFor="email">{validEmail.email} <span style={{color:'red'}}>{validEmail.mark}</span></label> 
-                            <img style={value.mail.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                            <img style={value.mail.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />  
+                            <img src={EMAIL_REGEXP.test(value.mail)? 'UI/formV.svg' : 'UI/formX.svg'} alt="" />
                             </div>
                                     
                         </div>
                         <div className='required'>
                             <input onChange={(e)=>{setValue({...value, comment: e.target.value})}} className='form__left-input' type="text" name='Комментарий' placeholder={intl.formatMessage({id: 'additional'})} />
-                            <img style={value.comment.length > 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formV.svg" alt="" /> 
-                            <img style={value.comment.length === 0 ? {display: 'block'} : {display: 'none'}} src="/UI/formX.svg" alt="" />
+                            <img src={value.comment.length > 0 ? 'UI/formV.svg' : ''} alt="" />
                         </div>
                         <div className='form__left-inputCheckbox'>
-                            <input className='form__left-inputCheck' type="checkbox" defaultChecked required/>
+                            <input className='form__left-inputCheck' name='Политика принята' type="checkbox" defaultChecked required/>
                             <label className='label-checkbox' htmlFor="">
                                 <FormattedMessage id='formPolicy'/> 
-                                <Link className='label-policy'>
+                                <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='label-policy'>
                                     <FormattedMessage id='formPolicyEnd'/>
                                 </Link>
                             </label>
@@ -141,7 +136,7 @@ function Form (props) {
                                 <input className='form__left-inputCheck' type="checkbox" defaultChecked />
                                 <label className='label-checkbox' htmlFor="">
                                     <FormattedMessage id='formPolicy'/>
-                                    <Link className='label-policy'>
+                                    <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='label-policy'>
                                         <FormattedMessage id='formPolicyEnd'/>
                                     </Link>
                                 </label>

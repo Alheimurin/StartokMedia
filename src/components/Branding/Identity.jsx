@@ -8,6 +8,7 @@ import Form from '../Form/Form'
 import Footer from '../Footer/Footer'
 import FormPopUp from '../popup/FormPopUp/FormPopUp'
 import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
+import { lang } from '../../constants/constants'
 
 import './identity.css'
 import '../fonts/Fonts.css'
@@ -66,7 +67,7 @@ function Identity ({setCurrLang, getLocale}) {
                         </h2>
                         <div className='identity-container'>
                             <div className='identity__style-left'>
-                                <img className='identity__style-leftIMG' src="UI/identityStyle.svg" alt="" />
+                                <img className='identity__style-leftIMG' src={lang === 'ru' ? "UI/identityStyle.svg" : "UI/identityStyleENG.svg"}/>
                             </div>
                             <div className='identity__style-right'>
                                 <div className='identity__style-Text'>

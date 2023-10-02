@@ -7,6 +7,7 @@ import Footer from '../Footer/Footer'
 import Integration from '../IntegrationFor/Integration'
 import FormPopUp from '../popup/FormPopUp/FormPopUp'
 import ModalFormMobile from '../popup/FormPopUpMobile/FormPopUpMobile'
+import { lang } from '../../constants/constants'
 
 import './companyBrand.css'
 import '../fonts/Fonts.css'
@@ -85,7 +86,7 @@ function CompanyBrand({setCurrLang, getLocale}) {
                             <button onClick={()=>{setMobileForm(true);showModalForm()}} className='conception-button'><FormattedMessage id='connectButton'/></button>
                         </div>
                         
-                        <img className='conception-img' srcSet="UX/conceptionRight.svg" alt="" />
+                        <img className='conception-img' srcSet={lang === 'ru' ? "UX/conceptionRight.svg" : "UX/conceptionRightENG.svg"} />
                     </div>
                 </div>
 
