@@ -1,5 +1,6 @@
 .burgerBox {
-    width: 320px;
+    /* width: 320px; */
+    width: 100vw;
     height: 100vh;
     color: white;
     position: fixed;

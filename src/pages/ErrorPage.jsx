@@ -1,4 +1,4 @@
-import Error from "../components/404/Error";
+import Error from "../components/404/Error.jsx";
 
 function ErrorPage () {
     return (

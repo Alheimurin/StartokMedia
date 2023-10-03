@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import QRPopUp from '../popup/QRPopUp/QRPopUp'
+import QRPopUp from '../popup/QRPopUp/QRPopUp.jsx'
 
 import './footer.css'
 

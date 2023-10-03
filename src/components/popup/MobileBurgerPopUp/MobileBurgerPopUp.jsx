@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 import './mobileBurgerPopUp.css'
 import '../../fonts/Fonts.css'
 
-import ModalFormMobile from '../FormPopUpMobile/FormPopUpMobile'
+import ModalFormMobile from '../FormPopUpMobile/FormPopUpMobile.jsx'
 import { LOCALES } from '../../../i18n/locales'
 
 function MobileBurger ({showBurger, setShowBurger, setMobileFormMenu, setCurrLang}) {

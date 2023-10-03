@@ -2,12 +2,12 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import { useState } from "react";
 import { IntlProvider } from "react-intl";
 
-import MainPage from '../../pages/MainPage'
-import ContactPage from '../../pages/ContactPage'
-import CompanyBrandPage from '../../pages/CompanyBrandPage'
-import MusicArtistPage from '../../pages/MusicArtistPage'
-import IdentityPage from '../../pages/IdentityPage'
-import ErrorPage from "../../pages/ErrorPage";
+import MainPage from '../../pages/MainPage.jsx'
+import ContactPage from '../../pages/ContactPage.jsx'
+import CompanyBrandPage from '../../pages/CompanyBrandPage.jsx'
+import MusicArtistPage from '../../pages/MusicArtistPage.jsx'
+import IdentityPage from '../../pages/IdentityPage.jsx'
+import ErrorPage from "../../pages/ErrorPage.jsx";
 import { LOCALES } from '../../i18n/locales'
 import { messages } from '../../i18n/messages'
 

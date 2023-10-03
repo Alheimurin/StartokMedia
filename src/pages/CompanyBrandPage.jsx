@@ -1,4 +1,4 @@
-import CompanyBrand from '../components/CompanyBrand/CompanyBrand'
+import CompanyBrand from '../components/CompanyBrand/CompanyBrand.jsx'
 
 function CompanyBrandPage ({setCurrLang, getLocale}) {
     return (

@@ -1,4 +1,4 @@
-import MusicArtist from "../components/MusicArtist/MusicArtist";
+import MusicArtist from "../components/MusicArtist/MusicArtist.jsx";
 
 function MusicArtistPage ({setCurrLang, getLocale}) {
     return (

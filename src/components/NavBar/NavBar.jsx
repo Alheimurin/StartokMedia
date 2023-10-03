@@ -5,7 +5,7 @@ import { FormattedMessage } from "react-intl"
 import './navbar.css'
 import '../fonts/Fonts.css'
 
-import MobileBurger from "../popup/MobileBurgerPopUp/MobileBurgerPopUp"
+import MobileBurger from "../popup/MobileBurgerPopUp/MobileBurgerPopUp.jsx"
 import { LOCALES } from "../../i18n/locales"
 
 function NavBar ( {showModalForm, contacts, identity, influence, setCurrLang} ) {

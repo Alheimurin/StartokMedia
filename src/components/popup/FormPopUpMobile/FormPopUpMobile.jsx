@@ -1,10 +1,11 @@
 import './formPopUpMobile.css'
 import '../../fonts/Fonts.css'
 
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
 
-function ModalFormMobile ({MobileForm, setMobileForm}) {
+function ModalFormMobile ({MobileForm, setMobileForm, intl}) {
+
     return (
         <div className={ MobileForm ? 'modalFormMobile__component modalFormMobileActive' : 'modalFormMobile__component'}>
             <div className='modalFormMobile'>
@@ -24,15 +25,15 @@ function ModalFormMobile ({MobileForm, setMobileForm}) {
                     <form className='modalFormMobile__form' action="https://formspree.io/f/mbjvzbeg" method="POST">
                         <label className='modaFormMobile__label' htmlFor="">
                             <FormattedMessage id='from'/>
-                            <input className='modalFormMobile__input mobileLabel' name='Компания' placeholder='Компания' type="text" />
+                            <input className='modalFormMobile__input mobileLabel' name='Компания' placeholder={intl.formatMessage({id: 'fromPlaceholder'})} type="text" />
                         </label>
-                        <input className='modalFormMobile__input' name='Имя' placeholder='Имя' type="text" />
-                        <input className='modalFormMobile__input' name='Телефон' placeholder='Телефон' type="text" />
+                        <input className='modalFormMobile__input' name='Имя' placeholder={intl.formatMessage({id: 'name'})} type="text" />
+                        <input className='modalFormMobile__input' name='Телефон' placeholder={intl.formatMessage({id: 'phone'})} type="number" required/>
                         <label className='modaFormMobile__label' htmlFor="">
                             <FormattedMessage id='email'/>
-                            <input className='modalFormMobile__input mobileLabel' name='Email' placeholder='Email' type="text" />
+                            <input className='modalFormMobile__input mobileLabel' name='Email' placeholder={intl.formatMessage({id: 'emailPlaceholder'})} type="text" required />
                         </label>
-                        <input className='modalFormMobile__input' name='Комментарий' placeholder='Комментарий' type="text" />
+                        <input className='modalFormMobile__input' name='Комментарий' placeholder={intl.formatMessage({id: 'additional'})} type="text" />
                         <label className='modaFormMobile__label' htmlFor="">
                             <FormattedMessage id='to'/>
                             <input readOnly value='STARTOK MEDIA' name='Кому' className='modalFormMobile__input mobileLabel inputTo ' type="text" />
@@ -42,7 +43,7 @@ function ModalFormMobile ({MobileForm, setMobileForm}) {
                             <input readOnly value='PR@STARTOKMEDIA.RU' name='На почту' className='modalFormMobile__input mobileLabel inputTo' type="text" />
                         </label>
                         <label className='modaFormMobile__label checkbox' htmlFor="">
-                            <input type="checkbox" defaultChecked required/>
+                            <input type="checkbox" name='Политика принята' defaultChecked required/>
                             <p>
                                 <FormattedMessage id='formPolicy'/> 
                                 <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='label-policy'>
@@ -65,4 +66,4 @@ function ModalFormMobile ({MobileForm, setMobileForm}) {
     )
 }
 
-export default ModalFormMobile
+export default injectIntl(ModalFormMobile)

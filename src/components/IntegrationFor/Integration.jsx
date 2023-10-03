@@ -1,4 +1,4 @@
-import IntForCard from '../Cards/IntegrationCard/IntForCard'
+import IntForCard from '../Cards/IntegrationCard/IntForCard.jsx'
 import { integrationImg } from '../../constants/constants'
 
 import './integration.css'

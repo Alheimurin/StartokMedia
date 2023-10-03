@@ -1,14 +1,16 @@
 import './formPopUp.css'
 import '../../fonts/Fonts.css'
 
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl } from 'react-intl'
+
 import { Link } from 'react-router-dom'
 
-function FormPopUp ({active, setActive}) {
+function FormPopUp ({active, setActive, intl}) {
+
     return (
         <div className={active ? 'modalForm active': 'modalForm'} onClick={()=> setActive(false)}>
             <div className='formPopUpComponent' onClick={e=>e.stopPropagation()}>
-                <form className='formPopUp__Container'>
+                <form className='formPopUp__Container' action="https://formspree.io/f/mbjvzbeg" method="POST">
                     <div className='formPopUp__Logo'>
                         <div className='formPopUp__LogoContainer'>
                             <img className='formPopUp__img' src="/UI/formPUpLogo.svg" alt="" />
@@ -23,16 +25,16 @@ function FormPopUp ({active, setActive}) {
                     </div>
                     <div className='formPopUp__inputsBox'>
                         <div className='formPopUp__inputs'>
-                            <input className='formPopUp__input' type="text" placeholder='Имя' />
-                            <input className='formPopUp__input' type="text" placeholder='Телефон' />
+                            <input className='formPopUp__input' name='Имя' type="text" placeholder={intl.formatMessage({id:'name'})}/>
+                            <input className='formPopUp__input' name='Телефон' type="number" placeholder={intl.formatMessage({id:'phone'})} required/>
                         </div>
                         <div className='formPopUp__inputs'>
-                            <input className='formPopUp__input' type="text" placeholder='Email' />
-                            <input className='formPopUp__input' type="text" placeholder='Название компании' />
+                            <input className='formPopUp__input' name='Email' type="text" placeholder={intl.formatMessage({id: 'emailPlaceholder'})} required/>
+                            <input className='formPopUp__input' name='Компания' type="text" placeholder={intl.formatMessage({id:'fromPlaceholder'})} />
                         </div>
-                        <input className='formPopUp__inputBottom' type="text" placeholder='Комментарий' />
+                        <input className='formPopUp__inputBottom' name='Комментарий' type="text" placeholder={intl.formatMessage({id: 'additional'})} />
                         <div className='formPopUp__inputChecbox'>
-                            <input className='formPopUp__inputChecboxItem' type="checkbox" defaultChecked />  
+                            <input className='formPopUp__inputChecboxItem' name='Политика принята' type="checkbox" defaultChecked required/>  
                             <label className='formPopUp__Text' htmlFor="">
                                 <FormattedMessage id='formPolicy'/>
                                 <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='formPopUpPolicy'>
@@ -46,12 +48,12 @@ function FormPopUp ({active, setActive}) {
                             <button type='button' className='formPopUp__buttonsUpload formPopUpBtn'>
                                 <label className='formPopUp__buttonsUploadContent' htmlFor="formPopUpUpload">
                                     <img src="/UI/clip.svg" alt="" />
-                                    Прикрепить файл 
+                                    <FormattedMessage id='attach'/>
                                 </label>
                                 <input id='formPopUpUpload' type="file"  style={{display: 'none'}}/>
                             </button>
                         </div>
-                        <button className='formPopUp__buttonsSubmit formPopUpBtn' type='submit'>Отправить заявку</button>
+                        <button className='formPopUp__buttonsSubmit formPopUpBtn' type='submit'><FormattedMessage id='formSubmit'/></button>
                     </div>
                 </form>
             </div>
@@ -59,4 +61,4 @@ function FormPopUp ({active, setActive}) {
     )   
 }
 
-export default FormPopUp
+export default injectIntl(FormPopUp)

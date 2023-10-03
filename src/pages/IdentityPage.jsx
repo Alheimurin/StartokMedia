@@ -1,4 +1,4 @@
-import Identity from "../components/Branding/Identity"
+import Identity from "../components/Branding/Identity.jsx"
 
 function identityPage ({setCurrLang, getLocale}) {
     return (
