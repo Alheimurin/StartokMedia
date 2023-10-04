@@ -27,10 +27,10 @@ function Contacts ({setCurrLang, getLocale}) {
                 <div className='contacts__header'>
                     <div className='contacts__header-nav'>
                         <NavBar 
-                        showModalForm={showModalForm} 
-                        contacts={true}
-                        setCurrLang={setCurrLang}
-                        getLocale={getLocale}
+                            showModalForm={showModalForm} 
+                            contacts={true}
+                            setCurrLang={setCurrLang}
+                            getLocale={getLocale}
                         />
                     </div>
 
@@ -66,7 +66,9 @@ function Contacts ({setCurrLang, getLocale}) {
             </main>
 
             <footer>
-                <Footer/>
+                <Footer
+                    setCurrLang={setCurrLang}
+                />
             </footer>
             <QRPopUp
                 active={QRShow}

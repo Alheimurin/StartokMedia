@@ -32,10 +32,10 @@ function CompanyBrand({setCurrLang, getLocale}) {
                 <div className='company__header'>
                     <div className='company__header-nav'>
                         <NavBar  
-                        showModalForm={showModalForm}
-                        influence={true}
-                        setCurrLang={setCurrLang}
-                        getLocale={getLocale}
+                            showModalForm={showModalForm}
+                            influence={true}
+                            setCurrLang={setCurrLang}
+                            getLocale={getLocale}
                         />
                     </div>
 
@@ -103,7 +103,9 @@ function CompanyBrand({setCurrLang, getLocale}) {
             </main>
 
             <footer>
-                <Footer />
+                <Footer 
+                    setCurrLang={setCurrLang}
+                />
             </footer>
             <FormPopUp
                 active={formShow}

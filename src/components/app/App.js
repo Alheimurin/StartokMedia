@@ -29,7 +29,7 @@ function App (props) {
 
   return (
     <IntlProvider messages={messages[currLang]} locale={currLang} defaultLocale={locale.en}>
-      <HashRouter>
+      <HashRouter basename='/'>
         <Routes>
           <Route path="/" element={<MainPage setCurrLang={setCurrLang}/>}/>
           <Route path="contacts" element={<ContactPage setCurrLang={setCurrLang}/>}/>

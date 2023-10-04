@@ -170,7 +170,9 @@ function Identity ({setCurrLang, getLocale}) {
 
             <footer>
                 <div>
-                    <Footer/>
+                    <Footer
+                        setCurrLang={setCurrLang}
+                    />
                 </div>
             </footer>
             <FormPopUp

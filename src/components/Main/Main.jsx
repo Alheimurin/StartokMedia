@@ -56,18 +56,18 @@ function Main ({setMobileFormMenu, setCurrLang, getLocale}) {
                             <nav className='main__header-cards_cards'>
                                 <button onClick={()=>setMobileForm(true)} className='main__header-cards__button'><FormattedMessage id='submitRequest'/></button>
                                 <Link to='/music' className='mainHeaderCard'>
-                                    <img  onPointerOver={()=>{setCardInfo(info.musicInfo); setHover({music:true})}} onPointerOut={()=>{setCardInfo(info.companyInfo) ;setHover({company:true})}} className={hover.music ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
+                                    <img  onMouseOver={()=>{setCardInfo(info.musicInfo); setHover({music:true})}} onMouseOut={()=>{setCardInfo(info.companyInfo) ;setHover({company:true})}} className={hover.music ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Music.svg" alt="" />
                                 </Link>
                                 <div>
                                     <div className='main__header-cards_desc_container'>
                                         <p className='main__header-cards_desc'>{cardInfo ? cardInfo : info.companyInfo}</p>
                                     </div>
                                     <Link to='/company' className='mainHeaderCard IC'>
-                                    <img onPointerOver={()=>{setCardInfo(info.companyInfo); setHover({company:true})}} onPointerOut={()=>{setCardInfo(info.companyInfo); setHover({company:true})}} className={hover.company ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Brand.svg" alt="" />
+                                    <img onMouseOver={()=>{setCardInfo(info.companyInfo); setHover({company:true})}} onMouseOut={()=>{setCardInfo(info.companyInfo); setHover({company:true})}} className={hover.company ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Brand.svg" alt="" />
                                     </Link>
                                 </div>
                                 <Link to='/identity' className='mainHeaderCard'>
-                                    <img onPointerOver={()=>{setCardInfo(info.identityInfo); setHover({identity:true})}} onPointerOut={()=>{setCardInfo(info.companyInfo); setHover({company:true})}}  className={hover.identity ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Branding.svg" alt="" />
+                                    <img onMouseOver={()=>{setCardInfo(info.identityInfo); setHover({identity:true})}} onMouseOut={()=>{setCardInfo(info.companyInfo); setHover({company:true})}}  className={hover.identity ? 'cardImgHover cardImg' : 'cardImg'} src="/UI/mainHeaderCards/Branding.svg" alt="" />
                                 </Link>
                             </nav>
                         </div>
@@ -211,7 +211,10 @@ function Main ({setMobileFormMenu, setCurrLang, getLocale}) {
                     <Form/>
                 </main>
                 <footer>
-                    <Footer/>
+                    <Footer
+                    setCurrLang={setCurrLang}
+                    getLocale={getLocale}
+                    />
                 </footer>
                 <FormPopUp
                     active={formShow}

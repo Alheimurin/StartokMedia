@@ -2,8 +2,10 @@ import './formPopUp.css'
 import '../../fonts/Fonts.css'
 
 import { FormattedMessage, injectIntl } from 'react-intl'
-
 import { Link } from 'react-router-dom'
+
+import { lang } from '../../../constants/constants'
+import { policyLink } from '../../../constants/constants'
 
 function FormPopUp ({active, setActive, intl}) {
 
@@ -37,7 +39,7 @@ function FormPopUp ({active, setActive, intl}) {
                             <input className='formPopUp__inputChecboxItem' name='Политика принята' type="checkbox" defaultChecked required/>  
                             <label className='formPopUp__Text' htmlFor="">
                                 <FormattedMessage id='formPolicy'/>
-                                <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='formPopUpPolicy'>
+                                <Link target='blank' to={lang === 'en' ? policyLink.en : policyLink.ru} className='formPopUpPolicy'>
                                     <FormattedMessage id='formPolicyEnd'/>
                                 </Link>
                             </label>

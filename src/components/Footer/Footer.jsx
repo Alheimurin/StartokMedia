@@ -3,15 +3,34 @@ import { useState } from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import QRPopUp from '../popup/QRPopUp/QRPopUp.jsx'
+import { LOCALES } from '../../i18n/locales.js'
 
 import './footer.css'
 
-function Footer () {
+function Footer ({setCurrLang}) {
 
     const [showQR, setShowQR] = useState(false)
     const [descName, setDescName] = useState('')
     const [descImg, setDescImg] = useState('')
 
+    const locale = {
+        en: LOCALES.ENGLISH,
+        ru: LOCALES.RUSSIAN
+    }
+
+    function setLocaleEN () {
+        localStorage.setItem('locale', locale.en)
+    } 
+    function setLocaleRU () {
+        localStorage.setItem('locale', locale.ru)
+    } 
+    
+    const lang = localStorage.getItem('locale')
+    const policyLink = {
+        ru: 'https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1',
+        en: 'https://drive.google.com/file/d/1Yj40Mz1cplIDTnMa_umYRikBcfQj54yt/view?pli=1'
+    }
+    
     return (
         <footer className='footer__content'>
             <div className='footer__content-container'>
@@ -22,7 +41,7 @@ function Footer () {
                             <Link to='/' className='footer__left-img'></Link>
                         </div>
                         <div className='footer__left-policy'>
-                            <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='footer__left-policyTitle'>
+                            <Link target='blank' to={lang === 'en' ? policyLink.en : policyLink.ru} className='footer__left-policyTitle'>
                                 <FormattedMessage id='footerPolicy'/>
                             </Link>
                             <p className='footer__left-policyText'>
@@ -39,9 +58,9 @@ function Footer () {
                                 <FormattedMessage id='footerLang'/>
                             </h2>
                             <div className='footer__right-itemLinks'>
-                                <Link className='footer__right-itemLink'>RU</Link>
-                                <Link className='footer__right-itemLink'>EN</Link>
-                                <Link className='footer__right-itemLink'>CN</Link>
+                                <button onClick={()=>{setCurrLang(locale.ru); setLocaleRU()}} className='footer__right-itemLink'>RU</button>
+                                <button onClick={()=>{setCurrLang(locale.en); setLocaleEN()}} className='footer__right-itemLink'>EN</button>
+                                <button className='footer__right-itemLink'>CN</button>
                             </div>
                         </div>
                         <div className='footer__right-item'>
@@ -112,7 +131,7 @@ function Footer () {
                 </div>
             </div>
             <div className='footer__left-policy mobile_policy'>
-                <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='footer__left-policyTitle'>
+                <Link target='blank' to={lang === 'en' ? policyLink.en : policyLink.ru} className='footer__left-policyTitle'>
                     <FormattedMessage id='footerPolicy'/>
                 </Link>
                 <p className='footer__left-policyText'>

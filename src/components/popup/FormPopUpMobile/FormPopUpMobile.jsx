@@ -4,6 +4,9 @@ import '../../fonts/Fonts.css'
 import { FormattedMessage, injectIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
 
+import { lang } from '../../../constants/constants'
+import { policyLink } from '../../../constants/constants'
+
 function ModalFormMobile ({MobileForm, setMobileForm, intl}) {
 
     return (
@@ -46,7 +49,7 @@ function ModalFormMobile ({MobileForm, setMobileForm, intl}) {
                             <input type="checkbox" name='Политика принята' defaultChecked required/>
                             <p>
                                 <FormattedMessage id='formPolicy'/> 
-                                <Link target='blank' to='https://drive.google.com/file/d/1ytQyOG2bAIXH9vFNwc4rPmYO0cQWs3lr/view?pli=1' className='label-policy'>
+                                <Link target='blank' to={lang === 'en' ? policyLink.en : policyLink.ru} className='label-policy'>
                                     <FormattedMessage id='formPolicyEnd'/>
                                 </Link>
                             </p>

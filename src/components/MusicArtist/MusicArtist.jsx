@@ -31,10 +31,10 @@ function MusicArtist ({setCurrLang, getLocale}) {
                 <div className='musicArtists__header'>
                     <div className='musicArtists__nav'>
                         <NavBar 
-                        showModalForm={showModalForm}
-                        influence={true}
-                        setCurrLang={setCurrLang}
-                        getLocale={getLocale}
+                            showModalForm={showModalForm}
+                            influence={true}
+                            setCurrLang={setCurrLang}
+                            getLocale={getLocale}
                         />
                     </div>
 
@@ -83,7 +83,9 @@ function MusicArtist ({setCurrLang, getLocale}) {
             </main>
 
             <footer>
-                <Footer/>
+                <Footer
+                    setCurrLang={setCurrLang}
+                />
             </footer>
             <FormPopUp
                 active={formShow}
