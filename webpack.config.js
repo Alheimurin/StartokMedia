@@ -20,9 +20,9 @@ const plugins = [
     }),
     new WebpackCopy({
         patterns: [
-          { from: "./public/assets", to: "assets/[contenthash].[ext]" },
-          { from: "./public/UI", to: "UI/[contenthash].[ext]" },
-          { from: "./public/UX", to: "UX/[contenthash].[ext]" },
+          { from: "./public/assets", to: "assets/" },
+          { from: "./public/UI", to: "UI/" },
+          { from: "./public/UX", to: "UX/" },
         ],
     }),
 ]
@@ -42,7 +42,7 @@ module.exports = {
 
     devServer: {
         hot: true,
-        historyApiFallback: true,
+        /* historyApiFallback: true, */
     },
 
     module: {
@@ -94,6 +94,6 @@ module.exports = {
         }, */
         assetModuleFilename: 'assets/[hash][ext][query]',
         clean: true,
-        publicPath: '/'
+        /* publicPath: '/' */
     },
 }

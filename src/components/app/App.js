@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { Route, Routes, HashRouter} from "react-router-dom";
 import { useState } from "react";
 import { IntlProvider } from "react-intl";
 
@@ -29,7 +29,7 @@ function App (props) {
 
   return (
     <IntlProvider messages={messages[currLang]} locale={currLang} defaultLocale={locale.en}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<MainPage setCurrLang={setCurrLang}/>}/>
           <Route path="contacts" element={<ContactPage setCurrLang={setCurrLang}/>}/>
@@ -38,7 +38,7 @@ function App (props) {
           <Route path="identity" element={<IdentityPage setCurrLang={setCurrLang}/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </IntlProvider>
   );
 }
