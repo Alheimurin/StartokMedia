@@ -127,6 +127,7 @@
     border: none;
     color: white;
     background-color: black;
+    padding: 0;
 }
 .lang__itemActive {
     color: black;

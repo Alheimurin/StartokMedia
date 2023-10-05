@@ -23,9 +23,11 @@ function NavBar ( {showModalForm, contacts, identity, influence, setCurrLang} ) 
 
     function setLocaleEN () {
         localStorage.setItem('locale', locale.en)
+        window.location.reload()
     } 
     function setLocaleRU () {
         localStorage.setItem('locale', locale.ru)
+        window.location.reload()
     } 
 
     const lang = localStorage.getItem('locale')

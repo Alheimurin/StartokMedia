@@ -90,8 +90,11 @@ input::placeholder {
 }
 
 .validItem {
-    width: 14px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .form__left-inputCheckbox {

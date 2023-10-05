@@ -23,7 +23,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 55px;
+    gap: 25px;
     margin-top: 50px;
 }
 
@@ -65,6 +65,7 @@
 .main__header-cards_desc_container {
     display: flex;
     justify-content: center;
+    margin-bottom: 75px;
 }
 
 .main__header-cards_desc {
@@ -106,10 +107,6 @@
     transition: 0.6s;
     background: linear-gradient(230deg, #FFD916, #FF1914, #6705FF);
     backdrop-filter: none;
-}
-
-.IC {
-    margin-top: 15px;
 }
 
 .main__header-ticker{

@@ -63,6 +63,7 @@ function Form (props) {
                         </span> 
                         <FormattedMessage id='formTitleEnd'/>
                     </h1>
+
                     <div className='form__left-inputs'>
                         <div className='inputs-form'>
                             <label className='inputs-labelLeft' htmlFor="">
@@ -70,17 +71,25 @@ function Form (props) {
                             </label>
                             <div className='required'>
                                 <input onChange={(e)=>{setValue({...value, company: e.target.value})}} className='form__left-input wLabel' name='Компания' type="text" placeholder={intl.formatMessage({id: 'fromPlaceholder'})} />
-                                <img className='validItem' src={value.company.length > 0 ? 'UI/formV.svg' : ''} alt="" />
+                                <div className='validItem'>
+                                    {value.company.length > 0 ? <img src='UI/formV.svg' alt="" />  : null}
+                                </div>
                             </div>
                         </div>
+
                         <div className='required'>
                             <input onChange={(e)=>{setValue({...value, name: e.target.value})}} className='form__left-input' name='Имя' type="text" placeholder={intl.formatMessage({id: 'name'})}/>
-                            <img className='validItem' src={value.name.length > 0 ? 'UI/formV.svg' : ''} alt="" /> 
+                            <div className='validItem'>
+                                {value.name.length > 0 ? <img src='UI/formV.svg' alt="" />  : null }
+                            </div>
                         </div>
+
                         <div className='required'>
                             <input onChange={(e)=>setValue({...value, phone: e.target.value})} className='form__left-input' value={null} name='Телефон' id='phone' type="number" required />
                             <label className='requiredItem' htmlFor="phone">{validPhone.phone} <span style={{color:'red'}}>{validPhone.mark}</span></label>
-                            <img className='validItem' src={value.phone.length > 0 ? 'UI/formV.svg' : 'UI/formX.svg'} alt="" />
+                            <div className='validItem'>
+                                {value.phone.length > 0 ? <img src='UI/formV.svg' alt="" />  : <img src='UI/formX.svg' alt=""/> }
+                            </div>
                         </div>
                         
                         <div className='inputs-form'>
@@ -90,13 +99,17 @@ function Form (props) {
                             <div className='required'>
                             <input onChange={(e)=>setValue({...value, mail: e.target.value})} className='form__left-input wLabel' name='Email' id='email' type="text" required />
                             <label className='requiredItem' htmlFor="email">{validEmail.email} <span style={{color:'red'}}>{validEmail.mark}</span></label> 
-                            <img className='validItem' src={EMAIL_REGEXP.test(value.mail)? 'UI/formV.svg' : 'UI/formX.svg'} alt="" />
+                            <div className='validItem'>
+                                {EMAIL_REGEXP.test(value.mail) ? <img src='UI/formV.svg' alt="" /> : <img src='UI/formX.svg' alt="" /> }
+                            </div>
                             </div>
                                     
                         </div>
                         <div className='required'>
                             <input onChange={(e)=>{setValue({...value, comment: e.target.value})}} className='form__left-input' type="text" name='Комментарий' placeholder={intl.formatMessage({id: 'additional'})} />
-                            <img className='validItem' src={value.comment.length > 0 ? 'UI/formV.svg' : ''} alt="" />
+                            <div className='validItem'>
+                                {value.comment.length > 0 ? <img src='UI/formV.svg' alt="" />  : ''}
+                            </div>
                         </div>
                         <div className='form__left-inputCheckbox'>
                             <input className='form__left-inputCheck' name='Политика принята' type="checkbox" defaultChecked required/>

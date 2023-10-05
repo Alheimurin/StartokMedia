@@ -1,4 +1,4 @@
-import { Route, Routes, HashRouter} from "react-router-dom";
+import { Route, Routes, HashRouter, BrowserRouter } from "react-router-dom";
 import { useState } from "react";
 import { IntlProvider } from "react-intl";
 
@@ -10,6 +10,7 @@ import IdentityPage from '../../pages/IdentityPage.jsx'
 import ErrorPage from "../../pages/ErrorPage.jsx";
 import { LOCALES } from '../../i18n/locales'
 import { messages } from '../../i18n/messages'
+import ScrollToTop from '../../constants/scrollToTop.js'
 
 import './app.css'
 
@@ -29,7 +30,8 @@ function App (props) {
 
   return (
     <IntlProvider messages={messages[currLang]} locale={currLang} defaultLocale={locale.en}>
-      <HashRouter basename='/'>
+      <BrowserRouter basename='/'>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<MainPage setCurrLang={setCurrLang}/>}/>
           <Route path="contacts" element={<ContactPage setCurrLang={setCurrLang}/>}/>
@@ -38,7 +40,7 @@ function App (props) {
           <Route path="identity" element={<IdentityPage setCurrLang={setCurrLang}/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </IntlProvider>
   );
 }

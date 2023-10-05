@@ -6,4 +6,3 @@ export const policyLink = {
     en: 'https://drive.google.com/file/d/1Yj40Mz1cplIDTnMa_umYRikBcfQj54yt/view?pli=1'
 }
 
-
