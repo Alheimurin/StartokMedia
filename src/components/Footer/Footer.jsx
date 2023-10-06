@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl'
 
 import QRPopUp from '../popup/QRPopUp/QRPopUp.jsx'
 import { LOCALES } from '../../i18n/locales.js'
+import ComingSoon from '../popup/Soon/Soon.jsx'
 
 import './footer.css'
 
@@ -12,6 +13,7 @@ function Footer ({setCurrLang}) {
     const [showQR, setShowQR] = useState(false)
     const [descName, setDescName] = useState('')
     const [descImg, setDescImg] = useState('')
+    const [soon, setSoon] = useState(false)
 
     const locale = {
         en: LOCALES.ENGLISH,
@@ -62,7 +64,7 @@ function Footer ({setCurrLang}) {
                             <div className='footer__right-itemLinks'>
                                 <button onClick={()=>{setCurrLang(locale.ru); setLocaleRU()}} className='footer__right-itemLink'>RU</button>
                                 <button onClick={()=>{setCurrLang(locale.en); setLocaleEN()}} className='footer__right-itemLink'>EN</button>
-                                <button className='footer__right-itemLink'>CN</button>
+                                <button disabled='disabled' className='footer__right-itemLink'> CN </button>
                             </div>
                         </div>
                         <div className='footer__right-item'>
@@ -155,7 +157,6 @@ function Footer ({setCurrLang}) {
             name={descName}
             img={descImg}
             />
-            
         </footer>
     )
 }

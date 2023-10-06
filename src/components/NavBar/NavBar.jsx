@@ -6,11 +6,14 @@ import './navbar.css'
 import '../fonts/Fonts.css'
 
 import MobileBurger from "../popup/MobileBurgerPopUp/MobileBurgerPopUp.jsx"
+import ComingSoon from "../popup/Soon/Soon.jsx"
 import { LOCALES } from "../../i18n/locales"
 
 function NavBar ( {showModalForm, contacts, identity, influence, setCurrLang} ) {
 
     const [show, setShow] = useState(false)
+    
+    const [soon, setSoon] = useState(false)
 
     const func = (x) => {
         x = true
@@ -75,10 +78,11 @@ function NavBar ( {showModalForm, contacts, identity, influence, setCurrLang} ) 
                                 </button>
                                 <button 
                                     onClick={()=>{setCurrLang(locale.en); setLocaleEN()}} 
-                                    className={lang === 'en' ? "navBar__listLang-item LangActive" : "navBar__listLang-item"}>
-                                    EN
-                                </button>
-                                <button disabled='disabled' className="navBar__listLang-item">CH</button>
+                                    className={lang === 'en' ? "navBar__listLang-item LangActive" : "navBar__listLang-item"}> EN </button>
+                                <div>
+                                    <button disabled='disabled' className="navBar__listLang-item"> CH </button>
+                                    <div className="wSoon" >{soon && <ComingSoon/>}</div>
+                                </div>
                             </div>
                         </nav>
                         <button onClick={() => showModalForm(func)} className="navBar__button"><FormattedMessage id='submitRequest'/></button>

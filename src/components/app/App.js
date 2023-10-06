@@ -1,4 +1,4 @@
-import { Route, Routes, HashRouter, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { useState } from "react";
 import { IntlProvider } from "react-intl";
 
@@ -25,7 +25,7 @@ function App (props) {
 
   function getLocale () {
     const savedLocale = localStorage.getItem('locale')
-    return savedLocale || localStorage.setItem('locale', locale.en)
+    return savedLocale || locale.en
   }
 
   return (
