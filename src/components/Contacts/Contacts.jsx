@@ -44,7 +44,7 @@ function Contacts ({setCurrLang, getLocale}) {
                             <div className='contacts__header-contactsTextContainer'>
                                 <div className='contacts__header-contactsBox'>
                                     <p className='contacts__header-contactsTextTitle'><FormattedMessage id='contactsMail'/></p>
-                                    <Link href="mailto:PR@STARTOKMEDIA.RU" className='contacts__header-contactsText'>PR@STARTOKMEDIA.RU</Link>
+                                    <Link to="#" onClick={() => window.location = 'mailto:PR@STARTOKMEDIA.RU'} className='contacts__header-contactsText'>PR@STARTOKMEDIA.RU</Link>
                                 </div>
                                 <div className='contacts__header-contactsBox'>
                                     <p className='contacts__header-contactsTextTitle'><FormattedMessage id='communications'/></p>

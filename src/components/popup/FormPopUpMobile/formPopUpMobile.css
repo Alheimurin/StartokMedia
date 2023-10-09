@@ -102,13 +102,17 @@
         font-weight: 300;
     }
     .modalFormMobile__input::placeholder {
-        font-family: Unbounded;
+        font-family: FordAntenna;
         font-size: 10px;
-        font-weight: 500;
+        font-weight: 300;
     }
     
     .inputTo {
         color: #A4A4A4;
+        font-family: Unbounded;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
     }
     
     .mobileLabel {

@@ -13,7 +13,6 @@ function Footer ({setCurrLang}) {
     const [showQR, setShowQR] = useState(false)
     const [descName, setDescName] = useState('')
     const [descImg, setDescImg] = useState('')
-    const [soon, setSoon] = useState(false)
 
     const locale = {
         en: LOCALES.ENGLISH,
@@ -102,8 +101,8 @@ function Footer ({setCurrLang}) {
                                 <FormattedMessage id='contactus'/>
                             </h2>
                             <div className='footer__right-itemLinks'>
-                                <Link target='blank' className='footer__right-itemLink'>PR@STARTOKMEDIA.RU</Link>
-                                <Link className='footer__right-itemLink'>WECHAT</Link>
+                                <Link to="#" onClick={() => window.location = 'mailto:PR@STARTOKMEDIA.RU'} className='footer__right-itemLink'>PR@STARTOKMEDIA.RU</Link>
+                                <Link onClick={()=>{setShowQR(true); setDescName('WeChat'); setDescImg('WeChat.svg')}} className='footer__right-itemLink'>WECHAT</Link>
                                 <Link to='//www.linkedin.com/company/startok-media/' target='blank' className='footer__right-itemLink'>LINKEDIN</Link>
                                 <Link to='//t.me/startokmedia' target='blank' className='footer__right-itemLink'>TELEGRAM</Link>
                                 <Link to='//wa.me/87055338422' target='blank' className='footer__right-itemLink'>WHATSAPP*</Link>
