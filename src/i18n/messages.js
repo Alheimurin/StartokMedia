@@ -135,7 +135,10 @@ export const messages = {
         qrClose: 'Close',
 
         // Error
-        errorBack: 'Go back home'
+        errorBack: 'Go back home',
+
+        //reqField
+        reqField: 'THIS FIELD IS REQUIRED'
     },
     [LOCALES.RUSSIAN]: {
         // Nav
@@ -273,6 +276,9 @@ export const messages = {
         qrClose: 'Закрыть',
 
         // Error
-        errorBack: 'На главную'
+        errorBack: 'На главную',
+
+        //reqField
+        reqField: 'ОБЯЗАТЕЛЬНОЕ ПОЛЕ'
     }
 }

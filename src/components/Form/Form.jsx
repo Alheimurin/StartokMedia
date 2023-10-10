@@ -4,6 +4,7 @@ import { FormattedMessage, injectIntl } from 'react-intl'
 
 import { lang } from '../../constants/constants'
 import { policyLink } from '../../constants/constants'
+import ReqField from '../otherItems/ReqField/ReqField.jsx'
 
 import './form.css'
 import '../fonts/Fonts.css'
@@ -86,7 +87,10 @@ function Form (props) {
 
                         <div className='required'>
                             <input onChange={(e)=>setValue({...value, phone: e.target.value})} className='form__left-input' value={null} name='Телефон' id='phone' type="number" required />
-                            <label className='requiredItem' htmlFor="phone">{validPhone.phone} <span style={{color:'red'}}>{validPhone.mark}</span></label>
+                            <label className='requiredItem' htmlFor="phone">{validPhone.phone} 
+                                <span style={{color:'red'}}>{validPhone.mark}</span>
+                                {value.phone.length > 0 ? null : <ReqField/>}
+                            </label>
                             <div className='validItem'>
                                 {value.phone.length > 0 ? <img src='UI/formV.svg' alt="" />  : <img src='UI/formX.svg' alt=""/> }
                             </div>
@@ -98,7 +102,10 @@ function Form (props) {
                             </label>
                             <div className='required'>
                             <input onChange={(e)=>setValue({...value, mail: e.target.value})} className='form__left-input wLabel' name='Email' id='email' type="text" required />
-                            <label className='requiredItem' htmlFor="email">{validEmail.email} <span style={{color:'red'}}>{validEmail.mark}</span></label> 
+                            <label className='requiredItem' htmlFor="email">{validEmail.email} 
+                                <span style={{color:'red'}}>{validEmail.mark}</span>
+                                {value.mail.length > 0 ? null : <ReqField/> }
+                            </label> 
                             <div className='validItem'>
                                 {EMAIL_REGEXP.test(value.mail) ? <img src='UI/formV.svg' alt="" /> : <img src='UI/formX.svg' alt="" /> }
                             </div>
